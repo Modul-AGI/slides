@@ -8,7 +8,7 @@
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      body { font-family: 'Droid Serif'; }
+      body { font-family: 'Yanone Kaffeesatz';  }
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
@@ -24,57 +24,106 @@
         width: 47%;
       }
     </style>
-    
+
+
     <!-- https://github.com/gnab/remark/issues/359 -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <style>
-    .smaller-font { font-size:14px }    
-
-    /* https://github.com/gnab/remark/issues/325#issuecomment-277411597 */
-    .invisible-ink {
-    display: none;
-    }
-
-    .remark-container.remark-presenter-mode .invisible-ink {
-        display: inline;
-        color: red;
-    }
+     
+    <style>  
+    .smaller-font { font-size:14px }
     </style>
 
+    <!-- This next style block is for the header of the slides -->
+    <style>
+      .header { 
+        position: absolute; 
+        top: 0px; 
+        left: 0px;
+        background-color: gainsboro;
+        width: 100%;
+        font-size: 80%;
+        padding: 10px;
+        }
+    
+      .headercol{
+        width: 33.33%;
+      }
+    
+      .leftc{float:left}
+      .rightc{float:right;text-align: right;padding-right: 20px;}
+      .centerc{margin:0 auto}
+    </style>
+    
+       
+    <!-- this next style is just for the title slide-->
+    <style>
+      .titleslide{
+        background: linear-gradient(to bottom, 
+        gray 0%, 
+        gray 55%, 
+        white 55%, 
+        white 100%);
+      }
+      .title-header{
+        position: absolute;
+      }
+    
+      .title-bottom{
+        bottom: 5%;
+      }
+    </style>
+
+  <style>
+    .second #second, 
+    .first #first, 
+    .third #third,
+    .fourth #fourth{
+      color: hotpink;
+    }
+    
+  </style>
+
+<!-- https://github.com/gnab/remark/issues/359 -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style>
+  .smaller-font { font-size:80% } 
+  </style>
   </head>
   <body>
     <textarea id="source">
 
----
+
+class: titleslide
 
 
-<h3> BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21</h3>
-<h3> </h3>
+<div>
+<h3 class = "title-header" style = "top: 20%;"> 
+  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
+</h3>
 
-<h1>Coding in GIS I</h1>
+<h1 class = "title-header" style = "top: 40%;">Coding in GIS I</h1>
 
-.pull-left[
-
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia0.png" width = 50%> 
-
-]
-
-.pull-right[
-.smaller-font[
-Nils Ratnaweera<br>
-Forschungsgruppe Geoinformatik<br>
-<br>
-
-Institut für Umwelt und Natürliche Ressourcen	<br>
-ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
-Grüental, Postfach, CH-8820 Wädenswil<br>
-<br>
-rata@zhaw.ch
-]
-]
+<div class = "title-header title-bottom" style = "width: 20%">
+  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+</div>
+<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
+  Nils Ratnaweera<br>
+  Forschungsgruppe Geoinformatik<br>
+  <br>
+  Institut für Umwelt und Natürliche Ressourcen	<br>
+  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
+  Grüental, Postfach, CH-8820 Wädenswil<br>
+  <br>
+  rata@zhaw.ch
+</div>
 
 
 
+<div class="header">
+  <div class = "headercol leftc">KW 39 | Coding in GIS I </div>
+  <div class = "headercol rightc">BSc UI | Angewandte Geoinformatik | HS21</div>
+  <!-- <div class = "headercol centerc">Nils Ratnaweera, IUNR</div> -->
+</div>
+</div>
 ---
 # Vorstellung
 
@@ -89,7 +138,7 @@ name: zeitplan
 .pure-table.pure-table-striped.smaller-font[
 | Uhrzeit       | Dauer   | Thema                                               |
 |---------------|---------|-----------------------------------------------------|
-| 13.00 – 13.30 | 30      | Einführung Coding in GIS                            |
+| 13.00 – 13.30 | 30      | **Einführung Coding in GIS**                        |
 | 13.30 – 13.45 | 15      | Einführung in die heutigen Übungen                  |
 | 13.45 – 13.50 | 5       | Pause                                               |
 | 13.50 – 14.00 | 10      | Demo                                                |
@@ -125,19 +174,16 @@ layout: true
 # Themen
 
 <ul>
-  <li class = "first">Programmieren: Eine notwendige Expertise?</li>
-  <li class = "second">Sieben Gründe, warum ich Programmieren liebe ♥</li>
-  <li class = "third">Die Qual der Wahl</li>
-  <li class = "fourth">Die erste grosse Hürde: Programmierumgebung</li>
+  <li id = "first">Programmieren: Eine notwendige Expertise?</li>
+  <li id = "second">Sieben Gründe, warum ich Programmieren liebe ♥</li>
+  <li id = "third">Die Qual der Wahl</li>
+  <li id = "fourth">Die erste grosse Hürde: Programmierumgebung</li>
 </ul>
-
 
 ---
 
 template: themen
-
-
-
+class: first
 
 ---
 layout: true
@@ -146,7 +192,7 @@ layout: true
 
 ---
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia2.jpg)
+background-image:  url(img/AGI_HS20_02_Coding_in_GIS_Ia2.jpg)
 
 Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-663860/
 
@@ -201,14 +247,12 @@ class: center, middle
 
 ---
 layout: false
-
-<!-- reverts the template-->
----
 template: themen
+class: second
+
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg" width = 100%>
 
 
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg)
 
 ---
 layout: true
@@ -507,7 +551,7 @@ layout: false
 
 ---
 template: themen
-
+class: third
 
 
 ---
@@ -610,6 +654,7 @@ Mathematik für UI 1 -->
 
 ---
 template: themen
+class: fourth
 
 <!-- <style>
   li.fourth {color: red;}
