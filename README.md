@@ -1,8 +1,6 @@
 
 
 
-https://modul-agi.github.io/slides/1_Coding_in_GIS_I/
+Slides zu Coding in GIS I - III
 
-[slides](slides/1_Coding_in_GIS_I/)
-
-[slides](1_Coding_in_GIS_I/)
+- [Slides für "Coding in GIS I"](1_Coding_in_GIS_I)
