@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Yanone Kaffeesatz';  }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+    </style>
+
+
+    <!-- https://github.com/gnab/remark/issues/359 -->
+     
+    <style>  
+    .smaller-font { font-size:14px }
+    </style>
+
+    <!-- This next style block is for the header of the slides -->
+    <style>
+      .header { 
+        position: absolute; 
+        top: 0px; 
+        left: 0px;
+        background-color: gainsboro;
+        width: 100%;
+        font-size: 80%;
+        padding: 10px;
+        }
+    
+      .headercol{
+        width: 33.33%;
+      }
+    
+      .leftc{float:left}
+      .rightc{float:right;text-align: right;padding-right: 20px;}
+      .centerc{margin:0 auto}
+    </style>
+    
+       
+    <!-- this next style is just for the title slide-->
+    <style>
+      .titleslide{
+        background: linear-gradient(to bottom, 
+        gray 0%, 
+        gray 55%, 
+        white 55%, 
+        white 100%);
+      }
+      .title-header{
+        position: absolute;
+      }
+    
+      .title-bottom{
+        bottom: 5%;
+      }
+    </style>
+
+  <style>
+    .second #second, 
+    .first #first, 
+    .third #third,
+    .fourth #fourth{
+      color: hotpink;
+    }
+    
+  </style>
+
+<!-- https://github.com/gnab/remark/issues/359 -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <style>
+  .smaller-font { font-size:80% } 
+  </style>
+  </head>
+  <body>
+    <textarea id="source">
+        
+        {{ page.content }}
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
