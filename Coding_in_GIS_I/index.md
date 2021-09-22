@@ -31,7 +31,7 @@ permalink: /Coding_in_GIS_I/
 ---
 # Vorstellung
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia0_1.png" width = 75%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia0_1.png" style = "width: 75%"> 
 
 
 ---
@@ -46,24 +46,24 @@ name: zeitplan
 | 13.30 – 13.45 | 15      | Einführung in die heutigen Übungen                  |
 | 13.45 – 13.50 | 5       | Pause                                               |
 | 13.50 – 14.00 | 10      | Demo                                                |
-| 14.00 – 14.35 | 35      | Lösen Aufgabe 1 («Primitive Datentypen»)            |
+| 14.00 – 14.35 | 35      | Lösen Aufgabe 1 ("Primitive Datentypen")            |
 | 14.35 – 14.50 | 15      | Pause                                               |
 | 14.50 – 15.00 | 10      | Besprechung Aufgabe 1 / Lösungen aufschalten        |
-| 15.00 – 15.35 | 35      | Lösen Aufgabe 2 («Listen»)                          |
+| 15.00 – 15.35 | 35      | Lösen Aufgabe 2 ("Listen")                          |
 | 15.35 – 15.50 | 15      | Pause                                               |
 | 15.50 – 16.00 | 10      | Besprechung Aufgabe 2 / Lösungen aufschalten        |
-| 16.00 – 16.25 | 25      | Lösen Aufgabe 3 («Dictionaries»)                    |
+| 16.00 – 16.25 | 25      | Lösen Aufgabe 3 ("Dictionaries")                    |
 | 16.25 – 16.35 | 10      | Zusammenfassung + Abschluss / Lösungen aufschalten  |
-| Zuhause       | 30 - 45 | Lösen bis und mit Aufgabe 4 («Tabellarische Daten») |
+| Zuhause       | 30 - 45 | Lösen bis und mit Aufgabe 4 ("Tabellarische Daten") |
 ]
 
 ---
 # Lernziele
 
-* Sie sind in der Lage die Vorteile von Coden / Skripten versus «Point-and-Klick» zu erläutern
+* Sie sind in der Lage die Vorteile von Coden / Skripten versus "Point-and-Klick" zu erläutern
 --
 
-* Sie kennen die Programmiersprachen für Einsteiger im Kontext von GIS undDataSciencerelevant sind
+* Sie kennen die Programmiersprachen für Einsteiger im Kontext von GIS und DataScience relevant sind
 --
 
 * Sie kennen die erste grosse Einstiegshürde
@@ -79,7 +79,7 @@ layout: true
 
 <ul>
   <li id = "first">Programmieren: Eine notwendige Expertise?</li>
-  <li id = "second">Sieben Gründe, warum ich Programmieren liebe ♥</li>
+  <li id = "second">7 Gründe, warum ich Programmieren liebe ♥</li>
   <li id = "third">Die Qual der Wahl</li>
   <li id = "fourth">Die erste grosse Hürde: Programmierumgebung</li>
 </ul>
@@ -118,7 +118,7 @@ Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-66386
 
 class: center, middle
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia3.png" height = 400> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia3.png" style = "width: 80%"> 
 
 .footnote[.smaller-font[Quelle: https://www.rheinwerk-verlag.de/programmieren-lernen-mit-der-maus_4973]]
 
@@ -128,7 +128,7 @@ class: center, middle
 
 
 <div class = "center middle">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia4.png" height = 500> 
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia4.png"  style = "width: 50%"> 
 </div>
 
 .footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]
@@ -143,7 +143,7 @@ class: center, middle
 ---
 
 <div class = "center middle">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia5.png" height = 500>
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia5.png"  style = "width: 80%">
 </div>
 
 .footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]
@@ -154,34 +154,34 @@ layout: false
 template: themen
 class: second
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg" width = 100%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg" style = "width: 80%">
 
 
 
 ---
 layout: true
 
-# Sieben Gründe, warum ich Programmieren liebe ♥
+# 7 Gründe warum ich Programmieren liebe ♥
 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia7.png" height = 300, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia7.png" class = "center" style = "width: 50%"> 
 
----
+--
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia8.png" height = 200, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia8.png" class = "center" style = "width: 50%"> 
 
 
 ---
 
 Ich ♥ Programmieren, weil ich damit:
 
-* … repetitive Tasks automatisieren kann
-* … übertragbare «Tools» bauen kann
-* … mehr Flexibilität und «Power» habe
-* … zu Grunde liegende Funktionen besser verstehe
-* … bessere Möglichkeiten habe zu Kollaborieren
-* … bessere Möglichkeiten habe, Hilfe zu erhalten
-* … reproduzierbar arbeite
+* ... repetitive Tasks automatisieren kann
+* ... übertragbare "Tools" bauen kann
+* ... mehr Flexibilität und "Power" habe
+* ... zu Grunde liegende Funktionen besser verstehe
+* ... bessere Möglichkeiten habe zu Kollaborieren
+* ... bessere Möglichkeiten habe, Hilfe zu erhalten
+* ... reproduzierbar arbeite
 
 ---
 layout: true
@@ -203,22 +203,22 @@ layout: true
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_1.jpg" height = 400, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_1.jpg" style = "width: 80%" class = "center"> 
 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_2.jpg" height = 400, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_2.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_3.jpg" height = 400, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_3.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_4.jpg" height = 400, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_4.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_5.jpg" height = 400, class = "center"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_5.jpg" style = "width: 80%" class = "center"> 
 
 ---
 
 
 <div class = "center">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" width="75%">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 80%">
 </div>
 
 
@@ -227,35 +227,33 @@ layout: true
 ```python
 make_map(neuntoeter)
 ```
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" width = 50%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 50%"> 
 
 
 ---
 
-```python
-all_birds = [ringdrossel, turmfalke …]​
+```ruby
+`all_birds` = [Neutöter, Ringdrossel​, Turmfalke​, Mittelspecht​, Turteltaube​, Rauchschwalbe​]​
 
-for bird in all_birds:​
+for bird in `all_birds`:​
   make_map(bird)
 ```
 
-.invisible-ink[Neutöter, Ringdrossel​, Turmfalke​, Mittelspecht​, Turteltaube​, Rauchschwalbe​]
-
-
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
 
 ???
 
+anpassungen viel leichter, zb. rot/grün
 
 
 ---
@@ -266,11 +264,11 @@ Achtung: Automatisierung
 
 --
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia17.png)
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia17.png"  style = "width: 60%">
 
 --
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia18.png)
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia18.png"  style = "width: 60%">
 
 
 .footnote[.smaller-fontsize[Quelle: https://xkcd.com/1319/]]
@@ -285,14 +283,14 @@ layout: true
 --
 
 .pull-left[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia20.png" width = 45%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia21.jpg" width = 45%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia20.png" style = "width: 45%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia21.jpg" style = "width: 45%"> 
 ]
 
 --
 
 .pull-right[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia19.gif" width = 75%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia19.gif" style = "width: 75%">
 ]
 
 ???
@@ -308,18 +306,18 @@ Alte Lösungen können für neue Probleme umfunktioniert werden​
 
 
 .pull-left[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" width = 30%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" width = 30%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" width = 30%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" width = 30%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" width = 30%> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" width = 30%> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
 ]
 
 --
 
 .pull-right[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" width = 75%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" style = "width: 75%">
 ]
 
 
@@ -344,8 +342,6 @@ Mit Beherrschung der zu Grunde liegenden Programmiersprache kann man auf eine vi
 ​
 
 ---
-
-
 Beispiel: Zufällige Punkte in einem Umkreis verteilen
 
 
@@ -355,8 +351,10 @@ Beispiel: Zufällige Punkte in einem Umkreis verteilen
   <img src="img/AGI_HS20_02_Coding_in_GIS_Ia31_arcgis.gif" style="width:100%">
   <figcaption>ArcGIS "Random Points in Polygon"</figcaption>
 </figure> 
-
 ]
+
+--
+
 .pull-right[
 
 <figure>
@@ -422,10 +420,15 @@ layout: true
 
 ---
 
-* Jedes Problem / jede Frage kann auf ein paar wenige Zeilen Code reduziert werden («Minimalworkingexample»)
-* So werden z.B. aufStackoverflow \> 5’000 Fragen _pro Tag_ gestellt<sup>1</sup>, > 90% der Fragen werden beantwortet<sup>2</sup> und es dauert ca. 10 Minuten eine Antwort zu bekommen<sup>2</sup>
+* Jedes Problem / jede Frage kann auf ein paar wenige Zeilen Code reduziert werden ("Minimal working example")
+* So werden z.B. auf Stackoverflow \> 5’000 Fragen _pro Tag_ gestellt<sup>1</sup>, > 90% der Fragen werden beantwortet<sup>2</sup> und es dauert ca. 10 Minuten eine Antwort zu bekommen<sup>2</sup>
 
 .footnote[.smaller-textsize[1)[meta.stackexchange.com](https://meta.stackexchange.com/a/146414/404870) <br> 2)[people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~bjoern/projects/stackoverflow/)]]
+
+
+???
+
+es dauert ca. 1h um eine frage zu *formulieren*
 
 ---
 
@@ -442,12 +445,11 @@ layout: true
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia39.png" style="width:75%">
 </div>
 ---
-
-
----
 layout: false
 
-## Reproduzierbarkeit ist...
+## Reproduzierbarkeit 
+
+Diese
 
 * ... v.a. in der Wissenschaft von grosser Wichtigkeit (siehe "[Reproducibility Crisis](https://en.wikipedia.org/wiki/Replication_crisis)")
 * ... auch in der Privatwirtschaft wichtig
@@ -481,62 +483,66 @@ layout: true
 
 .footnote[.smaller-textsize[Quelle: [http://createlucklv.com](http://createlucklv.com/real-estate/sacrifices-vs-choices-knowing-the-difference-and-choosing-choice/)]]
 ---
+
+<img src="img/tiobe_1.png" style = "width: 100%">
+
+
 ---
-<img src="img/tiobe_2.png" width = 100%>
+<img src="img/tiobe_2.png" style = "width: 100%">
 
 ???
 
 Programmiersprache C
 ---
-<img src="img/tiobe_3.png" width = 100%>
+<img src="img/tiobe_3.png" style = "width: 100%">
 ???
 
 Programmiersprache Java
 
 ---
-<img src="img/tiobe_4.png" width = 100%>
+<img src="img/tiobe_4.png" style = "width: 100%">
 ???
 
 Programmiersprache Python
 
 ---
-<img src="img/tiobe_5.png" width = 100%>
+<img src="img/tiobe_5.png" style = "width: 100%">
 ???
 
 Programmiersprache C++
 
 ---
-<img src="img/tiobe_6.png" width = 100%>
+<img src="img/tiobe_6.png" style = "width: 100%">
 ???
 
 Programmiersprache C#
 
 ---
-<img src="img/tiobe_7.png" width = 100%>
+<img src="img/tiobe_7.png" style = "width: 100%">
 ???
 
 Programmiersprache Visual Basic
 
 ---
-<img src="img/tiobe_8.png" width = 100%>
+<img src="img/tiobe_8.png" style = "width: 100%">
 ???
 
 Programmiersprache JavaScript
 
 ---
-<img src="img/tiobe_9.png" width = 100%>
+<img src="img/tiobe_9.png" style = "width: 100%">
 ???
 
 Programmiersprache R
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" width = 50%>
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style = "width: 50%">
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" style = "width: 50%">
 
 
 
@@ -563,12 +569,12 @@ layout: true
 ---
 
 * Welche Python Version?
-* Welche Entwicklungsumgebung («IDE»)?
+* Welche Entwicklungsumgebung ("IDE")?
 * Welche Module?
 * Welcher Package Manager?
 
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" style = "width: 50%">
 
 ???
 
@@ -698,8 +704,8 @@ layout: true
 
 Diese Tools:
 
-* gelten als «bestpractice» und «state of the art»
-* sind alle «Free and Open Source»
+* gelten als "bestpractice" und "state of the art"
+* sind alle "Free and Open Source"
 * werden aktiv weiter entwickelt
 * werden von einer __grossen__ Community genutzt und unterstützt (stackoverflow/github)
 
@@ -707,7 +713,7 @@ Was heisst das für euch?
 
 * Wir verlassen die ESRI / ArcGIS Welt
 * Wir lernen eine neue IDE kennen (JupyterLab)
-* Wir lernen einen «packagemanager» kennen (Conda)
+* Wir lernen einen "packagemanager" kennen (Conda)
 
 ---
 
@@ -715,7 +721,7 @@ Anzahl Fragen aufStackoverflowzum jeweiligen Thema
 
 <img src="img/so_tags.jpg" width=100%>
 
-.footnote[Quelle: stackoverflow.com | Abgerufen am 22.09.2020 | jeder Begriff wurde als «Tag» gesucht, mehrere Tags wurden mit «or» verbunden]
+.footnote[Quelle: stackoverflow.com | Abgerufen am 22.09.2020 | jeder Begriff wurde als "Tag" gesucht, mehrere Tags wurden mit "or" verbunden]
 
 ---
 # noch ein wichtiger Tipp von einem Grossmeister
@@ -748,7 +754,7 @@ Anzahl Fragen aufStackoverflowzum jeweiligen Thema
 
 ---
 
-template: zeitplantiobe_1.png" width = 100%>
+
 
 ???
 Tiobe: Ranking von Programmiersprachen nach ihrer Popularität. ​
@@ -805,12 +811,12 @@ Programmiersprache R
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" width = 50%>
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style = "width: 50%">
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" style = "width: 50%">
 
 
 
@@ -837,12 +843,12 @@ layout: true
 ---
 
 * Welche Python Version?
-* Welche Entwicklungsumgebung («IDE»)?
+* Welche Entwicklungsumgebung ("IDE")?
 * Welche Module?
 * Welcher Package Manager?
 
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" width = 50%>
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" style = "width: 50%">
 
 ???
 
@@ -972,8 +978,8 @@ layout: true
 
 Diese Tools:
 
-* gelten als «bestpractice» und «state of the art»
-* sind alle «Free and Open Source»
+* gelten als "bestpractice" und "state of the art"
+* sind alle "Free and Open Source"
 * werden aktiv weiter entwickelt
 * werden von einer __grossen__ Community genutzt und unterstützt (stackoverflow/github)
 
@@ -981,7 +987,7 @@ Was heisst das für euch?
 
 * Wir verlassen die ESRI / ArcGIS Welt
 * Wir lernen eine neue IDE kennen (JupyterLab)
-* Wir lernen einen «packagemanager» kennen (Conda)
+* Wir lernen einen "packagemanager" kennen (Conda)
 
 ---
 
@@ -989,7 +995,7 @@ Anzahl Fragen aufStackoverflowzum jeweiligen Thema
 
 <img src="img/so_tags.jpg" width=100%>
 
-.footnote[Quelle: stackoverflow.com | Abgerufen am 22.09.2020 | jeder Begriff wurde als «Tag» gesucht, mehrere Tags wurden mit «or» verbunden]
+.footnote[Quelle: stackoverflow.com | Abgerufen am 22.09.2020 | jeder Begriff wurde als "Tag" gesucht, mehrere Tags wurden mit "or" verbunden]
 
 ---
 # noch ein wichtiger Tipp von einem Grossmeister

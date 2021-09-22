@@ -1,0 +1,1001 @@
+I"�~<div class="titleslide">
+<h3 class="title-header" style="top: 20%;"> 
+  BSc Umweltingenieurwesen<br /> Angewandte Geoinformatik | HS21
+</h3>
+
+<h1 class="title-header" style="top: 40%;">Coding in GIS I</h1>
+
+<div class="title-header title-bottom" style="width: 20%">
+  &lt;img src="img/zhaw_rgb_byline_d.png" width = 100%&gt; 
+</div>
+<div class="title-header title-bottom" style="left: 40%; width: 47%;">
+  Nils Ratnaweera<br />
+  Forschungsgruppe Geoinformatik<br />
+  <br />
+  Institut für Umwelt und Natürliche Ressourcen	<br />
+  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br />
+  Grüental, Postfach, CH-8820 Wädenswil<br />
+  <br />
+  rata@zhaw.ch
+</div>
+
+
+<!-- <div class="header">
+    <div class = "headercol leftc">KW 39 | Coding in GIS I </div>
+    <div class = "headercol rightc">BSc UI | Angewandte Geoinformatik | HS21</div>
+    <!-- <div class = "headercol centerc">Nils Ratnaweera, IUNR</div> -->
+  </div>
+<p>&lt;/div&gt; –&gt;</p>
+
+<hr />
+<h1 id="vorstellung">Vorstellung</h1>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia0_1.png" style="width: 75%" /></p>
+
+<hr />
+<p>name: zeitplan</p>
+
+<h1 id="zeitplan">Zeitplan</h1>
+
+<p>.pure-table.pure-table-striped.smaller-font[
+| Uhrzeit       | Dauer   | Thema                                               |
+|—————|———|—————————————————–|
+| 13.00 – 13.30 | 30      | <strong>Einführung Coding in GIS</strong>                        |
+| 13.30 – 13.45 | 15      | Einführung in die heutigen Übungen                  |
+| 13.45 – 13.50 | 5       | Pause                                               |
+| 13.50 – 14.00 | 10      | Demo                                                |
+| 14.00 – 14.35 | 35      | Lösen Aufgabe 1 (“Primitive Datentypen”)            |
+| 14.35 – 14.50 | 15      | Pause                                               |
+| 14.50 – 15.00 | 10      | Besprechung Aufgabe 1 / Lösungen aufschalten        |
+| 15.00 – 15.35 | 35      | Lösen Aufgabe 2 (“Listen”)                          |
+| 15.35 – 15.50 | 15      | Pause                                               |
+| 15.50 – 16.00 | 10      | Besprechung Aufgabe 2 / Lösungen aufschalten        |
+| 16.00 – 16.25 | 25      | Lösen Aufgabe 3 (“Dictionaries”)                    |
+| 16.25 – 16.35 | 10      | Zusammenfassung + Abschluss / Lösungen aufschalten  |
+| Zuhause       | 30 - 45 | Lösen bis und mit Aufgabe 4 (“Tabellarische Daten”) |
+]</p>
+
+<hr />
+<h1 id="lernziele">Lernziele</h1>
+
+<ul>
+  <li>
+    <h2 id="sie-sind-in-der-lage-die-vorteile-von-coden--skripten-versus-point-and-klick-zu-erläutern">Sie sind in der Lage die Vorteile von Coden / Skripten versus “Point-and-Klick” zu erläutern</h2>
+  </li>
+  <li>
+    <h2 id="sie-kennen-die-programmiersprachen-für-einsteiger-im-kontext-von-gis-und-datascience-relevant-sind">Sie kennen die Programmiersprachen für Einsteiger im Kontext von GIS und DataScience relevant sind</h2>
+  </li>
+  <li>
+    <h2 id="sie-kennen-die-erste-grosse-einstiegshürde">Sie kennen die erste grosse Einstiegshürde</h2>
+  </li>
+  <li>Sie haben Lust Programmieren zu lernen</li>
+</ul>
+
+<hr />
+<p>name: themen
+layout: true</p>
+
+<h1 id="themen">Themen</h1>
+
+<ul>
+  <li id="first">Programmieren: Eine notwendige Expertise?</li>
+  <li id="second">7 Gründe, warum ich Programmieren liebe ♥</li>
+  <li id="third">Die Qual der Wahl</li>
+  <li id="fourth">Die erste grosse Hürde: Programmierumgebung</li>
+</ul>
+
+<hr />
+
+<p>template: themen
+class: first</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="programmieren-eine-notwendige-expertise">Programmieren: Eine notwendige Expertise?</h1>
+
+<hr />
+
+<p>background-image:  url(img/AGI_HS20_02_Coding_in_GIS_Ia2.jpg)</p>
+
+<p>Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-663860/</p>
+
+<hr />
+
+<div class="center middle">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MwLXrN0Yguk?start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p>.footnote[.smaller-font[Quelle: https://youtu.be/MwLXrN0Yguk]]</p>
+
+<p>???</p>
+
+<ul>
+  <li>“every Student needs to learn to code”​</li>
+  <li>“coding is the 21 century writing”​</li>
+  <li>“programming is the new literacy”​</li>
+</ul>
+
+<hr />
+
+<p>class: center, middle</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia3.png" style="width: 80%" /></p>
+
+<p>.footnote[.smaller-font[Quelle: https://www.rheinwerk-verlag.de/programmieren-lernen-mit-der-maus_4973]]</p>
+
+<hr />
+
+<div class="center middle">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia4.png" style="width: 50%" /> 
+</div>
+
+<p>.footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]</p>
+
+<p>???</p>
+
+<ul>
+  <li>In Australia, the government has been investing in STEM initiatives in recent years, and coding classes will soon be mandatory in Queensland schools</li>
+  <li>Meanwhile in the UK, kids aged five and over have been learning the fundamentals of coding since 2014.​</li>
+</ul>
+
+<hr />
+
+<div class="center middle">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia5.png" style="width: 80%" />
+</div>
+
+<p>.footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]</p>
+
+<hr />
+<p>layout: false
+template: themen
+class: second</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg" style="width: 80%" /></p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="7-gründe-warum-ich-programmieren-liebe-">7 Gründe warum ich Programmieren liebe ♥</h1>
+
+<hr />
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia7.png" class="center" style="width: 50%" /></p>
+
+<p>–</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia8.png" class="center" style="width: 50%" /></p>
+
+<hr />
+
+<p>Ich ♥ Programmieren, weil ich damit:</p>
+
+<ul>
+  <li>… repetitive Tasks automatisieren kann</li>
+  <li>… übertragbare “Tools” bauen kann</li>
+  <li>… mehr Flexibilität und “Power” habe</li>
+  <li>… zu Grunde liegende Funktionen besser verstehe</li>
+  <li>… bessere Möglichkeiten habe zu Kollaborieren</li>
+  <li>… bessere Möglichkeiten habe, Hilfe zu erhalten</li>
+  <li>… reproduzierbar arbeite</li>
+</ul>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="automatisierung-von-repetitiven-tasks">Automatisierung von repetitiven Tasks</h2>
+
+<hr />
+
+<div class="center">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia9.jpg" width="75%" />
+
+</div>
+
+<p>.footnote[.smaller-font[Quelle: <a href="https://www.vogelwarte.ch/assets/files/projekte/entwicklung/zustandsbericht%202018/Zustand%20der%20Vogelwelt%20in%20der%20Schweiz_Bericht%202018_D_low.pdf">www.vogelwarte.ch</a>]]</p>
+
+<p>???</p>
+
+<p>249 Arten!</p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_1.jpg" style="width: 80%" class="center" /></p>
+
+<hr />
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_2.jpg" style="width: 80%" class="center" /> 
+—
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_3.jpg" style="width: 80%" class="center" /> 
+—
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_4.jpg" style="width: 80%" class="center" /> 
+—
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_5.jpg" style="width: 80%" class="center" /></p>
+
+<hr />
+
+<div class="center">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style="width: 80%" />
+</div>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">make_map</span><span class="p">(</span><span class="n">neuntoeter</span><span class="p">)</span>
+</code></pre></div></div>
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style="width: 50%" /></p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`all_birds`</span> <span class="o">=</span> <span class="p">[</span><span class="no">Neut</span><span class="err">ö</span><span class="n">ter</span><span class="p">,</span> <span class="no">Ringdrossel</span><span class="err">​</span><span class="p">,</span> <span class="no">Turmfalke</span><span class="err">​</span><span class="p">,</span> <span class="no">Mittelspecht</span><span class="err">​</span><span class="p">,</span> <span class="no">Turteltaube</span><span class="err">​</span><span class="p">,</span> <span class="no">Rauchschwalbe</span><span class="err">​</span><span class="p">]</span><span class="err">​</span>
+
+<span class="k">for</span> <span class="n">bird</span> <span class="k">in</span> <span class="sb">`all_birds`</span><span class="p">:</span><span class="err">​</span>
+  <span class="n">make_map</span><span class="p">(</span><span class="n">bird</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2><img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style="width: 30%" /></h2>
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style="width: 30%" /> 
+–
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style="width: 30%" /> 
+–
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style="width: 30%" /> 
+–
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style="width: 30%" /> 
+–
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style="width: 30%" /></p>
+
+<p>???</p>
+
+<p>anpassungen viel leichter, zb. rot/grün</p>
+
+<hr />
+
+<p>Achtung: Automatisierung</p>
+<ul>
+  <li>… ist v.a. bei identischen, sehr häufig ausgeführten Tasks relevant</li>
+  <li>… bei vielen Tasks wird dieser erhoffte Vorteil überschätzt</li>
+</ul>
+
+<p>–</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia17.png" style="width: 60%" /></p>
+
+<p>–</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia18.png" style="width: 60%" /></p>
+
+<p>.footnote[.smaller-fontsize[Quelle: https://xkcd.com/1319/]]</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="übertragbarkeit-von-erarbeiteten-lösungen">Übertragbarkeit von erarbeiteten Lösungen</h2>
+
+<hr />
+
+<p>–</p>
+
+<p>.pull-left[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia20.png" style="width: 45%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia21.jpg" style="width: 45%" /> 
+]</p>
+
+<p>–</p>
+
+<p>.pull-right[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia19.gif" style="width: 75%" />
+]</p>
+
+<p>???</p>
+
+<p>Alte Lösungen können für neue Probleme umfunktioniert werden​</p>
+
+<p>​</p>
+
+<ul>
+  <li>Der erste Sparschäler mit querliegender beweglicher Klinge ist das Modell „Rex“, das von Alfred Neweczerzal 1947 erfunden und im selben Jahr patentiert wurde.[3]</li>
+  <li>Alfred Neweczerzal (1899–1959)[4] war im schweizerischen Davos geboren. https://de.wikipedia.org/wiki/Sparsch%C3%A4ler​</li>
+</ul>
+
+<hr />
+
+<p>.pull-left[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style="width: 30%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style="width: 30%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style="width: 30%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style="width: 30%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style="width: 30%" /> 
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style="width: 30%" /> 
+]</p>
+
+<p>–</p>
+
+<p>.pull-right[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" style="width: 75%" />
+]</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="flexiblität-power">Flexiblität/ Power</h2>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia30.jpg" alt="" /></p>
+
+<p>.foonote[.smaller-textsize[Quelle: <a href="https://www.washingtonpost.com/news/wonk/wp/2015/07/13/map-where-americas-sunniest-and-least-sunny-places-are/">www.washingtonpost.com</a>]]</p>
+
+<p>???</p>
+
+<p>In einem GUI ist man an die Optionen limitiert, die einem durch das Grafische Interface angeboten werden​
+Mit Beherrschung der zu Grunde liegenden Programmiersprache kann man auf eine viel grössere Anzahl von Funktionalitäten zurückgreifen.​</p>
+
+<p>​</p>
+
+<hr />
+<p>Beispiel: Zufällige Punkte in einem Umkreis verteilen</p>
+
+<p>.pull-left[</p>
+
+<figure>
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia31_arcgis.gif" style="width:100%" />
+  <figcaption>ArcGIS "Random Points in Polygon"</figcaption>
+</figure>
+<p>]</p>
+
+<p>–</p>
+
+<p>.pull-right[</p>
+
+<figure>
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia31_python.gif" style="width:100%" />
+  <figcaption>Python / R (eigene Funktion)</figcaption>
+</figure>
+
+<p>]</p>
+
+<hr />
+<p>layout: false</p>
+
+<h2 id="verständnis-der-zu-grunde-liegenden-funktionen">Verständnis der zu Grunde liegenden Funktionen</h2>
+
+<p>.pull-left[</p>
+
+<figure>
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia33.jpg" style="width:100%" />
+  <figcaption>ArcGIS: "TopologyRules" (seitenlang und ArcGIS spezifisch)</figcaption>
+</figure>
+
+<p>]
+.pull-right[</p>
+
+<figure>
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia34.png" style="width:100%" />
+  <figcaption>Grundkonzept DE-9IM: (kurz und elegant, in allen Programmiersprachen gleich)</figcaption>
+</figure>
+
+<p>]</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="kollaborationsmöglichkeit">Kollaborationsmöglichkeit</h2>
+
+<hr />
+
+<ul>
+  <li>Programmieren basiert auf einfachen Textfiles</li>
+  <li>Dies ermöglicht ein <em>hohes Grad</em> an Kollaboration</li>
+  <li>So können gigantische OpenSource Projekte mit tausenden von Beiträgern realisiert werden</li>
+  <li>GUIs basieren auf komplexen, unzugänglichen Dateien (z.B. xlsx,docx, mxd, aprx)</li>
+  <li>Versionierung/ Kollaboration ist schwierig bis unmöglich</li>
+</ul>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia35.png" style="width:75%" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia36.png" style="width:75%" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia37.png" style="width:75%" /></p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="möglichkeiten-hilfestellungen-zu-bekommen">Möglichkeiten Hilfestellungen zu bekommen</h2>
+
+<hr />
+
+<ul>
+  <li>Jedes Problem / jede Frage kann auf ein paar wenige Zeilen Code reduziert werden (“Minimal working example”)</li>
+  <li>So werden z.B. auf Stackoverflow &gt; 5’000 Fragen <em>pro Tag</em> gestellt<sup>1</sup>, &gt; 90% der Fragen werden beantwortet<sup>2</sup> und es dauert ca. 10 Minuten eine Antwort zu bekommen<sup>2</sup></li>
+</ul>
+
+<p>.footnote[.smaller-textsize[1)<a href="https://meta.stackexchange.com/a/146414/404870">meta.stackexchange.com</a> <br /> 2)<a href="https://people.eecs.berkeley.edu/~bjoern/projects/stackoverflow/">people.eecs.berkeley.edu</a>]]</p>
+
+<hr />
+
+<div class="center">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia38.png" style="width:75%" />
+</div>
+
+<hr />
+
+<div class="center">
+
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia39.png" style="width:75%" />
+</div>
+<hr />
+
+<hr />
+<p>layout: false</p>
+
+<h2 id="reproduzierbarkeit-ist">Reproduzierbarkeit ist…</h2>
+
+<ul>
+  <li>… v.a. in der Wissenschaft von grosser Wichtigkeit (siehe “<a href="https://en.wikipedia.org/wiki/Replication_crisis">Reproducibility Crisis</a>”)</li>
+  <li>… auch in der Privatwirtschaft wichtig</li>
+  <li>… bei GUI-Anwendungen kaum gegeben</li>
+</ul>
+
+<hr />
+<p>template: themen
+class: third</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="die-qual-der-wahl">Die Qual der Wahl</h1>
+
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia41.jpg'); height: 400px; width: 100%; position: relative;">
+  <!-- <img src="img/AGI_HS20_02_Coding_in_GIS_Ia41.jpg" style="width:100%; position: relative;"> -->
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia40.png" style="position: absolute; top: 160px; left: 050px;width: 40px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia42.png" style="position: absolute; top: 160px; left: 170px;width: 40px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia43.png" style="position: absolute; top: 160px; left: 280px;width: 40px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia44.png" style="position: absolute; top: 160px; left: 400px;width: 40px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia45.png" style="position: absolute; top: 160px; left: 510px;width: 40px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia46.png" style="position: absolute; top: 160px; left: 630px;width: 40px;" />
+
+</div>
+
+<h2 id="footnotesmaller-textsizequelle-httpcreatelucklvcom">.footnote[.smaller-textsize[Quelle: <a href="http://createlucklv.com/real-estate/sacrifices-vs-choices-knowing-the-difference-and-choosing-choice/">http://createlucklv.com</a>]]</h2>
+<hr />
+<p><img src="img/tiobe_2.png" style="width: 100%" /></p>
+
+<p>???</p>
+
+<h2 id="programmiersprache-c">Programmiersprache C</h2>
+<p><img src="img/tiobe_3.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache Java</p>
+
+<hr />
+<p><img src="img/tiobe_4.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache Python</p>
+
+<hr />
+<p><img src="img/tiobe_5.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache C++</p>
+
+<hr />
+<p><img src="img/tiobe_6.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache C#</p>
+
+<hr />
+<p><img src="img/tiobe_7.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache Visual Basic</p>
+
+<hr />
+<p><img src="img/tiobe_8.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache JavaScript</p>
+
+<hr />
+<p><img src="img/tiobe_9.png" style="width: 100%" />
+???</p>
+
+<p>Programmiersprache R</p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style="width: 50%" />
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style="width: 50%" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" style="width: 50%" /></p>
+
+<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia54.png) -->
+
+<!-- Mathematik für UI 2
+
+Mathematik für UI 1 -->
+
+<hr />
+<p>template: themen
+class: fourth</p>
+
+<!-- <style>
+  li.fourth {color: red;}
+</style> -->
+<hr />
+<p>layout: true</p>
+
+<h1 id="die-erste-grosse-hürde-programmierumgebung">Die erste grosse Hürde: Programmierumgebung</h1>
+
+<hr />
+
+<ul>
+  <li>Welche Python Version?</li>
+  <li>Welche Entwicklungsumgebung (“IDE”)?</li>
+  <li>Welche Module?</li>
+  <li>Welcher Package Manager?</li>
+</ul>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" style="width: 50%" /></p>
+
+<p>???</p>
+
+<p>Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Einrichten der Programmierumgebung. ​</p>
+
+<p>​</p>
+
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia56.jpg'); background-repeat: no-repeat; background-size: 90%; height: 1000px; position: relative;">
+
+</div>
+
+<p>.footnote[.smaller-textsize[Quelle: <a href="https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge">canadianliving.com</a>]]</p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia57.jpg" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" width="100%" /></p>
+
+<!-- <div style = "background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia61b.jpg'); background-repeat: no-repeat; border-radius: 100%; height: 250px; width: 250px; position: relative;"></div> -->
+
+<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia58.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia59.jpg)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia60.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia61.jpg)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia62.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia63.png)
+
+-->
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="showcases">Showcases</h2>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia64.gif" alt="" /></p>
+
+<p>.footnote[.smaller-textsize[Quelle: <a href="https://www.tucsonweekly.com/TheRange/archives/2016/02/11/weve-got-gravitational-waves">tucsonweekly.com</a>]]</p>
+
+<p>???</p>
+
+<p>Erstes Beispiel:​ Am 14. September 2015 hat der Gravitationswellendetektor LIGO die erste Graviationswelle aus der verschmelzung zweier schwarzer Löcher detekteirt. ​</p>
+
+<hr />
+
+<p>.pull-left[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia65.png" width="100%" />
+]</p>
+
+<p>.pull-right[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" width="100%" />
+]</p>
+
+<p>.footnote[Code auf <a href="https://github.com/minrk/ligo-binder">Github</a> verfübar]</p>
+
+<p>???</p>
+
+<p>Auch hier wurde Python mit Matplotlib genutzt und nicht nur das: die Datenanalyse wurde innerhalb eines Jupyter Notebooks festgehalten. 
+Mit Anacona habt ihr nun Jupyter Notebooks ebenfalls installiert und könntet nun die Daten ruterladen und bei euch lokal ausführen. ​</p>
+
+<hr />
+
+<div class="center">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia67.jpg" width="70%" />
+</div>
+
+<p>???</p>
+
+<p>Am 10.4.2019 wurde das erste Bild von einem schwarzen Loch, generiert durch das Event Horzon Teleskop (EHT) vorgestelllt.​</p>
+
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+</div>
+
+<p>???</p>
+
+<p>Dabei kursierte ebenfalls dieses Bild von Katie Bourman, eine der Wissenschaftlerinnen des EHT-Teams im internet.​
+Was man hier auf ihrem Bildschirm sieht ist offensichtlich die eben erstellte Visualisierung des schwarzen Loches – erstellt mit Matplotlib, wie an den Achsen zu erkennen ist. Der Code ist übrigens öffentlich einsehbar​</p>
+
+<hr />
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia68.png" style="position: absolute; top: 200px; left: 100px;width: 400px;" />
+  </div>
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia68.png" style="position: absolute; top: 200px; left: 100px; width: 400px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" style="position: absolute; top: 000px; left: 630px; width: 200px;" />
+  </div>
+
+<p>.footnote[Code auf <a href="https://github.com/achael/eht-imaging">Github</a> verfübar]</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="programmierumgebung">Programmierumgebung</h2>
+
+<hr />
+
+<p>Diese Tools:</p>
+
+<ul>
+  <li>gelten als “bestpractice” und “state of the art”</li>
+  <li>sind alle “Free and Open Source”</li>
+  <li>werden aktiv weiter entwickelt</li>
+  <li>werden von einer <strong>grossen</strong> Community genutzt und unterstützt (stackoverflow/github)</li>
+</ul>
+
+<p>Was heisst das für euch?</p>
+
+<ul>
+  <li>Wir verlassen die ESRI / ArcGIS Welt</li>
+  <li>Wir lernen eine neue IDE kennen (JupyterLab)</li>
+  <li>Wir lernen einen “packagemanager” kennen (Conda)</li>
+</ul>
+
+<hr />
+
+<p>Anzahl Fragen aufStackoverflowzum jeweiligen Thema</p>
+
+<p>&lt;img src=”img/so_tags.jpg” width=100%&gt;</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>.footnote[Quelle: stackoverflow.com</td>
+      <td>Abgerufen am 22.09.2020</td>
+      <td>jeder Begriff wurde als “Tag” gesucht, mehrere Tags wurden mit “or” verbunden]</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h1 id="noch-ein-wichtiger-tipp-von-einem-grossmeister">noch ein wichtiger Tipp von einem Grossmeister</h1>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia71.png" alt="" /></p>
+
+<hr />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYwXMnC03I4?start=44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<h1 id="zusammenfassung">Zusammenfassung</h1>
+
+<ul>
+  <li>CodingLiteracy: Programmieren wird für alle immer wichtiger</li>
+  <li>Ein Programmieransatz hat gegenüber den GUI Ansatz viele Vorteile
+    <ul>
+      <li>Automatisierung von repetitiven Tasks</li>
+      <li>Übertragbarkeit von erarbeiteten Lösungen</li>
+      <li>Flexibilität / Power</li>
+      <li>Besseres Verständnis der zu Grunde legenden Funktionen</li>
+      <li>Kollaborationsmöglichkeit</li>
+      <li>Möglichkeiten Hilfestellungen zu bekommen</li>
+      <li>Reproduzierbarkeit</li>
+    </ul>
+  </li>
+  <li>R und Python sind eine gute Wahl für
+    <ul>
+      <li>Einsteiger</li>
+      <li>Arbeiten im Bereich GIS /DataScience</li>
+    </ul>
+  </li>
+  <li>Die Einrichtung der Programmierumgebung ist die erste grosse Hürde</li>
+</ul>
+
+<hr />
+
+<p>???
+Tiobe: Ranking von Programmiersprachen nach ihrer Popularität. ​
+Der Listenplatz jeder Sprache ergibt sich aus der Häufigkeit von Treffern bei einer Suche nach dem Namen der Programmiersprache in den, gemäß Alexa Internet, wichtigsten Internetseiten mit Suchfunktion.[​</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_2.png” width = 100%&gt;</p>
+
+<p>???</p>
+
+<h2 id="programmiersprache-c-1">Programmiersprache C</h2>
+<p>&lt;img src=”img/tiobe_3.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache Java</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_4.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache Python</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_5.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache C++</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_6.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache C#</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_7.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache Visual Basic</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_8.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache JavaScript</p>
+
+<hr />
+<p>&lt;img src=”img/tiobe_9.png” width = 100%&gt;
+???</p>
+
+<p>Programmiersprache R</p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style="width: 50%" />
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style="width: 50%" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" style="width: 50%" /></p>
+
+<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia54.png) -->
+
+<!-- Mathematik für UI 2
+
+Mathematik für UI 1 -->
+
+<hr />
+<p>template: themen
+class: fourth</p>
+
+<!-- <style>
+  li.fourth {color: red;}
+</style> -->
+<hr />
+<p>layout: true</p>
+
+<h1 id="die-erste-grosse-hürde-programmierumgebung-1">Die erste grosse Hürde: Programmierumgebung</h1>
+
+<hr />
+
+<ul>
+  <li>Welche Python Version?</li>
+  <li>Welche Entwicklungsumgebung (“IDE”)?</li>
+  <li>Welche Module?</li>
+  <li>Welcher Package Manager?</li>
+</ul>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" style="width: 50%" /></p>
+
+<p>???</p>
+
+<p>Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Einrichten der Programmierumgebung. ​</p>
+
+<p>​</p>
+
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia56.jpg'); background-repeat: no-repeat; background-size: 90%; height: 1000px; position: relative;">
+
+</div>
+
+<p>.footnote[.smaller-textsize[Quelle: <a href="https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge">canadianliving.com</a>]]</p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia57.jpg" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" width="100%" /></p>
+
+<!-- <div style = "background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia61b.jpg'); background-repeat: no-repeat; border-radius: 100%; height: 250px; width: 250px; position: relative;"></div> -->
+
+<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia58.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia59.jpg)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia60.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia61.jpg)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia62.png)
+
+![](img/AGI_HS20_02_Coding_in_GIS_Ia63.png)
+
+-->
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="showcases-1">Showcases</h2>
+
+<hr />
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia64.gif" alt="" /></p>
+
+<p>.footnote[.smaller-textsize[Quelle: <a href="https://www.tucsonweekly.com/TheRange/archives/2016/02/11/weve-got-gravitational-waves">tucsonweekly.com</a>]]</p>
+
+<p>???</p>
+
+<p>Erstes Beispiel:​ Am 14. September 2015 hat der Gravitationswellendetektor LIGO die erste Graviationswelle aus der verschmelzung zweier schwarzer Löcher detekteirt. ​</p>
+
+<hr />
+
+<p>.pull-left[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia65.png" width="100%" />
+]</p>
+
+<p>.pull-right[
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" width="100%" />
+]</p>
+
+<p>.footnote[Code auf <a href="https://github.com/minrk/ligo-binder">Github</a> verfübar]</p>
+
+<p>???</p>
+
+<p>Auch hier wurde Python mit Matplotlib genutzt und nicht nur das: die Datenanalyse wurde innerhalb eines Jupyter Notebooks festgehalten. 
+Mit Anacona habt ihr nun Jupyter Notebooks ebenfalls installiert und könntet nun die Daten ruterladen und bei euch lokal ausführen. ​</p>
+
+<hr />
+
+<div class="center">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia67.jpg" width="70%" />
+</div>
+
+<p>???</p>
+
+<p>Am 10.4.2019 wurde das erste Bild von einem schwarzen Loch, generiert durch das Event Horzon Teleskop (EHT) vorgestelllt.​</p>
+
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+</div>
+
+<p>???</p>
+
+<p>Dabei kursierte ebenfalls dieses Bild von Katie Bourman, eine der Wissenschaftlerinnen des EHT-Teams im internet.​
+Was man hier auf ihrem Bildschirm sieht ist offensichtlich die eben erstellte Visualisierung des schwarzen Loches – erstellt mit Matplotlib, wie an den Achsen zu erkennen ist. Der Code ist übrigens öffentlich einsehbar​</p>
+
+<hr />
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia68.png" style="position: absolute; top: 200px; left: 100px;width: 400px;" />
+  </div>
+<hr />
+
+<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia68.png" style="position: absolute; top: 200px; left: 100px; width: 400px;" />
+  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" style="position: absolute; top: 000px; left: 630px; width: 200px;" />
+  </div>
+
+<p>.footnote[Code auf <a href="https://github.com/achael/eht-imaging">Github</a> verfübar]</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="programmierumgebung-1">Programmierumgebung</h2>
+
+<hr />
+
+<p>Diese Tools:</p>
+
+<ul>
+  <li>gelten als “bestpractice” und “state of the art”</li>
+  <li>sind alle “Free and Open Source”</li>
+  <li>werden aktiv weiter entwickelt</li>
+  <li>werden von einer <strong>grossen</strong> Community genutzt und unterstützt (stackoverflow/github)</li>
+</ul>
+
+<p>Was heisst das für euch?</p>
+
+<ul>
+  <li>Wir verlassen die ESRI / ArcGIS Welt</li>
+  <li>Wir lernen eine neue IDE kennen (JupyterLab)</li>
+  <li>Wir lernen einen “packagemanager” kennen (Conda)</li>
+</ul>
+
+<hr />
+
+<p>Anzahl Fragen aufStackoverflowzum jeweiligen Thema</p>
+
+<p>&lt;img src=”img/so_tags.jpg” width=100%&gt;</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>.footnote[Quelle: stackoverflow.com</td>
+      <td>Abgerufen am 22.09.2020</td>
+      <td>jeder Begriff wurde als “Tag” gesucht, mehrere Tags wurden mit “or” verbunden]</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h1 id="noch-ein-wichtiger-tipp-von-einem-grossmeister-1">noch ein wichtiger Tipp von einem Grossmeister</h1>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia71.png" alt="" /></p>
+
+<hr />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vYwXMnC03I4?start=44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<hr />
+
+<h1 id="zusammenfassung-1">Zusammenfassung</h1>
+
+<ul>
+  <li>CodingLiteracy: Programmieren wird für alle immer wichtiger</li>
+  <li>Ein Programmieransatz hat gegenüber den GUI Ansatz viele Vorteile
+    <ul>
+      <li>Automatisierung von repetitiven Tasks</li>
+      <li>Übertragbarkeit von erarbeiteten Lösungen</li>
+      <li>Flexibilität / Power</li>
+      <li>Besseres Verständnis der zu Grunde legenden Funktionen</li>
+      <li>Kollaborationsmöglichkeit</li>
+      <li>Möglichkeiten Hilfestellungen zu bekommen</li>
+      <li>Reproduzierbarkeit</li>
+    </ul>
+  </li>
+  <li>R und Python sind eine gute Wahl für
+    <ul>
+      <li>Einsteiger</li>
+      <li>Arbeiten im Bereich GIS /DataScience</li>
+    </ul>
+  </li>
+  <li>Die Einrichtung der Programmierumgebung ist die erste grosse Hürde</li>
+</ul>
+
+<hr />
+
+<p>template: zeitplan</p>
+:ET

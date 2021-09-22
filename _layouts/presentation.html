@@ -7,14 +7,16 @@
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-      body { font-family: 'Yanone Kaffeesatz';  }
+      body { font-family: 'Roboto';  }
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
+      /* creates xaringan pull-righta and pull left classes */
       .pull-left {
         float: left;
         width: 47%;
@@ -22,6 +24,11 @@
       .pull-right {
         float: right;
         width: 47%;
+      }
+
+      /* makes all images scale to 100% */
+      img{
+        width: 100%;
       }
     </style>
 
@@ -76,7 +83,8 @@
     .second #second, 
     .first #first, 
     .third #third,
-    .fourth #fourth{
+    .fourth #fourth,
+    .fifth #fifth{
       color: hotpink;
     }
     
@@ -97,7 +105,7 @@
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({highlightSpans: true, highlightLines: true});
     </script>
   </body>
 </html>

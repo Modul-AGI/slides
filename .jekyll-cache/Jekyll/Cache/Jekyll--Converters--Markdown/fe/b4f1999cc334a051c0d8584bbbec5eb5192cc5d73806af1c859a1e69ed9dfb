@@ -1,0 +1,645 @@
+I"�f<hr />
+
+<hr />
+<p>name: zeitplan</p>
+
+<h1 id="zeitplan">Zeitplan</h1>
+
+<p>.pure-table.pure-table-striped.smaller-font[
+| Uhrzeit       	| Dauer   	| Thema                                               	|
+|—————	|———	|—————————————————–	|
+| 13.00 – 13.30 	| 30      	| Einführung Coding in GIS                            	|
+| 13.30 – 13.45 	| 15      	| Einführung in die heutigen Übungen                  	|
+| 13.45 – 13.50 	| 5       	| Pause                                               	|
+| 13.50 – 14.00 	| 10      	| Demo                                                	|
+| 14.00 – 14.35 	| 35      	| Lösen Aufgabe 1 (<em>Primitive Datentypen</em>)            	|
+| 14.35 – 14.50 	| 15      	| Pause                                               	|
+| 14.50 – 15.00 	| 10      	| Besprechung Aufgabe 1 / Lösungen aufschalten        	|
+| 15.00 – 15.35 	| 35      	| Lösen Aufgabe 2 (<em>Listen</em>)                          	|
+| 15.35 – 15.50 	| 15      	| Pause                                               	|
+| 15.50 – 16.00 	| 10      	| Besprechung Aufgabe 2 / Lösungen aufschalten        	|
+| 16.00 – 16.25 	| 25      	| Lösen Aufgabe 3 (<em>Dictionaries</em>)                    	|
+| 16.25 – 16.35 	| 10      	| Zusammenfassung + Abschluss / Lösungen aufschalten  	|
+| Zuhause       	| 30 - 45 	| Lösen bis und mit Aufgabe 4 (<em>Tabellarische Daten</em>) 	|
+]</p>
+
+<hr />
+<h1 id="lernziele">Lernziele</h1>
+
+<ul>
+  <li>Ihr wisst was Python Erweiterungen / Module sind und wie man sie installiert</li>
+  <li>Ihr kennt das Konzept von Conda Environments</li>
+  <li>Ihr wisst was eine <em>Working Directory</em> ist und könnt diese abfragen und setzen</li>
+</ul>
+
+<hr />
+<p>name: themen
+layout: true</p>
+
+<h1 id="themen">Themen</h1>
+
+<ul>
+  <li id="first">Python Erweiterungen / Module</li>
+  <li id="second">Virtual Environments</li>
+  <li id="third">Conda</li>
+  <li id="fourth">Condamit ArcGIS</li>
+  <li id="fifth">Leistungsnachweis</li>
+</ul>
+
+<hr />
+<p>template: themen
+class: first</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="python-erweiterungen--module">Python Erweiterungen / Module</h1>
+
+<hr />
+
+<p><img src="img/virtual-env.png" alt="" /></p>
+
+<hr />
+<p>layout: true</p>
+<h1 id="virtual-environment">Virtual Environment</h1>
+
+<hr />
+
+<p>Ohne Virtual Environments:</p>
+
+<p>.center[<img src="img/virtual-env-2.png" alt="" />]</p>
+
+<p>.center[Alles wird an einem zentralen Ort installiert]</p>
+
+<hr />
+
+<p>mit Virtual Environments</p>
+
+<p>.center[<img src="img/virtual-env3.png" alt="" />]</p>
+
+<p>.center[unabhängige, wiederverwenbare Umgebungen]</p>
+
+<p>???</p>
+
+<ul>
+  <li>Verschiedene “Umgebungen» die​
+    <ul>
+      <li>voneinander unabhängig sind​</li>
+      <li>wiederverwendbar sind</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Davon gibt es in Python 3 verschiedene Implementationen:​
+  “Virtualenv”
+  “pipenv”
+  “Conda Environment”</p>
+
+<p>Wir werden nur “conda» kennen lernen​</p>
+
+<hr />
+<p>template: themen
+class: third</p>
+
+<hr />
+<h1 id="conda">Conda</h1>
+
+<ul>
+  <li>Was kann <em>Conda</em>
+    <ul>
+      <li>Erstellen und verwalten von <em>Virtual Environments</em></li>
+      <li>Installation von Erweiterungen (<em>Python Modules</em>)</li>
+    </ul>
+  </li>
+  <li>Wie nutzt man <em>Conda</em>?
+    <ul>
+      <li>Schritt 1: Software herunterladen und installieren</li>
+      <li>Schritt 2: Systemvariable setzen falls nötig</li>
+      <li>Schritt 3: eine <em>Virtual Environment</em> erstellen</li>
+      <li>Schritt 4: die <em>Virtual Environment</em> aktivieren</li>
+      <li>Schritt 5: Modul installieren</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="schritt-1-software-herunterladen-und-installieren">Schritt 1: Software herunterladen und installieren</h2>
+
+<p><em>conda</em> wird in zwei verschiedenen Varianten angeboten:</p>
+
+<ul>
+  <li><em>Miniconda</em>:
+    <ul>
+      <li>nur das Programm <em>conda</em></li>
+      <li>ohne grafisches User Interface</li>
+      <li>klein (50 – 100mb)</li>
+      <li>wird mit ArcGIS Pro mitgeliefert</li>
+    </ul>
+  </li>
+  <li><em>Anaconda</em>:
+    <ul>
+      <li>das Programm <em>conda</em></li>
+      <li>inkl. häufig genutzt Modules</li>
+      <li>inkl. einem Grafisches User Interface</li>
+      <li>gross (300 – 500 MB)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="schritt-2-systemvariable-setzen-falls-nötig">Schritt 2: Systemvariable setzen (falls nötig)</h2>
+
+<hr />
+
+<ul>
+  <li>Conda wird von der <strong>Konsole</strong> bedient</li>
+  <li>Dafür muss die Konsole wissen, wo das Programm installiert ist</li>
+  <li>
+    <h2 id="dies-wird-folgendermassen-überprüft">Dies wird folgendermassen überprüft:</h2>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="konsole-starten-widowstastecmd">Konsole starten (Widowstaste+cmd)</h2>
+  </li>
+  <li>Folgendes eingeben:</li>
+</ol>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+</code></pre></div></div>
+<p>–</p>
+<ol>
+  <li>Versionsnummer ☺ / Error ☹</li>
+</ol>
+
+<hr />
+
+<ul>
+  <li>Wird ein Programm in der Konsole aufgerufen, wird nach diesem Programm in verschiedenen Ordnern gesucht</li>
+  <li>Welche Ordner dies sind, wird in den Umgebungvariablen festgehalten</li>
+  <li>Wir müssen den <code class="language-plaintext highlighter-rouge">conda</code>-Pfad also ausfindig machen und in den Umgebungsvariabeln festhalten</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>Wenn ihr auf Windows arbeitet und ArcGIS installiert habt, istcondavermutlich hier installiert:</li>
+  <li><code class="language-plaintext highlighter-rouge">C:\Program Files\ArcGIS\Pro\bin\Python\Scripts</code></li>
+</ul>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II23.png” width = 80%&gt;</p>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II24.png” width = 75%&gt;</p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II25.png" /></p>
+
+<hr />
+
+<ul>
+  <li>Nun sollte <em>conda</em> betriebsbereit sein</li>
+  <li>Konsole starten (cmd):</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">conda</span> <span class="mf">4.3</span><span class="o">.</span><span class="mi">27</span>      <span class="c1"># &lt; kann auch variieren</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Wenn dies Funktioniert, können wir eine erste <em>conda environment</em> erstellen</li>
+</ul>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="schritt-3--conda-environment-erstellen">Schritt 3:  Conda environment erstellen</h2>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="nb">name</span> <span class="n">codingingis</span>
+</code></pre></div></div>
+
+<hr />
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`conda`</span> <span class="n">create</span> <span class="o">--</span><span class="nb">name</span> <span class="n">codingingis</span>
+</code></pre></div></div>
+<p>Ruft das Programm <em>conda</em> auf</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="sb">`create`</span> <span class="o">--</span><span class="nb">name</span> <span class="n">codingingis</span>
+</code></pre></div></div>
+<p>Ruft den Befehl <em>create</em> auscondaauf</p>
+
+<p>Der <em>create</em> Befehl erstellt eben diese neue Environment in einem Standartverzeichnis</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">create</span> <span class="sb">`--name`</span> <span class="n">codingingis</span>
+</code></pre></div></div>
+
+<p>Kündigt an, dass gleich der Name der neuen Umgebung definiert wird</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="nb">name</span> <span class="sb">`codingingis`</span>
+</code></pre></div></div>
+
+<p>Bestimmt, das der Name der neuen Umgebung <em>codingingis</em> lauten soll</p>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II26.png” width = 80%&gt;</p>
+
+<ul>
+  <li>Speicherort: <code class="language-plaintext highlighter-rouge">C:\Users\rata\AppData\Local\ESRI\conda</code></li>
+  <li>Mit <code class="language-plaintext highlighter-rouge">y</code> bestätigen</li>
+</ul>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II27.png” width = 100%&gt;</p>
+
+<hr />
+<p>layout: true</p>
+
+<h2 id="schritt-4-environment-aktivieren">Schritt 4: Environment aktivieren</h2>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">activate</span> <span class="n">codingingis</span>
+</code></pre></div></div>
+<ul>
+  <li>Aktiviert die Environment mit dem Namen <code class="language-plaintext highlighter-rouge">codingingis</code></li>
+</ul>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II28.png” width = 100%&gt;</p>
+
+<hr />
+<p>layout: true</p>
+<h2 id="schritt-5-modul-installieren">Schritt 5: Modul installieren</h2>
+
+<hr />
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II29.png” width = 100%&gt;</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Befehl um <em>pandas</em> zu installieren</li>
+  <li>Findet man über eine kurze websuche</li>
+</ul>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`conda`</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>
+</code></pre></div></div>
+
+<ul>
+  <li>ruft das Programm <em>conda</em> auf</li>
+</ul>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="sb">`install`</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>
+</code></pre></div></div>
+
+<ul>
+  <li>ruft den Befehl <em>install</em> in Condaauf</li>
+</ul>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="sb">`-c`</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>
+</code></pre></div></div>
+
+<ul>
+  <li>gibt an, dass jetzt gleich der <em>Channel</em> (i.e. das <em>Repository</em>) angegeben wird</li>
+</ul>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="sb">`conda-forge`</span> <span class="n">pandas</span>
+</code></pre></div></div>
+
+<ul>
+  <li>ist der Name des <em>channels</em></li>
+</ul>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="sb">`pandas`</span>
+</code></pre></div></div>
+
+<ul>
+  <li>der Name des Moduls</li>
+</ul>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II30.png” width = 100%&gt;</p>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II31.png” width = 100%&gt;</p>
+
+<hr />
+
+<p>Für Coding in GIS I – III brauchen wir folgende Module:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">jupyterlab</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pandas</code></li>
+  <li><code class="language-plaintext highlighter-rouge">matplotlib</code></li>
+  <li><code class="language-plaintext highlighter-rouge">geopandas</code></li>
+  <li><code class="language-plaintext highlighter-rouge">descartes</code></li>
+</ul>
+
+<p>Immer nach dem gleichen Syntax:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="sb">`pandas`</span> <span class="c1"># &lt; Modul-Name jeweils ersetzen</span>
+</code></pre></div></div>
+
+<p>Sobald jupyterlab installiert ist, könnt ihr die Anwendung mit folgendem Befehl in die Konsole starten:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jupyter</span> <span class="n">lab</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II32.png” width = 100%&gt;</p>
+
+<hr />
+<p>layout: false</p>
+
+<h2 id="modul-importieren">Modul Importieren</h2>
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II33.png” width = 100%&gt;</p>
+
+<p>zB  <code class="language-plaintext highlighter-rouge">import  pandas</code></p>
+
+<hr />
+<h2 id="working-directory">Working Directory</h2>
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II34.png” width = 100%&gt;</p>
+
+<ul>
+  <li>wo die Pythonscripts / Notebooks sind</li>
+  <li>Ist v.a. beim einlesen / ausgeben von Dateien wichtig</li>
+  <li>kann mit <code class="language-plaintext highlighter-rouge">os.getcwd()</code> ermittelt werden</li>
+</ul>
+
+<hr />
+<h2 id="warum-verbringen-wir-so-viel-zeit-mit-conda">Warum verbringen wir so viel Zeit mit <code class="language-plaintext highlighter-rouge">conda</code>?</h2>
+
+<ul>
+  <li>Der sichere Umgang mit Conda ist eine gute Basis für eine harmonische Python-Beziehung</li>
+  <li>Conda wird in vielen Python Kursen / Tutorials vorausgesetzt und unzureichend erklärt</li>
+  <li>Mit conda können wir zwei Welten miteinander Verbinden</li>
+</ul>
+
+<p>–</p>
+
+<p><img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class="pull-left" />
+<img src="img/AGI_HS19_06_Coding_in_GIS_II38.png" class="pull-right" /></p>
+
+<hr />
+<p>template: themen
+class: fourth</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="conda-mit-arcgis">Conda mit ArcGIS</h1>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II42.png” width = 100%&gt;</p>
+
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II43.png” width = 50%&gt;</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arcpy</span><span class="p">.</span><span class="n">analysis</span><span class="p">.</span><span class="n">SummarizeWithin</span><span class="p">(</span><span class="s">"Wald_NichtWald"</span><span class="p">,</span> 
+  <span class="s">"Tick_Original"</span><span class="p">,</span>
+  <span class="sa">r</span><span class="s">"C:\unsicherheit.gdb\summary"</span><span class="p">,</span> 
+  <span class="s">"KEEP_ALL"</span><span class="p">,</span> 
+  <span class="bp">None</span><span class="p">,</span> 
+  <span class="s">"ADD_SHAPE_SUM"</span><span class="p">,</span> 
+  <span class="s">''</span><span class="p">,</span> 
+  <span class="bp">None</span><span class="p">,</span> 
+  <span class="s">"NO_MIN_MAJ"</span><span class="p">,</span> 
+  <span class="s">"NO_PERCENT"</span><span class="p">,</span> 
+  <span class="bp">None</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<hr />
+
+<p>&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II44.png” width = 100%&gt;</p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II45.png" alt="" /></p>
+
+<hr />
+
+<h2 id="img-src--imgagi_hs19_06_coding_in_gis_ii46png-width--70">&lt;img src = “img/AGI_HS19_06_Coding_in_GIS_II46.png” width = 70%&gt;</h2>
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II47.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II48.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II49.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II50.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II51.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II52.png" alt="" /></p>
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II53.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II54.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II55.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II56.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II57.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II58.png" alt="" /></p>
+
+<hr />
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II59.png" alt="" /></p>
+
+<hr />
+<p>template: themen
+class: fifth</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="leistungsnachweis">Leistungsnachweis</h1>
+
+<p>Gemeinsam kommende Woche (Coding in GIS III):</p>
+
+<ul>
+  <li>Monte Carlo Simulation mit den Zeckenstichdaten</li>
+  <li>Systematik gleich wie in <em>Datenqualität und Unsicherheit</em></li>
+  <li>Neu: Alles in Python (auch die Erstellung der Simulierten Daten)</li>
+</ul>
+
+<p><img src="img/process.png" alt="" /></p>
+
+<hr />
+
+<p>Eure Leistung:</p>
+
+<ul>
+  <li>Erstellen eines sauber kommentierten Reports</li>
+  <li>In JupyterLabs mit JupyterNotebook (Python und Markdown)</li>
+  <li>Experimentieren mit verschiedenen Radien</li>
+  <li>Visualisierung der Daten</li>
+</ul>
+
+<p><img src="img/AGI_HS19_06_Coding_in_GIS_II65.png" style="width: 75%" /></p>
+
+<hr />
+<p>template: zeitplan</p>
+
+<hr />
+<p>layout: true</p>
+
+<h1 id="keep-your-code-tidy">Keep your code tidy!</h1>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">padnas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+
+<span class="err">​</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+
+<span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span><span class="err">​</span>
+
+<span class="kn">import</span> <span class="nn">os</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.txt"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.txt"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="kn">import</span> <span class="nn">padnas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+
+<span class="err">​</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="o">*</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+
+<span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span><span class="err">​</span>
+
+<span class="o">*</span><span class="kn">import</span> <span class="nn">os</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.txt"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.txt"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>???</p>
+
+<p>Alle “import» befehle zu beginn des scripts​</p>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="kn">import</span> <span class="nn">padnas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+<span class="o">*</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+<span class="o">*</span><span class="kn">import</span> <span class="nn">os</span><span class="err">​</span>
+
+<span class="err">​</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+
+<span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span><span class="err">​</span>
+
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.txt"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.txt"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="kn">import</span> <span class="nn">padnas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="err">​</span>
+
+<span class="err">​</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+
+<span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span><span class="err">​</span>
+
+
+<span class="o">*</span><span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="o">*</span><span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"Zeckenstiche.txt"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.txt"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>???</p>
+
+<p>Code-Zeilen, die Nicht funktinoieren auskommentieren oder löschen​</p>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span><span class="err">​</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="err">​</span>
+
+<span class="o">*</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.csv"</span><span class="p">)</span><span class="err">​</span>
+
+<span class="o">*</span><span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span><span class="err">​</span>
+
+<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"zeckenstiche.txt"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>???</p>
+
+<p>Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​</p>
+:ET

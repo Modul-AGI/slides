@@ -1,616 +1,649 @@
-BScUmweltingenieurwesen
+---
+layout: presentation
+title: Default Presentation
+permalink: /Coding_in_GIS_II/
+# I'm using ruby instad of bash because of https://github.com/gnab/remark/issues/658
+---
 
-AngewandteGeoinformatik | HS 2020
+<div class = "titleslide">
+<h3 class = "title-header" style = "top: 20%;"> 
+  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
+</h3>
 
-# Coding in GIS II
+<h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
 
-# Nils Ratnaweera
-Forschungsgruppe Geoinformatik
- 
-Institut für Umwelt und Natürliche Ressourcen	
-ZHAW Zürcher Hochschule für Angewandte Wissenschaften
-Grüental, Postfach, CH-8820 Wädenswil
- 
-rata@zhaw.ch
-
-![](img/AGI_HS19_06_Coding_in_GIS_II0.png)
+<div class = "title-header title-bottom" style = "width: 20%">
+  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+</div>
+<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
+  Nils Ratnaweera<br>
+  Forschungsgruppe Geoinformatik<br>
+  <br>
+  Institut für Umwelt und Natürliche Ressourcen	<br>
+  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
+  Grüental, Postfach, CH-8820 Wädenswil<br>
+  <br>
+  rata@zhaw.ch
+</div>
+---
+name: zeitplan 
 
 # Zeitplan
 
+.pure-table.pure-table-striped.smaller-font[
+| Uhrzeit       	| Dauer   	| Thema                                               	|
+|---------------	|---------	|-----------------------------------------------------	|
+| 13.00 – 13.30 	| 30      	| Einführung Coding in GIS                            	|
+| 13.30 – 13.45 	| 15      	| Einführung in die heutigen Übungen                  	|
+| 13.45 – 13.50 	| 5       	| Pause                                               	|
+| 13.50 – 14.00 	| 10      	| Demo                                                	|
+| 14.00 – 14.35 	| 35      	| Lösen Aufgabe 1 (*Primitive Datentypen*)            	|
+| 14.35 – 14.50 	| 15      	| Pause                                               	|
+| 14.50 – 15.00 	| 10      	| Besprechung Aufgabe 1 / Lösungen aufschalten        	|
+| 15.00 – 15.35 	| 35      	| Lösen Aufgabe 2 (*Listen*)                          	|
+| 15.35 – 15.50 	| 15      	| Pause                                               	|
+| 15.50 – 16.00 	| 10      	| Besprechung Aufgabe 2 / Lösungen aufschalten        	|
+| 16.00 – 16.25 	| 25      	| Lösen Aufgabe 3 (*Dictionaries*)                    	|
+| 16.25 – 16.35 	| 10      	| Zusammenfassung + Abschluss / Lösungen aufschalten  	|
+| Zuhause       	| 30 - 45 	| Lösen bis und mit Aufgabe 4 (*Tabellarische Daten*) 	|
+]
+
+---
 # Lernziele
 
-![](img/AGI_HS19_06_Coding_in_GIS_II1.png)
-
 * Ihr wisst was Python Erweiterungen / Module sind und wie man sie installiert
-* Ihr kennt das Konzept vonCondaEnvironments
-* Ihr wisst was eine «Working Directory» ist und könnt diese abfragen und setzen
+* Ihr kennt das Konzept von Conda Environments
+* Ihr wisst was eine *Working Directory* ist und könnt diese abfragen und setzen
 
-# Heute
+---
+name: themen
+layout: true
 
-__Python Erweiterungen / Module__
+# Themen
 
-Virtual Environments
+<ul>
+  <li id = "first">Python Erweiterungen / Module</li>
+  <li id = "second">Virtual Environments</li>
+  <li id = "third">Conda</li>
+  <li id = "fourth">Condamit ArcGIS</li>
+  <li id = "fifth">Leistungsnachweis</li>
+</ul>
 
-Conda
+---
+template: themen
+class: first
 
-Condamit ArcGIS
-
-Leistungsnachweis
+---
+layout: true
 
 # Python Erweiterungen / Module
 
-<span style="color:#00B0F0">Erweiterung aus einem</span>
+---
 
-<span style="color:#00B0F0">Reposoritory</span>  <span style="color:#00B0F0"> _installieren_ </span>
+![](img/virtual-env.png)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II2.jpg)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II3.png)
+---
+template: themen
+class: second
 
-![](img/AGI_HS19_06_Coding_in_GIS_II4.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II5.jpg)
-
-<span style="color:#00B0F0">Erweiterung Laden</span>
-
-Spezialisten/innen
-
-Projekt «Haus bauen»
-
-![](img/AGI_HS19_06_Coding_in_GIS_II6.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II7.png)
-
-# Heute
-
-Python Erweiterungen / Module
-
-__Virtual Environment__
-
-Conda
-
-Condamit ArcGIS
-
-Leistungsnachweis
-
+---
+layout: true
 # Virtual Environment
 
-Ohne Virtual Environments:
+---
 
-Alles wird an einem zentralen Ort installiert
+ohne Virtual Environments:
 
-Viele Erweiterungen
+.center[![](img/virtual-env-2.png)]
 
-![](img/AGI_HS19_06_Coding_in_GIS_II8.png)
+.center[Alles wird an einem zentralen Ort installiert]
 
-![](img/AGI_HS19_06_Coding_in_GIS_II9.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II10.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II11.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II12.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II13.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II14.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II15.png)
+---
 
 mit Virtual Environments
 
-Verschiedene «Umgebungen» die
+.center[![](img/virtual-env3.png)]
 
-voneinanderunabhängigsind
+.center[unabhängige, wiederverwenbare Umgebungen]
 
-wiederverwendbarsind
+???
 
-Viele Erweiterungen
+davon gibt es in Python 3 verschiedene Implementationen:​
+- "Virtualenv"
+- "pipenv"
+- "Conda Environment"
 
-![](img/AGI_HS19_06_Coding_in_GIS_II16.png)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II17.jpg)
+---
+template: themen
+class: third
 
-![](img/AGI_HS19_06_Coding_in_GIS_II18.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II19.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II20.png)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II21.jpg)
-
-![](img/AGI_HS19_06_Coding_in_GIS_II22.png)
-
-# Heute
-
-Python Erweiterungen / Module
-
-Virtual Environment
-
-__Conda__
-
-Condamit ArcGIS
-
-Leistungsnachweis
-
+---
+layout: false
 # Conda
 
-* Was kann «Conda»?
-  * Erstellen und verwalten von «Virtual Environments»
-  * Installation von Erweiterungen («Python Modules»)
-* Wie nutzt man «Conda»?
-  * Schritt 1: Software herunterladen und installieren
-  * Schritt 2: Systemvariable setzen falls nötig
-  * Schritt 3: eine «Virtual Environment» erstellen
-  * Schritt 4: die «Virtual Environment» aktivieren
+
+
+- Was kann *Conda*
+  * Erstellen und verwalten von *Virtual Environments*
+  * Installation von Erweiterungen (*Python Modules*)
+
+- Wie nutzt man *Conda*?
+  * ~~Schritt 1: Software herunterladen und installieren~~
+  * Schritt 2: Systemvariable setzen (falls nötig)
+  * Schritt 3: eine *Virtual Environment* erstellen
+  * Schritt 4: die *Virtual Environment* aktivieren
   * Schritt 5: Modul installieren
 
-* __Schritt 1: Software herunterladen und installieren__
-* _conda_ wird in zwei verschiedenen Varianten angeboten:
-  * «Miniconda»:
-    * nur das Programm _conda_
-    * Ohne grafisches User Interface
-    * Klein (50 – 100mb)
-    * Wird mit ArcGIS Pro mitgeliefert
-  * «Anaconda»:
-    * Das Programm _conda_
-    * Inkl. häufig genutzt Modules
-    * Inkl. einem Grafisches User Interface
-    * Gross (300 – 500 MB)
+---
 
-* __Schritt 2: Systemvariable setzen falls nötig__
-* Condaist ein Programm, welches von der Kommandozeile aus bedient wird (cmdin Windows)
+## Schritt 1: Software herunterladen und installieren
+
+_conda_ wird in zwei verschiedenen Varianten angeboten:
+
+* *Miniconda*:
+  * nur das Programm _conda_
+  * ohne grafisches User Interface
+  * klein (50 – 100mb)
+  * **wird mit ArcGIS Pro mitgeliefert**
+* *Anaconda*:
+  * das Programm _conda_
+  * inkl. häufig genutzt Modules
+  * inkl. einem Grafisches User Interface
+  * gross (300 – 500 MB)
+
+---
+layout: true
+
+## Schritt 2: Systemvariable setzen (falls nötig)
+
+---
+
+* Conda wird von der **Konsole** bedient
 * Dafür muss die Konsole wissen, wo das Programm installiert ist
-* Um zu prüfen, ob dies der Fall ist kann folgendermassen getestet werden:
-  * Konsole starten (Widowstaste+cmd)
-  * Folgendes eingeben:conda–version
-  * Versionsnummer / Error 
+* Dies wird folgendermassen überprüft:
+--
 
-__Schritt 2: Systemvariable setzen falls nötig__
+1. Konsole starten (Widowstaste+cmd)
+--
 
-Wird ein Programm in der Konsole aufgerufen, wird nach diesem Programm in verschiedenen Ordnern gesucht
+2. Folgendes eingeben: `conda --version`
+--
 
-Welche Ordner dies sind, wird in derUmgebungvariablenfestgehalten
+3. Versionsnummer ☺ / Error ☹
 
-Wir müssen denconda-Pfad also ausfindig machen und in denUmgebungsvariabelnfesthalten
+---
 
-__Schritt 2: Systemvariable setzen falls nötig__
+- Wird ein Programm in der Konsole aufgerufen, wird nach diesem Programm in verschiedenen Ordnern gesucht
+- Welche Ordner dies sind, wird in den Umgebungvariablen festgehalten
+- Wir müssen den `conda`-Pfad also ausfindig machen und in den Umgebungsvariabeln festhalten
 
-Wenn ihr auf Windows arbeitet und ArcGIS installiert habt, istcondavermutlich hier installiert:
+---
 
-C:\Program Files\ArcGIS\Pro\bin\Python\Scripts
+- Wenn ihr auf Windows arbeitet und ArcGIS installiert habt, ist conda vermutlich hier installiert:
+- `C:\Program Files\ArcGIS\Pro\bin\Python\Scripts`
 
-__Schritt 2: Systemvariable setzen falls nötig__
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II23.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
 
-__Schritt 2: Systemvariable setzen falls nötig__
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II24.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
 
-__Schritt 2: Systemvariable setzen falls nötig__
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II25.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
 
-__Schritt 2: Systemvariable setzen falls nötig__
+---
 
-Nun sollte «conda» betriebsbereit sein
 
-Konsole starten (cmd):>>conda--versionconda4.3.27
+- Nun sollte *conda* betriebsbereit sein
+- Konsole starten (cmd):
 
-Wenn dies Funktioniert, können wir eine erste «condaenvironment» erstellen
+```ruby
+conda --version
+conda 4.3.27      # < kann auch variieren
+```
 
-__Schritt 3:__  __Conda__  __environment__  __erstellen__
 
-condacreate--namecodingingis
+- Wenn dies Funktioniert, können wir eine erste *conda environment* erstellen
 
-__Schritt 3:__  __Conda__  __environment__  __erstellen__
+---
+layout: true
 
-<span style="color:#FF0000">conda</span> create--namecodingingis
+## Schritt 3:  Conda environment erstellen
 
-Ruft das Programm «conda» auf
+---
 
-__Schritt 3:__  __Conda__  __environment__  __erstellen__
 
-conda <span style="color:#FF0000">create</span> --namecodingingis
+```ruby
+conda create --name codingingis
+```
 
-Ruft den Befehl «create» auscondaauf
+---
+```ruby
+`conda` create --name codingingis
+```
+Ruft das Programm *conda* auf
 
-Der «create» Befehl erstellt eben diese neue Environment in einem Standartverzeichnis
+---
 
-__Schritt 3:__  __Conda__  __environment__  __erstellen__
 
-condacreate <span style="color:#FF0000">--name</span> codingingis
+```ruby
+conda `create` --name codingingis
+```
+Ruft den Befehl *create* auscondaauf
+
+Der *create* Befehl erstellt eben diese neue Environment in einem Standartverzeichnis
+
+---
+
+```ruby
+conda create `--name` codingingis
+```
 
 Kündigt an, dass gleich der Name der neuen Umgebung definiert wird
 
-__Schritt 3:__  __Conda__  __environment__  __erstellen__
+---
 
-condacreate--name <span style="color:#FF0000">codingingis</span>
+```ruby
+conda create --name `codingingis`
+```
 
-Bestimmt, das der Name der neuen Umgebung «codingingis» lauten soll
+Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
 
-![](img/AGI_HS19_06_Coding_in_GIS_II26.png)
+---
 
-Speicherort: C:\Users\rata\AppData\Local\ESRI\conda
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
 
-Mit "y" bestätigen
+- Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
+- Mit `y` bestätigen
 
-![](img/AGI_HS19_06_Coding_in_GIS_II27.png)
+---
 
-__Schritt 4: Environment aktivieren__
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
 
-activatecodingingis
+---
+layout: true
 
-«Aktiviert» die Environment mit dem Namen «codingingis»
+## Schritt 4: Environment aktivieren
 
-![](img/AGI_HS19_06_Coding_in_GIS_II28.png)
+---
 
-__Schritt 5: Modul installieren__
+```ruby
+activate codingingis
+```
+- Aktiviert die Environment mit dem Namen `codingingis`
 
-![](img/AGI_HS19_06_Coding_in_GIS_II29.png)
+---
 
-__Schritt 5: Modul installieren__
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
 
+---
+layout: true
+## Schritt 5: Modul installieren
+
+
+---
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+
+---
+
+```ruby
 conda install -c conda-forge pandas
+```
 
-Befehl um «pandas» zu installieren
+- Befehl um *pandas* zu installieren
+- Findet man über eine kurze websuche
 
-Findet man über eine kurzeGooglesuche
+---
 
-__Schritt 5: Modul installieren__
 
-<span style="color:#FF0000">conda</span> install -c conda-forge pandas
+```ruby
+`conda` install -c conda-forge pandas
+```
 
-Ruft das Programm «conda» auf
+- ruft das Programm *conda* auf
 
-__Schritt 5: Modul installieren__
+---
 
-conda <span style="color:#FF0000">install</span> -c conda-forge pandas
 
-Ruft den Befehl «install» inCondaauf
+```ruby
+conda `install` -c conda-forge pandas
+```
 
-__Schritt 5: Modul installieren__
+- ruft den Befehl *install* in Condaauf
 
-conda install <span style="color:#FF0000">-c</span> conda-forge pandas
+---
 
-Gibt an, dass jetzt gleich der «Channel» angegeben wird
 
-Der Channel ist das «Repository»
+```ruby
+conda install `-c` conda-forge pandas
+```
 
-__Schritt 4: Modul installieren__
+- gibt an, dass jetzt gleich der *Channel* (i.e. das *Repository*) angegeben wird
 
-conda install -c <span style="color:#FF0000">conda-forge</span> pandas
+---
 
-Ist der Name des «channels»
+```ruby
+conda install -c `conda-forge` pandas
+```
 
-__Schritt 5: Modul installieren__
+- ist der Name des *channels*
 
-conda install -c conda-forge <span style="color:#FF0000">pandas</span>
+---
 
-Der Name des Moduls, dass man installieren möchte
+```ruby
+conda install -c conda-forge `pandas`
+```
 
-__Schritt 5: Modul installieren__
+- der Name des Moduls
 
-![](img/AGI_HS19_06_Coding_in_GIS_II30.png)
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II31.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
 
-* __Schritt 5: Modul installieren__
-* Für Coding in GIS I – III brauchen wir folgende Module:
-  * jupyterlab,pandas,matplotlib,geopandas,descartes
-  * Immer nach dem gleichen Syntax:condainstall-c conda-forge <span style="color:#FF0000">pandas</span>
-* Sobaldjupyterlabinstalliertist,könntihrdieAnwendungmitfolgendemBefehlin dieKonsolestarten:jupyterlab
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II32.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
 
-__Modul Importieren__
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II33.png)
+Für Coding in GIS I – III brauchen wir folgende Module:
+* `jupyterlab`
+* `pandas`
+* `matplotlib`
+* `geopandas`
+* `descartes`
 
-<span style="color:#FF0000">zB</span>  <span style="color:#FF0000">.</span>  <span style="color:#FF0000">import</span>  <span style="color:#FF0000">pandas</span>
+Immer nach dem gleichen Syntax:
 
-__Working Directory__
+```ruby
+conda install -c conda-forge `pandas` # < Modul-Name jeweils ersetzen
+```
 
-wo diePythonscripts/Notebooks sind
+Sobald jupyterlab installiert ist, könnt ihr die Anwendung mit folgendem Befehl in die Konsole starten:
 
-Ist v.a. beim einlesen / ausgeben von Dateien wichtig
+```ruby
+jupyter lab
+```
 
-kann mitos.getcwd()ermittelt werden
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II34.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
 
-__Warum verbringen wir so viel Zeit mit__  __conda__  __?__
+---
+layout: false
 
-Der sichere Umgang mitCondaist eine gute Basis für eine harmonische Python-Beziehung
+## Modul Importieren
 
-Conda(o.ä.) wird in vielen Python Kursen / Tutorials vorausgesetzt und unzureichend erklärt
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
 
-Mitcondakönnen wir zwei Welten miteinander Verbinden
+zB  `import  pandas`
 
-![](img/AGI_HS19_06_Coding_in_GIS_II35.png)
+---
+## Working Directory
 
-![](img/AGI_HS19_06_Coding_in_GIS_II36.jpg)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
 
-![](img/AGI_HS19_06_Coding_in_GIS_II37.jpg)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II38.png)
+- wo die Pythonscripts / Notebooks sind
+- Ist v.a. beim einlesen / ausgeben von Dateien wichtig
+- kann mit `os.getcwd()` ermittelt werden
 
-![](img/AGI_HS19_06_Coding_in_GIS_II39.png)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II40.png)
+---
+## Warum verbringen wir so viel Zeit mit `conda`?
 
-![](img/AGI_HS19_06_Coding_in_GIS_II41.png)
+- Der sichere Umgang mit Conda ist eine gute Basis für eine harmonische Python-Beziehung
+- Conda wird in vielen Python Kursen / Tutorials vorausgesetzt und unzureichend erklärt
+- Mit conda können wir zwei Welten miteinander Verbinden
 
-# Heute
+--
 
-Python Erweiterungen / Module
+<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
 
-Virtual Environment
 
-Conda
+---
+template: themen
+class: fourth
 
-__Conda__  __mit ArcGIS__
-
-Leistungsnachweis
+---
+layout: true
 
 # Conda mit ArcGIS
 
-![](img/AGI_HS19_06_Coding_in_GIS_II42.png)
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II43.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
-arcpy.analysis.SummarizeWithin("Wald_NichtWald", "Tick_Original",r"C:\unsicherheit.gdb\summary", "KEEP_ALL", None, "ADD_SHAPE_SUM", '', None, "NO_MIN_MAJ", "NO_PERCENT", None)
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II44.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+
+```python
+arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
+  "Tick_Original",
+  r"C:\unsicherheit.gdb\summary", 
+  "KEEP_ALL", 
+  None, 
+  "ADD_SHAPE_SUM", 
+  '', 
+  None, 
+  "NO_MIN_MAJ", 
+  "NO_PERCENT", 
+  None
+)
+```
+---
+
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
+
+---
+
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
 
-![](img/AGI_HS19_06_Coding_in_GIS_II46.png)
+---
+
+
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+---
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
 
+---
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
+
+---
+
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
 
+---
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
+
+---
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
 
+---
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
+
+
+
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
 
+---
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
+
+---
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
 
+---
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
+
+---
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
 
+
+---
+
+
 ![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
+
+---
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
 
-# Heute
+---
+template: themen
+class: fifth
 
-Python Erweiterungen / Module
-
-Virtual Environment
-
-Conda
-
-Condamit ArcGIS
-
-__Leistungsnachweis__
+---
+layout: true
 
 # Leistungsnachweis
 
 Gemeinsam kommende Woche (Coding in GIS III):
 
-Monte Carlo Simulation mit den Zeckenstichdaten
+- Monte Carlo Simulation mit den Zeckenstichdaten
+- Systematik gleich wie in *Datenqualität und Unsicherheit*
+- Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
 
-Systematik gleich wie in «Datenqualität und Unsicherheit»
 
-Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
+![](img/process.png)
 
-Zeckenstichmeldungen
+---
 
-![](img/AGI_HS19_06_Coding_in_GIS_II60.jpg)
+Eure Leistung: 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II61.jpg)
+- Erstellen eines sauber kommentierten Reports
+- In JupyterLabs mit JupyterNotebook (Python und Markdown)
+- Experimentieren mit verschiedenen Radien
+- Visualisierung der Daten
 
-![](img/AGI_HS19_06_Coding_in_GIS_II62.png)
+<img src = "img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
-Zufällig verteilen
+---
+template: zeitplan
 
-![](img/AGI_HS19_06_Coding_in_GIS_II63.png)
-
-Zeckenstiche _im_ Wald ermitteln
-
-Mittelwert /Verteilungder Anteile darstellen
-
-![](img/AGI_HS19_06_Coding_in_GIS_II64.png)
-
-Eure Leistung
-
-Erstellen eines geordneten, __kommentierten__ Reports
-
-InJupyterLabs mitJupyterNotebook (Python undMarkdown)
-
-Experimentieren mit verschiedenen Radien
-
-Visualisierung der Daten
-
-![](img/AGI_HS19_06_Coding_in_GIS_II65.png)
-
-# Zeitplan
-
-# 
-
-![](img/AGI_HS19_06_Coding_in_GIS_II66.png)
-
-__https://ratnanil.github.io/codingingis/__
+---
+layout: true
 
 # Keep your code tidy!
 
-importpadnasaspd
+---
 
-pd.read_csv("zeckenstiche.csv")
+```python
+import padnas as pd​
 
-importpandasaspd
+​pd.read_csv("zeckenstiche.csv")​
 
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
+import pandas as pd​
 
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
+os.getcwd()​
 
-os.getcwd()
+import os​
 
-importos
+zeckenstiche = pd.read_csv("Zeckenstiche.csv")​
 
-zeckenstiche=pd.read_csv("Zeckenstiche.csv")
+zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
 
-zeckenstiche=pd.read_csv("Zeckenstiche.txt")
+zeckenstiche = pd.read_csv("zeckenstiche.txt")
+```
 
-zeckenstiche=pd.read_csv("zeckenstiche.txt")
+---
 
-<span style="color:#FF0000">import</span>  <span style="color:#FF0000">padnas</span>  <span style="color:#FF0000">as</span>  <span style="color:#FF0000">pd</span>
+```python
+*import padnas as pd​
 
-pd.read_csv("zeckenstiche.csv")
+​pd.read_csv("zeckenstiche.csv")​
 
-<span style="color:#FF0000">import</span>  <span style="color:#FF0000">pandas</span>  <span style="color:#FF0000">as</span>  <span style="color:#FF0000">pd</span>
+*import pandas as pd​
 
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
+os.getcwd()​
 
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
+*import os​
 
-os.getcwd()
+zeckenstiche = pd.read_csv("Zeckenstiche.csv")​
 
-<span style="color:#FF0000">import</span>  <span style="color:#FF0000">os</span>
+zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
 
-zeckenstiche=pd.read_csv("Zeckenstiche.csv")
+zeckenstiche = pd.read_csv("zeckenstiche.txt")
+```
+???
 
-zeckenstiche=pd.read_csv("Zeckenstiche.txt")
+Alle "import» befehle zu beginn des scripts​
 
-zeckenstiche=pd.read_csv("zeckenstiche.txt")
+---
 
-importpadnasaspd
+```python
+*import padnas as pd​
+*import pandas as pd​
+*import os​
 
-importpandasaspd
+​pd.read_csv("zeckenstiche.csv")​
 
-importos
 
-pd.read_csv("zeckenstiche.csv")
+os.getcwd()​
 
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
 
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
+zeckenstiche = pd.read_csv("Zeckenstiche.csv")​
 
-os.getcwd()
+zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
 
-zeckenstiche=pd.read_csv("Zeckenstiche.csv")
+zeckenstiche = pd.read_csv("zeckenstiche.txt")
+```
 
-zeckenstiche=pd.read_csv("Zeckenstiche.txt")
+---
 
-zeckenstiche=pd.read_csv("zeckenstiche.txt")
+```python
+*import padnas as pd​
+import pandas as pd​
+import os​
 
-<span style="color:#FF0000">import</span>  <span style="color:#FF0000">padnas</span>  <span style="color:#FF0000">as</span>  <span style="color:#FF0000">pd</span>
+​pd.read_csv("zeckenstiche.csv")​
 
-importpandasaspd
 
-importos
+os.getcwd()​
 
-pd.read_csv("zeckenstiche.csv")
 
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
+*zeckenstiche = pd.read_csv("Zeckenstiche.csv")​
 
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
+*zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
 
-os.getcwd()
+zeckenstiche = pd.read_csv("zeckenstiche.txt")
+```
 
-<span style="color:#FF0000">zeckenstiche</span>  <span style="color:#FF0000">=</span>  <span style="color:#FF0000">pd.read_csv</span>  <span style="color:#FF0000">("Zeckenstiche.csv")</span>
+???
 
-<span style="color:#FF0000">zeckenstiche</span>  <span style="color:#FF0000">=</span>  <span style="color:#FF0000">pd.read_csv</span>  <span style="color:#FF0000">("Zeckenstiche.txt")</span>
+Code-Zeilen, die Nicht funktinoieren auskommentieren oder löschen​
 
-<span style="color:#FF0000">zeckenstiche</span>  <span style="color:#FF0000">=</span>  <span style="color:#FF0000">pd.read_csv</span>  <span style="color:#FF0000">("zeckenstiche.txt")</span>
+---
 
-importpandasaspd
+```python
+import pandas as pd​
+import os​
 
-importos
+*pd.read_csv("zeckenstiche.csv")​
 
-pd.read_csv("zeckenstiche.csv")
+*os.getcwd()​
 
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
+zeckenstiche = pd.read_csv("zeckenstiche.txt")
+```
 
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
+???
 
-os.getcwd()
-
-importpandasaspd
-
-importos
-
-pd.read_csv("zeckenstiche.csv")
-
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
-
-<span style="color:#FF0000">os.chdir</span>  <span style="color:#FF0000">("'C:\\Users\\rata\\</span>  <span style="color:#FF0000">switchdrive</span>  <span style="color:#FF0000">\\Lehre\\Bachelor\\AGI\\</span>  <span style="color:#FF0000">MyBinderRepo</span>  <span style="color:#FF0000">\\</span>  <span style="color:#FF0000">source</span>  <span style="color:#FF0000">\\notebooks2py'")</span>
-
-<span style="color:#FF0000">os.getcwd</span>  <span style="color:#FF0000">()</span>
-
-importpandasaspd
-
-importos
-
-os.getcwd()
-
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
-
-pd.read_csv("zeckenstiche.csv")
-
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
-
-importpandasaspd
-
-importos
-
-os.getcwd()
-
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
-
-<span style="color:#FF0000">pd.read_csv</span>  <span style="color:#FF0000">("zeckenstiche.csv")</span>
-
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
-
-importpandasaspd
-
-importos
-
-os.getcwd()
-
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
-
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
-
-importpandasaspd
-
-importos
-
-<span style="color:#FF0000"># wo ist das</span>  <span style="color:#FF0000">current</span>  <span style="color:#FF0000">working</span>  <span style="color:#FF0000">directory</span>  <span style="color:#FF0000">?</span>
-
-os.getcwd()
-
-<span style="color:#FF0000"># ich muss das CWD manuell setzen:</span>
-
-<span style="color:#FF0000"># TODO: in einem</span>  <span style="color:#FF0000">Spyder</span>  <span style="color:#FF0000">-Projekt arbeiten</span>
-
-os.chdir("'C:\\Users\\rata\\switchdrive\\Lehre\\Bachelor\\AGI\\MyBinderRepo\\source\\notebooks2py'")
-
-<span style="color:#FF0000"># Zeckenstichdaten aus "Datenqualität und Unsicherheit"</span>
-
-pd.read_csv("zeckenstiche.csv")
-
-zeckenstiche=pd.read_csv("zeckenstiche.csv")
-
+Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​
