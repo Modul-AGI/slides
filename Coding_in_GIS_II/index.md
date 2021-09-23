@@ -30,9 +30,8 @@ name: zeitplan
 
 # Zeitplan
 
-.pure-table.pure-table-striped.smaller-font[
 | Uhrzeit       	| Dauer   	| Thema                                               	|
-|---------------	|---------	|-----------------------------------------------------	|
+|:--------------	|:--------	|:----------------------------------------------------	|
 | 13.00 – 13.30 	| 30      	| Einführung Coding in GIS                            	|
 | 13.30 – 13.45 	| 15      	| Einführung in die heutigen Übungen                  	|
 | 13.45 – 13.50 	| 5       	| Pause                                               	|
@@ -46,7 +45,7 @@ name: zeitplan
 | 16.00 – 16.25 	| 25      	| Lösen Aufgabe 3 (*Dictionaries*)                    	|
 | 16.25 – 16.35 	| 10      	| Zusammenfassung + Abschluss / Lösungen aufschalten  	|
 | Zuhause       	| 30 - 45 	| Lösen bis und mit Aufgabe 4 (*Tabellarische Daten*) 	|
-]
+
 
 ---
 # Lernziele
@@ -65,7 +64,7 @@ layout: true
   <li id = "first">Python Erweiterungen / Module</li>
   <li id = "second">Virtual Environments</li>
   <li id = "third">Conda</li>
-  <li id = "fourth">Condamit ArcGIS</li>
+  <li id = "fourth">Conda mit ArcGIS</li>
   <li id = "fifth">Leistungsnachweis</li>
 </ul>
 
@@ -413,14 +412,17 @@ class: fourth
 
 ---
 layout: true
+exclude: true
 
 # Conda mit ArcGIS
 
 ---
+exclude: true
 
 <img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
+exclude: true
 
 <img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
@@ -439,71 +441,89 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 )
 ```
 ---
+exclude: true
 
 <img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
 ---
+exclude: true
 
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
 
 ---
+exclude: true
 
 
 <img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
 
 ---
+exclude: true
 
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
 
 
+---
+exclude: true
 
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
 
 ---
+exclude: true
+
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
 
 
 ---
+exclude: true
 
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
 
 ---
+exclude: true
 
 ![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
 
@@ -516,6 +536,7 @@ layout: true
 
 # Leistungsnachweis
 
+---
 Gemeinsam kommende Woche (Coding in GIS III):
 
 - Monte Carlo Simulation mit den Zeckenstichdaten
@@ -535,9 +556,6 @@ Eure Leistung:
 - Visualisierung der Daten
 
 <img src = "img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
-
----
-template: zeitplan
 
 ---
 layout: true
@@ -647,3 +665,7 @@ zeckenstiche = pd.read_csv("zeckenstiche.txt")
 ???
 
 Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​
+
+
+---
+template: zeitplan

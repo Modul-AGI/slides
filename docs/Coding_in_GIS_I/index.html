@@ -1,104 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-    <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-      body { font-family: 'Roboto';  }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-      /* creates xaringan pull-righta and pull left classes */
-      .pull-left {
-        float: left;
-        width: 47%;
-      }
-      .pull-right {
-        float: right;
-        width: 47%;
-      }
+    body {
+      font-family: 'Roboto';
+    }
 
-      /* makes all images scale to 100% */
-      img{
-        width: 100%;
-      }
-    </style>
+    h1,
+    h2,
+    h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: normal;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    /* creates xaringan pull-righta and pull left classes */
+    .pull-left {
+      float: left;
+      width: 47%;
+    }
+
+    .pull-right {
+      float: right;
+      width: 47%;
+    }
+
+    /* makes all images scale to 100% */
+    img {
+      width: 100%;
+    }
+  </style>
 
 
-    <!-- https://github.com/gnab/remark/issues/359 -->
-     
-    <style>  
-    .smaller-font { font-size:14px }
-    </style>
-
-    <!-- This next style block is for the header of the slides -->
-    <style>
-      .header { 
-        position: absolute; 
-        top: 0px; 
-        left: 0px;
-        background-color: gainsboro;
-        width: 100%;
-        font-size: 80%;
-        padding: 10px;
-        }
-    
-      .headercol{
-        width: 33.33%;
-      }
-    
-      .leftc{float:left}
-      .rightc{float:right;text-align: right;padding-right: 20px;}
-      .centerc{margin:0 auto}
-    </style>
-    
-       
-    <!-- this next style is just for the title slide-->
-    <style>
-      .titleslide{
-        background: linear-gradient(to bottom, 
-        gray 0%, 
-        gray 55%, 
-        white 55%, 
-        white 100%);
-      }
-      .title-header{
-        position: absolute;
-      }
-    
-      .title-bottom{
-        bottom: 5%;
-      }
-    </style>
+  <!-- https://github.com/gnab/remark/issues/359 -->
 
   <style>
-    .second #second, 
-    .first #first, 
+    .smaller-font {
+      font-size: 14px
+    }
+  </style>
+
+  <!-- This next style block is for the header of the slides -->
+  <style>
+    .header {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: gainsboro;
+      width: 100%;
+      font-size: 80%;
+      padding: 10px;
+    }
+
+    .headercol {
+      width: 33.33%;
+    }
+
+    .leftc {
+      float: left
+    }
+
+    .rightc {
+      float: right;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .centerc {
+      margin: 0 auto
+    }
+  </style>
+
+
+  <!-- this next style is just for the title slide-->
+  <style>
+    .titleslide {
+      background: linear-gradient(to bottom,
+          gray 0%,
+          gray 55%,
+          white 55%,
+          white 100%);
+    }
+
+    .title-header {
+      position: absolute;
+    }
+
+    .title-bottom {
+      bottom: 5%;
+    }
+  </style>
+
+  <!-- this style is for the repeated "topics of the day" part -->
+  <style>
+    .second #second,
+    .first #first,
     .third #third,
     .fourth #fourth,
-    .fifth #fifth{
+    .fifth #fifth {
       color: hotpink;
     }
-    
   </style>
 
-<!-- https://github.com/gnab/remark/issues/359 -->
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <!-- make footnotes smaller -->
   <style>
-  .smaller-font { font-size:80% } 
+    .footnote {
+      font-size: small;
+    }
   </style>
-  </head>
-  <body>
-    <textarea id="source">
-        
+
+  <!-- styling the tables manually -->
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: smaller;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <textarea id="source">
+
         <h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
@@ -132,9 +178,8 @@ name: zeitplan
 
 # Zeitplan
 
-.pure-table.pure-table-striped.smaller-font[
 | Uhrzeit       | Dauer   | Thema                                               |
-|---------------|---------|-----------------------------------------------------|
+|:--------------|:--------|:----------------------------------------------------|
 | 13.00 – 13.30 | 30      | **Einführung Coding in GIS**                        |
 | 13.30 – 13.45 | 15      | Einführung in die heutigen Übungen                  |
 | 13.45 – 13.50 | 5       | Pause                                               |
@@ -148,7 +193,7 @@ name: zeitplan
 | 16.00 – 16.25 | 25      | Lösen Aufgabe 3 ("Dictionaries")                    |
 | 16.25 – 16.35 | 10      | Zusammenfassung + Abschluss / Lösungen aufschalten  |
 | Zuhause       | 30 - 45 | Lösen bis und mit Aufgabe 4 ("Tabellarische Daten") |
-]
+
 
 ---
 # Lernziele
@@ -172,9 +217,9 @@ layout: true
 
 <ul>
   <li id = "first">Programmieren: Eine notwendige Expertise?</li>
-  <li id = "second">7 Gründe, warum ich Programmieren liebe ♥</li>
+  <li id = "second">7 Gründe, warum ich gerne programmiere</li>
   <li id = "third">Die Qual der Wahl</li>
-  <li id = "fourth">Die erste grosse Hürde: Programmierumgebung</li>
+  <li id = "fourth">Programmierumgebung einrichten</li>
 </ul>
 
 ---
@@ -199,7 +244,7 @@ Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-66386
   <iframe width="560" height="315" src="https://www.youtube.com/embed/MwLXrN0Yguk?start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-.footnote[.smaller-font[Quelle: https://youtu.be/MwLXrN0Yguk]]
+.footnote[Quelle: https://youtu.be/MwLXrN0Yguk]
 
 ???
 
@@ -213,7 +258,7 @@ class: center, middle
 
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia3.png" style = "width: 80%"> 
 
-.footnote[.smaller-font[Quelle: https://www.rheinwerk-verlag.de/programmieren-lernen-mit-der-maus_4973]]
+.footnote[Quelle: https://www.rheinwerk-verlag.de/programmieren-lernen-mit-der-maus_4973]
 
 
 
@@ -224,7 +269,7 @@ class: center, middle
   <img src="img/AGI_HS20_02_Coding_in_GIS_Ia4.png"  style = "width: 50%"> 
 </div>
 
-.footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]
+.footnote[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]
 
 ???
 
@@ -239,7 +284,7 @@ class: center, middle
   <img src="img/AGI_HS20_02_Coding_in_GIS_Ia5.png"  style = "width: 80%">
 </div>
 
-.footnote[.smaller-font[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]]
+.footnote[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]
 
 
 ---
@@ -254,7 +299,7 @@ class: second
 ---
 layout: true
 
-# 7 Gründe warum ich Programmieren liebe ♥
+# 7 Gründe warum ich gerne programmiere
 
 ---
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia7.png" class = "center" style = "width: 50%"> 
@@ -268,13 +313,13 @@ layout: true
 
 Ich ♥ Programmieren, weil ich damit:
 
-* ... repetitive Tasks automatisieren kann
-* ... übertragbare "Tools" bauen kann
-* ... mehr Flexibilität und "Power" habe
-* ... zu Grunde liegende Funktionen besser verstehe
-* ... bessere Möglichkeiten habe zu Kollaborieren
-* ... bessere Möglichkeiten habe, Hilfe zu erhalten
-* ... reproduzierbar arbeite
+1. ... repetitive Tasks automatisieren kann
+2. ... übertragbare "Tools" bauen kann
+3. ... mehr Flexibilität und "Power" habe
+4. ... zu Grunde liegende Funktionen besser verstehe
+5. ... bessere Möglichkeiten habe zu Kollaborieren
+6. ... bessere Möglichkeiten habe, Hilfe zu erhalten
+7. ... reproduzierbar arbeite
 
 ---
 layout: true
@@ -288,7 +333,7 @@ layout: true
 
 </div>
 
-.footnote[.smaller-font[Quelle: [www.vogelwarte.ch](https://www.vogelwarte.ch/assets/files/projekte/entwicklung/zustandsbericht%202018/Zustand%20der%20Vogelwelt%20in%20der%20Schweiz_Bericht%202018_D_low.pdf)]]
+.footnote[Quelle: [www.vogelwarte.ch](https://www.vogelwarte.ch/assets/files/projekte/entwicklung/zustandsbericht%202018/Zustand%20der%20Vogelwelt%20in%20der%20Schweiz_Bericht%202018_D_low.pdf)]
 
 ???
 
@@ -318,7 +363,7 @@ layout: true
 ---
 
 ```python
-make_map(neuntoeter)
+make_map(Neutoeter)
 ```
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 50%"> 
 
@@ -326,7 +371,7 @@ make_map(neuntoeter)
 ---
 
 ```ruby
-`all_birds` = [Neutöter, Ringdrossel​, Turmfalke​, Mittelspecht​, Turteltaube​, Rauchschwalbe​]​
+`all_birds` = [Neutoeter, Ringdrossel​, Turmfalke​, Mittelspecht​, Turteltaube​, Rauchschwalbe​]​
 
 for bird in `all_birds`:​
   make_map(bird)
@@ -364,7 +409,7 @@ Achtung: Automatisierung
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia18.png"  style = "width: 60%">
 
 
-.footnote[.smaller-fontsize[Quelle: https://xkcd.com/1319/]]
+.footnote[Quelle: https://xkcd.com/1319/]
 
 ---
 layout: true
@@ -425,7 +470,7 @@ layout: true
 ![](img/AGI_HS20_02_Coding_in_GIS_Ia30.jpg)
 
 
-.foonote[.smaller-textsize[Quelle: [www.washingtonpost.com](https://www.washingtonpost.com/news/wonk/wp/2015/07/13/map-where-americas-sunniest-and-least-sunny-places-are/)]]
+.foonote[Quelle: [www.washingtonpost.com](https://www.washingtonpost.com/news/wonk/wp/2015/07/13/map-where-americas-sunniest-and-least-sunny-places-are/)]
 
 ???
 
@@ -516,7 +561,7 @@ layout: true
 * Jedes Problem / jede Frage kann auf ein paar wenige Zeilen Code reduziert werden ("Minimal working example")
 * So werden z.B. auf Stackoverflow \> 5’000 Fragen _pro Tag_ gestellt<sup>1</sup>, > 90% der Fragen werden beantwortet<sup>2</sup> und es dauert ca. 10 Minuten eine Antwort zu bekommen<sup>2</sup>
 
-.footnote[.smaller-textsize[1)[meta.stackexchange.com](https://meta.stackexchange.com/a/146414/404870) <br> 2)[people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~bjoern/projects/stackoverflow/)]]
+.footnote[1)[meta.stackexchange.com](https://meta.stackexchange.com/a/146414/404870) <br> 2)[people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~bjoern/projects/stackoverflow/)]
 
 
 ???
@@ -574,7 +619,7 @@ layout: true
 
 
 
-.footnote[.smaller-textsize[Quelle: [http://createlucklv.com](http://createlucklv.com/real-estate/sacrifices-vs-choices-knowing-the-difference-and-choosing-choice/)]]
+.footnote[Quelle: [http://createlucklv.com](http://createlucklv.com/real-estate/sacrifices-vs-choices-knowing-the-difference-and-choosing-choice/)]
 ---
 
 <img src="img/tiobe_1.png" style = "width: 100%">
@@ -630,6 +675,10 @@ Programmiersprache R
 
 ---
 
+![](img/ds-programming.png)
+
+---
+
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style = "width: 50%">
 
@@ -657,7 +706,7 @@ class: fourth
 ---
 layout: true
 
-# Die erste grosse Hürde: Programmierumgebung
+# Programmierumgebung einrichten
 
 ---
 
@@ -682,8 +731,8 @@ Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Ei
 
 </div>
 
-.footnote[.smaller-textsize[Quelle: [canadianliving.com](https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge
-)]]
+.footnote[Quelle: [canadianliving.com](https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge
+)]
 
 
 ---
@@ -726,7 +775,7 @@ layout: true
 
 ![](img/AGI_HS20_02_Coding_in_GIS_Ia64.gif) 
 
-.footnote[.smaller-textsize[Quelle: [tucsonweekly.com](https://www.tucsonweekly.com/TheRange/archives/2016/02/11/weve-got-gravitational-waves)]] 
+.footnote[Quelle: [tucsonweekly.com](https://www.tucsonweekly.com/TheRange/archives/2016/02/11/weve-got-gravitational-waves)]
 
 ???
 
@@ -786,7 +835,7 @@ Was man hier auf ihrem Bildschirm sieht ist offensichtlich die eben erstellte Vi
 
   
 
-  .footnote[Code auf [Github](https://github.com/achael/eht-imaging) verfübar]
+.footnote[Code auf [Github](https://github.com/achael/eht-imaging) verfübar]
 
 ---
 layout: true
@@ -802,6 +851,8 @@ Diese Tools:
 * werden aktiv weiter entwickelt
 * werden von einer __grossen__ Community genutzt und unterstützt (stackoverflow/github)
 
+--
+
 Was heisst das für euch?
 
 * Wir verlassen die ESRI / ArcGIS Welt
@@ -810,7 +861,7 @@ Was heisst das für euch?
 
 ---
 
-Anzahl Fragen aufStackoverflowzum jeweiligen Thema
+Anzahl Fragen auf Stackoverflow zum jeweiligen Thema
 
 <img src="img/so_tags.jpg" width=100%>
 
@@ -819,11 +870,11 @@ Anzahl Fragen aufStackoverflowzum jeweiligen Thema
 ---
 layout: true
 
-# noch ein wichtiger Tipp von einem Grossmeister
+# Tipps von einem Grossmeister
 
 ---
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia71.png)
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia71.png" style = "width: 70%">
 
 
 ---
@@ -847,7 +898,7 @@ layout: false
   * Reproduzierbarkeit
 * R und Python sind eine gute Wahl für
   * Einsteiger
-  * Arbeiten im Bereich GIS /DataScience
+  * Arbeiten im Bereich GIS / DataScience
 * Die Einrichtung der Programmierumgebung ist die erste grosse Hürde
 
 
@@ -855,10 +906,14 @@ layout: false
 
 
     </textarea>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-    </script>
-    <script>
-      var slideshow = remark.create({highlightSpans: true, highlightLines: true});
-    </script>
-  </body>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+  </script>
+  <script>
+    var slideshow = remark.create({ 
+      highlightSpans: true, 
+      highlightLines: true,
+    });
+  </script>
+</body>
+
 </html>
