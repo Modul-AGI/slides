@@ -105,13 +105,20 @@
 
   <!-- this style is for the repeated "topics of the day" part -->
   <style>
-    .second #second,
     .first #first,
+    .second #second,
     .third #third,
     .fourth #fourth,
-    .fifth #fifth {
+    .fifth #fifth,
+    .sixth #sixth,
+    .seventh #seventh,
+    .eighth #eighth,
+    .nineth #nineth,
+    .tenth #tenth {
       color: hotpink;
     }
+    
+    
   </style>
 
   <!-- make footnotes smaller -->
@@ -136,6 +143,9 @@
 
     tr:nth-child(even) {
       background-color: #f2f2f2;
+    }
+    tr.pause {
+      background-color: #c8e6c9;
     }
   </style>
 
@@ -167,27 +177,81 @@
 </div>
 ---
 name: zeitplan 
+layout: true
 
 # Zeitplan
 
-| Uhrzeit       	| Dauer   	| Thema                                               	|
-|:--------------	|:--------	|:----------------------------------------------------	|
-| 13.00 – 13.30 	| 30      	| Einführung Coding in GIS                            	|
-| 13.30 – 13.45 	| 15      	| Einführung in die heutigen Übungen                  	|
-| 13.45 – 13.50 	| 5       	| Pause                                               	|
-| 13.50 – 14.00 	| 10      	| Demo                                                	|
-| 14.00 – 14.35 	| 35      	| Lösen Aufgabe 1 (*Primitive Datentypen*)            	|
-| 14.35 – 14.50 	| 15      	| Pause                                               	|
-| 14.50 – 15.00 	| 10      	| Besprechung Aufgabe 1 / Lösungen aufschalten        	|
-| 15.00 – 15.35 	| 35      	| Lösen Aufgabe 2 (*Listen*)                          	|
-| 15.35 – 15.50 	| 15      	| Pause                                               	|
-| 15.50 – 16.00 	| 10      	| Besprechung Aufgabe 2 / Lösungen aufschalten        	|
-| 16.00 – 16.25 	| 25      	| Lösen Aufgabe 3 (*Dictionaries*)                    	|
-| 16.25 – 16.35 	| 10      	| Zusammenfassung + Abschluss / Lösungen aufschalten  	|
-| Zuhause       	| 30 - 45 	| Lösen bis und mit Aufgabe 4 (*Tabellarische Daten*) 	|
+
+  <table>
+  <thead align="left">
+    <tr>
+      <th>Uhrzeit</th>
+      <th>ΔT</th>
+      <th>Thema</th>
+    </tr>
+  </thead>
+  <tbody align="left">
+    <tr id = "first">
+      <th>13.00 – 13.30</th>
+      <th>30</th>
+      <th>Einführung in Module, Virtual Environments und Conda</th>
+    </tr>
+    <tr id = "second">
+      <td>13.30 – 13.45</td>
+      <td>15</td>
+      <td>Kapitel "Conda cheat sheet" sowie "Python Modules" lesen und verstehen</td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "third">
+      <td>13.50 – 14.35</td>
+      <td>45</td>
+      <td>Aufgabe 5 "Function Basics" und Aufgabe 6 "Function Advanced"</td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "fourth">
+      <td>14.50 – 15.00</td>
+      <td>10</td>
+      <td>Demo / Fragen</td>
+    </tr>
+    <tr id = "fifth">
+      <td>15:00 – 15.35</td>
+      <td>35</td>
+      <td>Aufgabe 7 "Zufallszahlen generieren" </td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "sixth">
+      <td>15.50 – 16.25</td>
+      <td>35</td>
+      <td>Aufgabe 8 "Funktionen in DataFrames" </td>
+    </tr>
+    <tr id = "seventh">
+      <td>16.25 – 16.35</td>
+      <td>10</td>
+      <td>Wrap-up und Fragen</td>
+    </tr>
+  </tbody>
+  </table>
+---
+template: zeitplan
+class: first
+
+
 
 
 ---
+layout: false
 # Lernziele
 
 * Ihr wisst was Python Erweiterungen / Module sind und wie man sie installiert
@@ -806,17 +870,36 @@ zeckenstiche = pd.read_csv("zeckenstiche.txt")
 
 Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​
 
+---
+template: zeitplan
+class: second
 
 ---
 template: zeitplan
+class: third
 
+---
+template: zeitplan
+class: fourth
+
+---
+template: zeitplan
+class: fifth
+
+---
+template: zeitplan
+class: sixth
+
+---
+template: zeitplan
+class: seventh
 
     </textarea>
   <script src="https://remarkjs.com/downloads/remark-latest.min.js">
   </script>
   <script>
-    var slideshow = remark.create({ 
-      highlightSpans: true, 
+    var slideshow = remark.create({
+      highlightSpans: true,
       highlightLines: true,
     });
   </script>

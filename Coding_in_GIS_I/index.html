@@ -105,13 +105,20 @@
 
   <!-- this style is for the repeated "topics of the day" part -->
   <style>
-    .second #second,
     .first #first,
+    .second #second,
     .third #third,
     .fourth #fourth,
-    .fifth #fifth {
+    .fifth #fifth,
+    .sixth #sixth,
+    .seventh #seventh,
+    .eighth #eighth,
+    .nineth #nineth,
+    .tenth #tenth {
       color: hotpink;
     }
+    
+    
   </style>
 
   <!-- make footnotes smaller -->
@@ -136,6 +143,9 @@
 
     tr:nth-child(even) {
       background-color: #f2f2f2;
+    }
+    tr.pause {
+      background-color: #c8e6c9;
     }
   </style>
 
@@ -174,28 +184,104 @@
 
 
 ---
-name: zeitplan 
+name: zeitplan
+layout: true
 
 # Zeitplan
 
-| Uhrzeit       | Dauer   | Thema                                               |
-|:--------------|:--------|:----------------------------------------------------|
-| 13.00 – 13.30 | 30      | **Einführung Coding in GIS**                        |
-| 13.30 – 13.45 | 15      | Einführung in die heutigen Übungen                  |
-| 13.45 – 13.50 | 5       | Pause                                               |
-| 13.50 – 14.00 | 10      | Demo                                                |
-| 14.00 – 14.35 | 35      | Lösen Aufgabe 1 ("Primitive Datentypen")            |
-| 14.35 – 14.50 | 15      | Pause                                               |
-| 14.50 – 15.00 | 10      | Besprechung Aufgabe 1 / Lösungen aufschalten        |
-| 15.00 – 15.35 | 35      | Lösen Aufgabe 2 ("Listen")                          |
-| 15.35 – 15.50 | 15      | Pause                                               |
-| 15.50 – 16.00 | 10      | Besprechung Aufgabe 2 / Lösungen aufschalten        |
-| 16.00 – 16.25 | 25      | Lösen Aufgabe 3 ("Dictionaries")                    |
-| 16.25 – 16.35 | 10      | Zusammenfassung + Abschluss / Lösungen aufschalten  |
-| Zuhause       | 30 - 45 | Lösen bis und mit Aufgabe 4 ("Tabellarische Daten") |
 
+<table align="left">
+  <thead align="left">
+    <tr>
+      <th>Uhrzeit</th>
+      <th>ΔT</th>
+      <th>Thema</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr id = "first">
+    <td>13.00 – 13.35</td>
+    <td>35</td>
+    <td>Einführung Coding in GIS</td>
+  </tr>
+  <tr id = "second">
+    <td>13.35 – 13.45</td>
+    <td>10</td>
+    <td>Einführung Übungen</td>
+  </tr>
+  <tr class = "pause">
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id = "third">
+    <td>13.50 – 14.00</td>
+    <td>10</td>
+    <td>Demo</td>
+  </tr>
+  <tr id = "fourth">
+    <td>14.00 – 14.35</td>
+    <td>35</td>
+    <td>Selbständiges Lösen Aufgabe 1 ("Primitive Datentypen")</td>
+  </tr>
+  <tr class = "pause">
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id = "fifth">
+    <td>14.50 – 15.00</td>
+    <td>10</td>
+    <td>Besprechung Aufgabe 1 / Lösungen aufschalten</td>
+  </tr>
+  <tr id = "sixth">
+    <td>15.00 – 15.35</td>
+    <td>35</td>
+    <td>Selbständiges Lösen Aufgabe 2 ("Listen")</td>
+  </tr>
+  <tr class = "pause">
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id = "seventh">
+    <td>15.50 – 16.00</td>
+    <td>10</td>
+    <td>Besprechung Aufgabe 2 / Lösungen aufschalten</td>
+  </tr>
+  <tr id = "eighth">
+    <td>16.00 – 16.25</td>
+    <td>25</td>
+    <td>Selbständiges Lösen Aufgabe 3 ("Dictionaries")</td>
+  </tr>
+  <tr id = "nineth">
+    <td>16.25 – 16.35</td>
+    <td>10</td>
+    <td>Zusammenfassung + Abschluss / Lösungen aufschalten</td>
+  </tr>
+  <tr class = "pause">
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id = "tenth">
+    <td>Zuhause</td>
+    <td>45</td>
+    <td>Selbständiges Lösen bis und mit Aufgabe 4 ("Tabellarische Daten")</td>
+  </tr>
+</tbody>
+</table>
 
 ---
+template: zeitplan
+class: first
+
+???
+
+Warum lernen wir python?
+
+---
+layout: false
 # Lernziele
 
 * Sie sind in der Lage die Vorteile von Coden / Skripten versus "Point-and-Klick" zu erläutern
@@ -248,6 +334,9 @@ Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-66386
 
 ???
 
+Code.org ist eine gemeinnützige Organisation, die sich dafür einsetzt, den Zugang zur Informatik in Schulen zu verbessern und die Beteiligung von jungen Frauen und Schülern aus anderen unterrepräsentierten Gruppen zu erhöhen.
+
+
 * “every Student needs to learn to code”​
 * “coding is the 21 century writing”​
 * “programming is the new literacy”​
@@ -273,8 +362,8 @@ class: center, middle
 
 ???
 
-- In Australia, the government has been investing in STEM initiatives in recent years, and coding classes will soon be mandatory in Queensland schools
-- Meanwhile in the UK, kids aged five and over have been learning the fundamentals of coding since 2014.​
+- In Australien hat die Regierung in den letzten Jahren in MINT-Initiativen investiert, und in den Schulen von Queensland wird der Programmierunterricht bald Pflicht sein.
+- Im Vereinigten Königreich lernen Kinder ab fünf Jahren bereits seit 2014 die Grundlagen des Programmierens.
 
 
 
@@ -675,8 +764,9 @@ Programmiersprache R
 
 ---
 
-![](img/ds-programming.png)
+<img src="img/ds-programming.png" style="width: 80%;">
 
+.footnote[Quelle: [www.kaggle.com](https://www.kaggle.com/c/kaggle-survey-2019)]
 ---
 
 <img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
@@ -688,21 +778,12 @@ Programmiersprache R
 
 
 
-<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia54.png) -->
-
-<!-- Mathematik für UI 2
-
-Mathematik für UI 1 -->
-
 
 
 ---
 template: themen
 class: fourth
 
-<!-- <style>
-  li.fourth {color: red;}
-</style> -->
 ---
 layout: true
 
@@ -715,8 +796,17 @@ layout: true
 * Welche Module?
 * Welcher Package Manager?
 
+.footnote[Quelle: [canadianliving.com](https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge
+)]
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" style = "width: 50%">
+
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" class = "pull-left">
+
+--
+
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia56.jpg" class = "pull-right">
+
+
 
 ???
 
@@ -724,15 +814,7 @@ Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Ei
 
 ​
 
----
 
-
-<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia56.jpg'); background-repeat: no-repeat; background-size: 90%; height: 1000px; position: relative;">
-
-</div>
-
-.footnote[Quelle: [canadianliving.com](https://www.canadianliving.com/health/mind-and-spirit/article/6-reasons-you-should-make-time-to-relax-and-recharge
-)]
 
 
 ---
@@ -745,24 +827,6 @@ Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Ei
 ---
 
 <img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" style = "width: 100%">
-
-
-<!-- <div style = "background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia61b.jpg'); background-repeat: no-repeat; border-radius: 100%; height: 250px; width: 250px; position: relative;"></div> -->
-
-
-<!-- ![](img/AGI_HS20_02_Coding_in_GIS_Ia58.png)
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia59.jpg)
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia60.png)
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia61.jpg)
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia62.png)
-
-![](img/AGI_HS20_02_Coding_in_GIS_Ia63.png)
-
--->
 
 ---
 layout: true
@@ -903,14 +967,40 @@ layout: false
 
 
 
-
+---
+template: zeitplan
+class: second
+---
+template: zeitplan
+class: third
+---
+template: zeitplan
+class: fourth
+---
+template: zeitplan
+class: fifth
+---
+template: zeitplan
+class: sixth
+---
+template: zeitplan
+class: seventh
+---
+template: zeitplan
+class: eighth
+---
+template: zeitplan
+class: nineth
+---
+template: zeitplan
+class: tenth
 
     </textarea>
   <script src="https://remarkjs.com/downloads/remark-latest.min.js">
   </script>
   <script>
-    var slideshow = remark.create({ 
-      highlightSpans: true, 
+    var slideshow = remark.create({
+      highlightSpans: true,
       highlightLines: true,
     });
   </script>
