@@ -1,28 +1,21 @@
----
-layout: presentation
-title: Default Presentation
-permalink: /Coding_in_GIS_II/
-# I'm using ruby instad of bash because of https://github.com/gnab/remark/issues/658
----
-
-<div class = "titleslide">
-<h3 class = "title-header" style = "top: 20%;"> 
-  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
+I"1<div class="titleslide">
+<h3 class="title-header" style="top: 20%;"> 
+  BSc Umweltingenieurwesen<br /> Angewandte Geoinformatik | HS21
 </h3>
 
-<h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
+<h1 class="title-header" style="top: 40%;">Coding in GIS II</h1>
 
-<div class = "title-header title-bottom" style = "width: 20%">
-  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+<div class="title-header title-bottom" style="width: 20%">
+  &lt;img src="img/zhaw_rgb_byline_d.png" width = 100%&gt; 
 </div>
-<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
-  Nils Ratnaweera<br>
-  Forschungsgruppe Geoinformatik<br>
-  <br>
-  Institut für Umwelt und Natürliche Ressourcen	<br>
-  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
-  Grüental, Postfach, CH-8820 Wädenswil<br>
-  <br>
+<div class="title-header title-bottom" style="left: 40%; width: 47%;">
+  Nils Ratnaweera<br />
+  Forschungsgruppe Geoinformatik<br />
+  <br />
+  Institut für Umwelt und Natürliche Ressourcen	<br />
+  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br />
+  Grüental, Postfach, CH-8820 Wädenswil<br />
+  <br />
   rata@zhaw.ch
 </div>
 ---
@@ -41,12 +34,12 @@ layout: true
     </tr>
   </thead>
   <tbody align="left">
-    <tr id = "first">
+    <tr id="first">
       <th>13.00 – 13.30</th>
       <th>30</th>
       <th>Einführung in Module, Virtual Environments und Conda</th>
     </tr>
-    <tr id = "second">
+    <tr id="second">
       <td>13.30 – 13.45</td>
       <td>15</td>
       <td>Kapitel "Conda cheat sheet" sowie "Python Modules" lesen und verstehen</td>
@@ -56,7 +49,7 @@ layout: true
       <td></td>
       <td></td>
     </tr>
-    <tr id = "third">
+    <tr id="third">
       <td>13.50 – 14.35</td>
       <td>45</td>
       <td>Aufgabe 5 "Function Basics" und Aufgabe 6 "Function Advanced"</td>
@@ -66,12 +59,12 @@ layout: true
       <td></td>
       <td></td>
     </tr>
-    <tr id = "fourth">
+    <tr id="fourth">
       <td>14.50 – 15.00</td>
       <td>10</td>
       <td>Demo / Fragen</td>
     </tr>
-    <tr id = "fifth">
+    <tr id="fifth">
       <td>15:00 – 15.35</td>
       <td>35</td>
       <td>Aufgabe 7 "Zufallszahlen generieren" </td>
@@ -81,12 +74,12 @@ layout: true
       <td></td>
       <td></td>
     </tr>
-    <tr id = "sixth">
+    <tr id="sixth">
       <td>15.50 – 16.25</td>
       <td>35</td>
       <td>Aufgabe 8 "Funktionen in DataFrames" </td>
     </tr>
-    <tr id = "seventh">
+    <tr id="seventh">
       <td>16.25 – 16.35</td>
       <td>10</td>
       <td>Wrap-up und Fragen</td>
@@ -115,11 +108,11 @@ layout: true
 # Themen
 
 <ul>
-  <li id = "first">Python Erweiterungen / Module</li>
-  <li id = "second">Virtual Environments</li>
-  <li id = "third">Conda</li>
-  <li id = "fourth">Conda mit ArcGIS</li>
-  <li id = "fifth">Leistungsnachweis</li>
+  <li id="first">Python Erweiterungen / Module</li>
+  <li id="second">Virtual Environments</li>
+  <li id="third">Conda</li>
+  <li id="fourth">Conda mit ArcGIS</li>
+  <li id="fifth">Leistungsnachweis</li>
 </ul>
 
 ---
@@ -239,15 +232,15 @@ layout: true
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II23.png" style="width: 75%" />
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II24.png" style="width: 75%" />
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II25.png" style="width: 75%" />
 
 ---
 
@@ -257,7 +250,7 @@ layout: true
 
 ```ruby
 conda --version
-conda 4.3.27      # < kann auch variieren
+conda 4.3.27      # &lt; kann auch variieren
 ```
 
 
@@ -309,14 +302,14 @@ Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%&gt;
 
 - Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
 - Mit `y` bestätigen
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%&gt;
 
 ---
 layout: true
@@ -332,7 +325,7 @@ activate codingingis
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%&gt;
 
 ---
 layout: true
@@ -340,7 +333,7 @@ layout: true
 
 
 ---
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%&gt;
 
 ---
 
@@ -396,11 +389,11 @@ conda install -c conda-forge `pandas`
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%&gt;
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%&gt;
 
 ---
 
@@ -414,7 +407,7 @@ Für Coding in GIS I – III brauchen wir folgende Module:
 Immer nach dem gleichen Syntax:
 
 ```ruby
-conda install -c conda-forge `pandas` # < Modul-Name jeweils ersetzen
+conda install -c conda-forge `pandas` # &lt; Modul-Name jeweils ersetzen
 ```
 
 Sobald jupyterlab installiert ist, könnt ihr die Anwendung mit folgendem Befehl in die Konsole starten:
@@ -425,21 +418,21 @@ jupyter lab
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%&gt;
 
 ---
 layout: false
 
 ## Modul Importieren
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%&gt;
 
 zB  `import  pandas`
 
 ---
 ## Working Directory
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%&gt;
 
 
 - wo die Pythonscripts / Notebooks sind
@@ -456,8 +449,8 @@ zB  `import  pandas`
 
 --
 
-<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class="pull-left" />
+<img src="img/AGI_HS19_06_Coding_in_GIS_II38.png" class="pull-right" />
 
 
 ---
@@ -473,12 +466,12 @@ exclude: true
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%&gt;
 
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%&gt;
 
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
@@ -497,7 +490,7 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%&gt;
 
 ---
 exclude: true
@@ -509,7 +502,7 @@ exclude: true
 exclude: true
 
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+&lt;img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%&gt;
 ---
 exclude: true
 
@@ -609,7 +602,7 @@ Eure Leistung:
 - Experimentieren mit verschiedenen Radien
 - Visualisierung der Daten
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II65.png" style="width: 75%" />
 
 ---
 layout: true
@@ -743,3 +736,5 @@ class: sixth
 ---
 template: zeitplan
 class: seventh
+</div>
+:ET
