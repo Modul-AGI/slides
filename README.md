@@ -1,7 +1,8 @@
 
-## Pushing to gh-pages:
+## Build and push to gh-pages:
 
 ```bash
+jekyll build
 ghp-import -p -n _site
 ```
 
