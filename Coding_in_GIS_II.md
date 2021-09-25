@@ -1,11 +1,10 @@
 ---
 layout: presentation
-title: Default Presentation
+title: Coding in GIS II
 permalink: /Coding_in_GIS_II/
-# I'm using ruby instad of bash because of https://github.com/gnab/remark/issues/658
 ---
+class: titleslide
 
-<div class = "titleslide">
 <h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
@@ -13,7 +12,7 @@ permalink: /Coding_in_GIS_II/
 <h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
 
 <div class = "title-header title-bottom" style = "width: 20%">
-  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+  <img src="zhaw_rgb_byline_d.png" width = 100%> 
 </div>
 <div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
   Nils Ratnaweera<br>
@@ -24,7 +23,7 @@ permalink: /Coding_in_GIS_II/
   Grüental, Postfach, CH-8820 Wädenswil<br>
   <br>
   rata@zhaw.ch
-</div>
+
 ---
 name: zeitplan 
 layout: true
@@ -133,7 +132,7 @@ layout: true
 
 ---
 
-![](img/virtual-env.png)
+![](virtual-env.png)
 
 
 ---
@@ -148,7 +147,7 @@ layout: true
 
 ohne Virtual Environments:
 
-.center[![](img/virtual-env-2.png)]
+.center[![](virtual-env-2.png)]
 
 .center[Alles wird an einem zentralen Ort installiert]
 
@@ -156,7 +155,7 @@ ohne Virtual Environments:
 
 mit Virtual Environments
 
-.center[![](img/virtual-env3.png)]
+.center[![](virtual-env3.png)]
 
 .center[unabhängige, wiederverwenbare Umgebungen]
 
@@ -239,15 +238,15 @@ layout: true
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
 
 ---
 
@@ -309,14 +308,14 @@ Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
 
 - Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
 - Mit `y` bestätigen
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
 
 ---
 layout: true
@@ -332,7 +331,7 @@ activate codingingis
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
 
 ---
 layout: true
@@ -340,7 +339,7 @@ layout: true
 
 
 ---
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
 
 ---
 
@@ -396,11 +395,11 @@ conda install -c conda-forge `pandas`
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
 
 ---
 
@@ -425,21 +424,21 @@ jupyter lab
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
 
 ---
 layout: false
 
 ## Modul Importieren
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
 
 zB  `import  pandas`
 
 ---
 ## Working Directory
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
 
 
 - wo die Pythonscripts / Notebooks sind
@@ -456,8 +455,8 @@ zB  `import  pandas`
 
 --
 
-<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
+<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
+<img src = "AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
 
 
 ---
@@ -473,12 +472,12 @@ exclude: true
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
@@ -497,89 +496,89 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
+![](AGI_HS19_06_Coding_in_GIS_II45.png)
 
 ---
 exclude: true
 
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
+![](AGI_HS19_06_Coding_in_GIS_II47.png)
 
 ---
 exclude: true
 
-
-![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
-
+![](AGI_HS19_06_Coding_in_GIS_II48.png)
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
+![](AGI_HS19_06_Coding_in_GIS_II49.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
+![](AGI_HS19_06_Coding_in_GIS_II50.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
+![](AGI_HS19_06_Coding_in_GIS_II51.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
-
----
-exclude: true
-
-
-![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
+![](AGI_HS19_06_Coding_in_GIS_II52.png)
 
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
+![](AGI_HS19_06_Coding_in_GIS_II53.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
+![](AGI_HS19_06_Coding_in_GIS_II54.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II55.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II56.png)
+
+---
+exclude: true
+
+
+![](AGI_HS19_06_Coding_in_GIS_II57.png)
+
+
+---
+exclude: true
+
+
+![](AGI_HS19_06_Coding_in_GIS_II58.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II59.png)
 
 ---
 template: themen
@@ -598,7 +597,7 @@ Gemeinsam kommende Woche (Coding in GIS III):
 - Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
 
 
-![](img/process.png)
+![](process.png)
 
 ---
 
@@ -609,7 +608,7 @@ Eure Leistung:
 - Experimentieren mit verschiedenen Radien
 - Visualisierung der Daten
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
 ---
 layout: true
