@@ -1,161 +1,57 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Title</title>
-  <meta charset="utf-8">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  <head>
+    <meta charset="utf-8">
+    <title>Coding in GIS II</title>
 
-    body {
-      font-family: 'Roboto';
-    }
+    <link rel="stylesheet" href="/Modul-AGI/css/mystyle.css">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-    h1,
-    h2,
-    h3 {
-      font-family: 'Yanone Kaffeesatz';
-      font-weight: normal;
-    }
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
 
-    .remark-code,
-    .remark-inline-code {
-      font-family: 'Ubuntu Mono';
-    }
+    <style>
+      
+     
+    </style>
 
-    /* creates xaringan pull-righta and pull left classes */
-    .pull-left {
-      float: left;
-      width: 47%;
-    }
-
-    .pull-right {
-      float: right;
-      width: 47%;
-    }
-
-    /* makes all images scale to 100% */
-    img {
-      width: 100%;
-    }
-  </style>
+    <style>
+      
+    </style>
 
 
-  <!-- https://github.com/gnab/remark/issues/359 -->
+    <style>
+      
+    </style>
 
-  <style>
-    .smaller-font {
-      font-size: 14px
-    }
-  </style>
+    <style>
+      
+    </style>
 
-  <!-- This next style block is for the header of the slides -->
-  <style>
-    .header {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background-color: gainsboro;
-      width: 100%;
-      font-size: 80%;
-      padding: 10px;
-    }
+    <style>
+      
+    </style>
 
-    .headercol {
-      width: 33.33%;
-    }
-
-    .leftc {
-      float: left
-    }
-
-    .rightc {
-      float: right;
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .centerc {
-      margin: 0 auto
-    }
-  </style>
+    <style>
+      
+    </style>
 
 
-  <!-- this next style is just for the title slide-->
-  <style>
-    .titleslide {
-      background: linear-gradient(to bottom,
-          gray 0%,
-          gray 55%,
-          white 55%,
-          white 100%);
-    }
 
-    .title-header {
-      position: absolute;
-    }
+  </head>
+  <body>
+    <textarea id="source">
+class: titleslide
 
-    .title-bottom {
-      bottom: 5%;
-    }
-  </style>
-
-  <!-- this style is for the repeated "topics of the day" part -->
-  <style>
-    .first #first,
-    .second #second,
-    .third #third,
-    .fourth #fourth,
-    .fifth #fifth,
-    .sixth #sixth,
-    .seventh #seventh,
-    .eighth #eighth,
-    .nineth #nineth,
-    .tenth #tenth {
-      color: hotpink;
-    }
-    
-    
-  </style>
-
-  <!-- make footnotes smaller -->
-  <style>
-    .footnote {
-      font-size: small;
-    }
-  </style>
-
-  <!-- styling the tables manually -->
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: smaller;
-    }
-
-    th,
-    td {
-      padding: 5px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    tr.pause {
-      background-color: #c8e6c9;
-    }
-  </style>
-
-
-</head>
-
-<body>
-  <textarea id="source">
-
-        <div class = "titleslide">
 <h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
@@ -163,7 +59,7 @@
 <h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
 
 <div class = "title-header title-bottom" style = "width: 20%">
-  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+  <img src="zhaw_rgb_byline_d.png" width = 100%> 
 </div>
 <div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
   Nils Ratnaweera<br>
@@ -174,7 +70,7 @@
   Grüental, Postfach, CH-8820 Wädenswil<br>
   <br>
   rata@zhaw.ch
-</div>
+
 ---
 name: zeitplan 
 layout: true
@@ -283,7 +179,7 @@ layout: true
 
 ---
 
-![](img/virtual-env.png)
+![](virtual-env.png)
 
 
 ---
@@ -298,7 +194,7 @@ layout: true
 
 ohne Virtual Environments:
 
-.center[![](img/virtual-env-2.png)]
+.center[![](virtual-env-2.png)]
 
 .center[Alles wird an einem zentralen Ort installiert]
 
@@ -306,7 +202,7 @@ ohne Virtual Environments:
 
 mit Virtual Environments
 
-.center[![](img/virtual-env3.png)]
+.center[![](virtual-env3.png)]
 
 .center[unabhängige, wiederverwenbare Umgebungen]
 
@@ -389,15 +285,15 @@ layout: true
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
 
 ---
 
@@ -459,14 +355,14 @@ Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
 
 - Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
 - Mit `y` bestätigen
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
 
 ---
 layout: true
@@ -482,7 +378,7 @@ activate codingingis
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
 
 ---
 layout: true
@@ -490,7 +386,7 @@ layout: true
 
 
 ---
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
 
 ---
 
@@ -546,11 +442,11 @@ conda install -c conda-forge `pandas`
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
 
 ---
 
@@ -575,21 +471,21 @@ jupyter lab
 
 ---
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
 
 ---
 layout: false
 
 ## Modul Importieren
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
 
 zB  `import  pandas`
 
 ---
 ## Working Directory
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
 
 
 - wo die Pythonscripts / Notebooks sind
@@ -606,8 +502,8 @@ zB  `import  pandas`
 
 --
 
-<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
+<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
+<img src = "AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
 
 
 ---
@@ -623,12 +519,12 @@ exclude: true
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
@@ -647,89 +543,89 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 ---
 exclude: true
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
+![](AGI_HS19_06_Coding_in_GIS_II45.png)
 
 ---
 exclude: true
 
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+<img src = "AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
+![](AGI_HS19_06_Coding_in_GIS_II47.png)
 
 ---
 exclude: true
 
-
-![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
-
----
-exclude: true
-
-![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
-
+![](AGI_HS19_06_Coding_in_GIS_II48.png)
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
+![](AGI_HS19_06_Coding_in_GIS_II49.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
+![](AGI_HS19_06_Coding_in_GIS_II50.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
+![](AGI_HS19_06_Coding_in_GIS_II51.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
-
----
-exclude: true
-
-
-![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
+![](AGI_HS19_06_Coding_in_GIS_II52.png)
 
 
 ---
 exclude: true
 
 
-![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
+![](AGI_HS19_06_Coding_in_GIS_II53.png)
 
 ---
 exclude: true
 
-![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
+![](AGI_HS19_06_Coding_in_GIS_II54.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II55.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II56.png)
+
+---
+exclude: true
+
+
+![](AGI_HS19_06_Coding_in_GIS_II57.png)
+
+
+---
+exclude: true
+
+
+![](AGI_HS19_06_Coding_in_GIS_II58.png)
+
+---
+exclude: true
+
+![](AGI_HS19_06_Coding_in_GIS_II59.png)
 
 ---
 template: themen
@@ -748,7 +644,7 @@ Gemeinsam kommende Woche (Coding in GIS III):
 - Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
 
 
-![](img/process.png)
+![](process.png)
 
 ---
 
@@ -759,7 +655,7 @@ Eure Leistung:
 - Experimentieren mit verschiedenen Radien
 - Visualisierung der Daten
 
-<img src = "img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
+<img src = "AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
 ---
 layout: true
@@ -893,16 +789,14 @@ class: sixth
 ---
 template: zeitplan
 class: seventh
-
     </textarea>
-  <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-  </script>
-  <script>
-    var slideshow = remark.create({
-      highlightSpans: true,
-      highlightLines: true,
-    });
-  </script>
-</body>
-
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        highlightSpans: true,
+        highlightLines: true,
+      });
+    </script>
+  </body>
 </html>

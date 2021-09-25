@@ -1,168 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Title</title>
-  <meta charset="utf-8">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  <head>
+    <meta charset="utf-8">
+    <title>Coding in GIS I</title>
 
-    body {
-      font-family: 'Roboto';
-    }
+    <link rel="stylesheet" href="/Modul-AGI/css/mystyle.css">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-    h1,
-    h2,
-    h3 {
-      font-family: 'Yanone Kaffeesatz';
-      font-weight: normal;
-    }
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
 
-    .remark-code,
-    .remark-inline-code {
-      font-family: 'Ubuntu Mono';
-    }
+    <style>
+      
+     
+    </style>
 
-    /* creates xaringan pull-righta and pull left classes */
-    .pull-left {
-      float: left;
-      width: 47%;
-    }
-
-    .pull-right {
-      float: right;
-      width: 47%;
-    }
-
-    /* makes all images scale to 100% */
-    img {
-      width: 100%;
-    }
-  </style>
+    <style>
+      
+    </style>
 
 
-  <!-- https://github.com/gnab/remark/issues/359 -->
+    <style>
+      
+    </style>
 
-  <style>
-    .smaller-font {
-      font-size: 14px
-    }
-  </style>
+    <style>
+      
+    </style>
 
-  <!-- This next style block is for the header of the slides -->
-  <style>
-    .header {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background-color: gainsboro;
-      width: 100%;
-      font-size: 80%;
-      padding: 10px;
-    }
+    <style>
+      
+    </style>
 
-    .headercol {
-      width: 33.33%;
-    }
-
-    .leftc {
-      float: left
-    }
-
-    .rightc {
-      float: right;
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .centerc {
-      margin: 0 auto
-    }
-  </style>
+    <style>
+      
+    </style>
 
 
-  <!-- this next style is just for the title slide-->
-  <style>
-    .titleslide {
-      background: linear-gradient(to bottom,
-          gray 0%,
-          gray 55%,
-          white 55%,
-          white 100%);
-    }
 
-    .title-header {
-      position: absolute;
-    }
+  </head>
+  <body>
+    <textarea id="source">
+class: titleslide
 
-    .title-bottom {
-      bottom: 5%;
-    }
-  </style>
-
-  <!-- this style is for the repeated "topics of the day" part -->
-  <style>
-    .first #first,
-    .second #second,
-    .third #third,
-    .fourth #fourth,
-    .fifth #fifth,
-    .sixth #sixth,
-    .seventh #seventh,
-    .eighth #eighth,
-    .nineth #nineth,
-    .tenth #tenth {
-      color: hotpink;
-    }
-    
-    
-  </style>
-
-  <!-- make footnotes smaller -->
-  <style>
-    .footnote {
-      font-size: small;
-    }
-  </style>
-
-  <!-- styling the tables manually -->
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: smaller;
-    }
-
-    th,
-    td {
-      padding: 5px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    tr.pause {
-      background-color: #c8e6c9;
-    }
-  </style>
-
-
-</head>
-
-<body>
-  <textarea id="source">
-
-        <h3 class = "title-header" style = "top: 20%;"> 
+<h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
 
 <h1 class = "title-header" style = "top: 40%;">Coding in GIS I</h1>
 
 <div class = "title-header title-bottom" style = "width: 20%">
-  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
+  <img src="zhaw_rgb_byline_d.png" width = 100%> 
 </div>
 <div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
   Nils Ratnaweera<br>
@@ -180,7 +77,7 @@
 ---
 # Vorstellung
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia0_1.png" style = "width: 75%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia0_1.png" style = "width: 75%"> 
 
 
 ---
@@ -284,6 +181,8 @@ Warum lernen wir python?
 layout: false
 # Lernziele
 
+
+
 * Sie sind in der Lage die Vorteile von Coden / Skripten versus "Point-and-Klick" zu erläutern
 --
 
@@ -319,10 +218,19 @@ layout: true
 # Programmieren: Eine notwendige Expertise?
 
 ---
+background-image:  url(steve-jobs.jpeg)
+background-position: center
+background-size: contain   
 
-background-image:  url(img/AGI_HS20_02_Coding_in_GIS_Ia2.jpg)
+--
 
-Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-663860/
+<blockquote style = "position: absolute; bottom: 35%">
+Everybody in this country should learn how to program a computer... because it teaches you how to think
+</blockquote>
+
+
+
+<!-- Quelle: https://www.androidauthority.com/why-everyone-should-learn-to-code-663860/ -->
 
 ---
 
@@ -345,7 +253,7 @@ Code.org ist eine gemeinnützige Organisation, die sich dafür einsetzt, den Zug
 
 class: center, middle
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia3.png" style = "width: 80%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia3.png" style = "width: 80%"> 
 
 .footnote[Quelle: https://www.rheinwerk-verlag.de/programmieren-lernen-mit-der-maus_4973]
 
@@ -355,7 +263,7 @@ class: center, middle
 
 
 <div class = "center middle">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia4.png"  style = "width: 50%"> 
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia4.png"  style = "width: 50%"> 
 </div>
 
 .footnote[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]
@@ -370,7 +278,7 @@ class: center, middle
 ---
 
 <div class = "center middle">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia5.png"  style = "width: 80%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia5.png"  style = "width: 80%">
 </div>
 
 .footnote[Quelle: https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare/]
@@ -381,7 +289,7 @@ layout: false
 template: themen
 class: second
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg" style = "width: 80%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia6.jpg" style = "width: 80%">
 
 
 
@@ -391,11 +299,11 @@ layout: true
 # 7 Gründe warum ich gerne programmiere
 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia7.png" class = "center" style = "width: 50%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia7.png" class = "center" style = "width: 50%"> 
 
 --
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia8.png" class = "center" style = "width: 50%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia8.png" class = "center" style = "width: 50%"> 
 
 
 ---
@@ -418,7 +326,7 @@ layout: true
 ---
 
 <div class = "center">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia9.jpg" style = "width: 75%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia9.jpg" style = "width: 75%">
 
 </div>
 
@@ -430,22 +338,22 @@ layout: true
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_1.jpg" style = "width: 80%" class = "center"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia9_1.jpg" style = "width: 80%" class = "center"> 
 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_2.jpg" style = "width: 80%" class = "center"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia9_2.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_3.jpg" style = "width: 80%" class = "center"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia9_3.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_4.jpg" style = "width: 80%" class = "center"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia9_4.jpg" style = "width: 80%" class = "center"> 
 ---
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia9_5.jpg" style = "width: 80%" class = "center"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia9_5.jpg" style = "width: 80%" class = "center"> 
 
 ---
 
 
 <div class = "center">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 80%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 80%">
 </div>
 
 
@@ -454,7 +362,7 @@ layout: true
 ```python
 make_map(Neutoeter)
 ```
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 50%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 50%"> 
 
 
 ---
@@ -466,17 +374,17 @@ for bird in `all_birds`:​
   make_map(bird)
 ```
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
 --
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
 
 ???
 
@@ -491,11 +399,11 @@ Achtung: Automatisierung
 
 --
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia17.png"  style = "width: 60%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia17.png"  style = "width: 60%">
 
 --
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia18.png"  style = "width: 60%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia18.png"  style = "width: 60%">
 
 
 .footnote[Quelle: https://xkcd.com/1319/]
@@ -510,14 +418,14 @@ layout: true
 --
 
 .pull-left[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia20.png" style = "width: 45%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia21.jpg" style = "width: 45%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia20.png" style = "width: 45%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia21.jpg" style = "width: 45%"> 
 ]
 
 --
 
 .pull-right[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia19.gif" style = "width: 75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia19.gif" style = "width: 75%">
 ]
 
 ???
@@ -533,18 +441,18 @@ Alte Lösungen können für neue Probleme umfunktioniert werden​
 
 
 .pull-left[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia10.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia11.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia13.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia14.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia15.png" style = "width: 30%"> 
+<img src="AGI_HS20_02_Coding_in_GIS_Ia16.png" style = "width: 30%"> 
 ]
 
 --
 
 .pull-right[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" style = "width: 75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia22.png" style = "width: 75%">
 ]
 
 
@@ -556,7 +464,7 @@ layout: true
 
 ---
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia30.jpg)
+![](AGI_HS20_02_Coding_in_GIS_Ia30.jpg)
 
 
 .foonote[Quelle: [www.washingtonpost.com](https://www.washingtonpost.com/news/wonk/wp/2015/07/13/map-where-americas-sunniest-and-least-sunny-places-are/)]
@@ -575,7 +483,7 @@ Beispiel: Zufällige Punkte in einem Umkreis verteilen
 .pull-left[
 
 <figure>
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia31_arcgis.gif" style="width:100%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia31_arcgis.gif" style="width:100%">
   <figcaption>ArcGIS "Random Points in Polygon"</figcaption>
 </figure> 
 ]
@@ -585,7 +493,7 @@ Beispiel: Zufällige Punkte in einem Umkreis verteilen
 .pull-right[
 
 <figure>
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia31_python.gif" style="width:100%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia31_python.gif" style="width:100%">
   <figcaption>Python / R (eigene Funktion)</figcaption>
 </figure> 
 
@@ -599,7 +507,7 @@ layout: false
 .pull-left[
 
 <figure>
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia33.jpg" style="width:100%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia33.jpg" style="width:100%">
   <figcaption>ArcGIS: "TopologyRules" (seitenlang und ArcGIS spezifisch)</figcaption>
 </figure> 
 
@@ -607,7 +515,7 @@ layout: false
 .pull-right[
 
 <figure>
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia34.png" style="width:100%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia34.png" style="width:100%">
   <figcaption>Grundkonzept DE-9IM: (kurz und elegant, in allen Programmiersprachen gleich)</figcaption>
 </figure> 
 
@@ -628,15 +536,15 @@ layout: true
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia35.png" style="width:75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia35.png" style="width:75%">
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia36.png" style="width:75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia36.png" style="width:75%">
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia37.png" style="width:75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia37.png" style="width:75%">
 
 ---
 layout: true
@@ -661,7 +569,7 @@ es dauert ca. 1h um eine frage zu *formulieren*
 
 
 <div class = "center">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia38.png" style="width:75%">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia38.png" style="width:75%">
 </div>
 
 
@@ -669,7 +577,7 @@ es dauert ca. 1h um eine frage zu *formulieren*
 
 <div class = "center">
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia39.png" style="width:75%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia39.png" style="width:75%">
 </div>
 ---
 layout: false
@@ -695,14 +603,14 @@ layout: true
 
 ---
 
-<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia41.jpg'); height: 400px; width: 100%; position: relative;">
-  <!-- <img src="img/AGI_HS20_02_Coding_in_GIS_Ia41.jpg" style="width:100%; position: relative;"> -->
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia40.png" style="position: absolute; top: 160px; left: 050px;width: 40px;">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia42.png" style="position: absolute; top: 160px; left: 170px;width: 40px;">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia43.png" style="position: absolute; top: 160px; left: 280px;width: 40px;">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia44.png" style="position: absolute; top: 160px; left: 400px;width: 40px;">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia45.png" style="position: absolute; top: 160px; left: 510px;width: 40px;">
-  <img src="img/AGI_HS20_02_Coding_in_GIS_Ia46.png" style="position: absolute; top: 160px; left: 630px;width: 40px;">
+<div style="background-image: url('AGI_HS20_02_Coding_in_GIS_Ia41.jpg'); height: 400px; width: 100%; position: relative;">
+  <!-- <img src="AGI_HS20_02_Coding_in_GIS_Ia41.jpg" style="width:100%; position: relative;"> -->
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia40.png" style="position: absolute; top: 160px; left: 050px;width: 40px;">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia42.png" style="position: absolute; top: 160px; left: 170px;width: 40px;">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia43.png" style="position: absolute; top: 160px; left: 280px;width: 40px;">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia44.png" style="position: absolute; top: 160px; left: 400px;width: 40px;">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia45.png" style="position: absolute; top: 160px; left: 510px;width: 40px;">
+  <img src="AGI_HS20_02_Coding_in_GIS_Ia46.png" style="position: absolute; top: 160px; left: 630px;width: 40px;">
 
 </div>
 
@@ -711,70 +619,70 @@ layout: true
 .footnote[Quelle: [http://createlucklv.com](http://createlucklv.com/real-estate/sacrifices-vs-choices-knowing-the-difference-and-choosing-choice/)]
 ---
 
-<img src="img/tiobe_1.png" style = "width: 100%">
+<img src="tiobe_1.png" style = "width: 100%">
 
 
 ---
-<img src="img/tiobe_2.png" style = "width: 100%">
+<img src="tiobe_2.png" style = "width: 100%">
 
 ???
 
 Programmiersprache C
 ---
-<img src="img/tiobe_3.png" style = "width: 100%">
+<img src="tiobe_3.png" style = "width: 100%">
 ???
 
 Programmiersprache Java
 
 ---
-<img src="img/tiobe_4.png" style = "width: 100%">
+<img src="tiobe_4.png" style = "width: 100%">
 ???
 
 Programmiersprache Python
 
 ---
-<img src="img/tiobe_5.png" style = "width: 100%">
+<img src="tiobe_5.png" style = "width: 100%">
 ???
 
 Programmiersprache C++
 
 ---
-<img src="img/tiobe_6.png" style = "width: 100%">
+<img src="tiobe_6.png" style = "width: 100%">
 ???
 
 Programmiersprache C#
 
 ---
-<img src="img/tiobe_7.png" style = "width: 100%">
+<img src="tiobe_7.png" style = "width: 100%">
 ???
 
 Programmiersprache Visual Basic
 
 ---
-<img src="img/tiobe_8.png" style = "width: 100%">
+<img src="tiobe_8.png" style = "width: 100%">
 ???
 
 Programmiersprache JavaScript
 
 ---
-<img src="img/tiobe_9.png" style = "width: 100%">
+<img src="tiobe_9.png" style = "width: 100%">
 ???
 
 Programmiersprache R
 
 ---
 
-<img src="img/ds-programming.png" style="width: 80%;">
+<img src="ds-programming.png" style="width: 80%;">
 
 .footnote[Quelle: [www.kaggle.com](https://www.kaggle.com/c/kaggle-survey-2019)]
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia52.png" style = "width: 50%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia50.png" style = "width: 50%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia52.png" style = "width: 50%">
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia53.png" style = "width: 50%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia53.png" style = "width: 50%">
 
 
 
@@ -800,11 +708,11 @@ layout: true
 )]
 
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia55.jpg" class = "pull-left">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia55.jpg" class = "pull-left">
 
 --
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia56.jpg" class = "pull-right">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia56.jpg" class = "pull-right">
 
 
 
@@ -822,11 +730,11 @@ Der schwierigste Schritt für Anfänger in Python ist meiner Meinung nach das Ei
 
 
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia57.jpg)
+![](AGI_HS20_02_Coding_in_GIS_Ia57.jpg)
 
 ---
 
-<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" style = "width: 100%">
+<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" style = "width: 100%">
 
 ---
 layout: true
@@ -837,7 +745,7 @@ layout: true
 
 
 
-![](img/AGI_HS20_02_Coding_in_GIS_Ia64.gif) 
+![](AGI_HS20_02_Coding_in_GIS_Ia64.gif) 
 
 .footnote[Quelle: [tucsonweekly.com](https://www.tucsonweekly.com/TheRange/archives/2016/02/11/weve-got-gravitational-waves)]
 
@@ -849,11 +757,11 @@ Erstes Beispiel:​ Am 14. September 2015 hat der Gravitationswellendetektor LIG
 ---
 
 .pull-left[
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia65.png" style = "width: 100%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia65.png" style = "width: 100%">
 ]
 
 .pull-right[
-<img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png" style = "width: 100%">
+<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" style = "width: 100%">
 ]
 
 .footnote[Code auf [Github](https://github.com/minrk/ligo-binder) verfübar]
@@ -867,7 +775,7 @@ Mit Anacona habt ihr nun Jupyter Notebooks ebenfalls installiert und könntet nu
 ---
 
 <div class = "center">
-  <img src = "img/AGI_HS20_02_Coding_in_GIS_Ia67.jpg" style = "width: 60%">
+  <img src = "AGI_HS20_02_Coding_in_GIS_Ia67.jpg" style = "width: 60%">
 </div>
 
 ???
@@ -877,7 +785,7 @@ Am 10.4.2019 wurde das erste Bild von einem schwarzen Loch, generiert durch das 
 ---
 
 
-<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+<div style="background-image: url('AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
 </div>
 
 ???
@@ -886,15 +794,15 @@ Dabei kursierte ebenfalls dieses Bild von Katie Bourman, eine der Wissenschaftle
 Was man hier auf ihrem Bildschirm sieht ist offensichtlich die eben erstellte Visualisierung des schwarzen Loches – erstellt mit Matplotlib, wie an den Achsen zu erkennen ist. Der Code ist übrigens öffentlich einsehbar​
 
 ---
-<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
-  <img src = "img/AGI_HS20_02_Coding_in_GIS_Ia68.png"  style="position: absolute; top: 200px; left: 100px;width: 400px;">
+<div style="background-image: url('AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src = "AGI_HS20_02_Coding_in_GIS_Ia68.png"  style="position: absolute; top: 200px; left: 100px;width: 400px;">
   </div>
 ---
 
 
-<div style="background-image: url('img/AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
-  <img src = "img/AGI_HS20_02_Coding_in_GIS_Ia68.png"  style="position: absolute; top: 200px; left: 100px; width: 400px;">
-  <img src = "img/AGI_HS20_02_Coding_in_GIS_Ia66.png"  style="position: absolute; top: 000px; left: 630px; width: 200px;">
+<div style="background-image: url('AGI_HS20_02_Coding_in_GIS_Ia70.png'); background-repeat: no-repeat; background-size: 100%; height: 400px; width: 80%; position: relative;">
+  <img src = "AGI_HS20_02_Coding_in_GIS_Ia68.png"  style="position: absolute; top: 200px; left: 100px; width: 400px;">
+  <img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png"  style="position: absolute; top: 000px; left: 630px; width: 200px;">
   </div>
 
   
@@ -927,7 +835,7 @@ Was heisst das für euch?
 
 Anzahl Fragen auf Stackoverflow zum jeweiligen Thema
 
-<img src="img/so_tags.jpg" width=100%>
+<img src="so_tags.jpg" width=100%>
 
 .footnote[Quelle: stackoverflow.com | Abgerufen am 22.09.2020 | jeder Begriff wurde als "Tag" gesucht, mehrere Tags wurden mit "or" verbunden]
 
@@ -938,7 +846,7 @@ layout: true
 
 ---
 
-<img src="img/AGI_HS20_02_Coding_in_GIS_Ia71.png" style = "width: 70%">
+<img src="AGI_HS20_02_Coding_in_GIS_Ia71.png" style = "width: 70%">
 
 
 ---
@@ -994,16 +902,14 @@ class: nineth
 ---
 template: zeitplan
 class: tenth
-
     </textarea>
-  <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-  </script>
-  <script>
-    var slideshow = remark.create({
-      highlightSpans: true,
-      highlightLines: true,
-    });
-  </script>
-</body>
-
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        highlightSpans: true,
+        highlightLines: true,
+      });
+    </script>
+  </body>
 </html>

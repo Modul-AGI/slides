@@ -1,0 +1,126 @@
+/* beautiful blockquotes */
+
+/* https://github.com/gnab/remark/issues/305#issuecomment-403309989 */
+
+blockquote::before {
+  content: open-quote;
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+blockquote {
+  border-left: 0.3em solid #ccc;
+  padding: 0 15px;
+  font-style: italic;
+  color: #ccc;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote::after {
+  content: close-quote;
+  margin-left: 5px;
+  font-size: 1.2em;
+}
+
+/* creates xaringan pull-righta and pull left classes */
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+/* makes all images scale to 100% */
+
+img {
+  width: 100%;
+}
+
+/* just for the header (currently unused) */
+
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: gainsboro;
+  width: 100%;
+  font-size: 80%;
+  padding: 10px;
+}
+
+.headercol {
+  width: 33.33%;
+}
+
+.leftc {
+  float: left
+}
+
+.rightc {
+  float: right;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.centerc {
+  margin: 0 auto
+}
+
+/* for the title slide */
+
+.titleslide {
+  background: linear-gradient(to bottom, gray 0%, gray 55%, white 55%, white 100%);
+}
+
+.title-header {
+  position: absolute;
+}
+
+.title-bottom {
+  bottom: 5%;
+}
+
+/* this style is for the repeated "topics of the day" part */
+
+.first #first, 
+.second #second, 
+.third #third, 
+.fourth #fourth, 
+.fifth #fifth, 
+.sixth #sixth, 
+.seventh #seventh, 
+.eighth #eighth, 
+.nineth #nineth, 
+.tenth #tenth {
+  color: hotpink;
+}
+
+/* make footnotes smaller */
+.footnote {
+  font-size: small;
+}
+
+
+/* styling the tables manually */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: smaller;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr.pause {
+  background-color: #c8e6c9;
+}
