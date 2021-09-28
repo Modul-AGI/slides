@@ -257,16 +257,31 @@ layout: true
 
 
 ---
+name: gruende
+layout: true
+
+# 7 Gründe warum ich gerne programmiere
+
 
 Ich ♥ Programmieren, weil ich damit:
 
-1. ... repetitive Tasks automatisieren kann
-2. ... übertragbare "Tools" bauen kann
-3. ... mehr Flexibilität und "Power" habe
-4. ... zu Grunde liegende Funktionen besser verstehe
-5. ... bessere Möglichkeiten habe zu Kollaborieren
-6. ... bessere Möglichkeiten habe, Hilfe zu erhalten
-7. ... reproduzierbar arbeite
+<ol>
+  <li id = "first">... repetitive Tasks automatisieren kann</li>
+  <li id = "second">... übertragbare "Tools" bauen kann</li>
+  <li id = "third">... mehr Flexibilität und "Power" habe</li>
+  <li id = "fourth">... zu Grunde liegende Funktionen besser verstehe</li>
+  <li id = "fifth">... bessere Möglichkeiten habe zu Kollaborieren</li>
+  <li id = "sixth">... bessere Möglichkeiten habe, Hilfe zu erhalten</li>
+  <li id = "seventh">... reproduzierbar arbeite</li>
+</ol>
+
+
+---
+template: gruende
+
+---
+template: gruende
+class: first
 
 ---
 layout: true
@@ -358,6 +373,11 @@ Achtung: Automatisierung
 
 .footnote[Quelle: https://xkcd.com/1319/]
 
+
+---
+template: gruende
+class: second
+
 ---
 layout: true
 
@@ -405,6 +425,9 @@ Alte Lösungen können für neue Probleme umfunktioniert werden​
 <img src="AGI_HS20_02_Coding_in_GIS_Ia22.png" style = "width: 75%">
 ]
 
+---
+template: gruende
+class: third
 
 ---
 layout: true
@@ -450,6 +473,10 @@ Beispiel: Zufällige Punkte in einem Umkreis verteilen
 ]
 
 ---
+template: gruende
+class: fourth
+
+---
 layout: false
 
 ## Verständnis der zu Grunde liegenden Funktionen
@@ -470,6 +497,10 @@ layout: false
 </figure> 
 
 ]
+
+---
+template: gruende
+class: fifth
 
 ---
 layout: true
@@ -495,6 +526,11 @@ layout: true
 ---
 
 <img src="AGI_HS20_02_Coding_in_GIS_Ia37.png" style="width:75%">
+
+
+---
+template: gruende
+class: sixth
 
 ---
 layout: true
@@ -529,6 +565,11 @@ es dauert ca. 1h um eine frage zu *formulieren*
 
 <img src="AGI_HS20_02_Coding_in_GIS_Ia39.png" style="width:75%">
 </div>
+
+---
+template: gruende
+class: seventh
+
 ---
 layout: false
 
