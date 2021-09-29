@@ -28,7 +28,6 @@ class: titleslide
 
 
 
-
 ---
 # Vorstellung
 
