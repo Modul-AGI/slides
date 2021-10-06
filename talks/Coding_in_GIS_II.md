@@ -114,8 +114,7 @@ layout: true
 # Themen
 
 <ul>
-  <li id = "first">Python Erweiterungen / Module</li>
-  <li id = "second">Virtual Environments</li>
+  <li id = "first">Python Modules und Virtual Environments</li>
   <li id = "third">Conda</li>
   <li id = "fourth">Conda mit ArcGIS</li>
   <li id = "fifth">Leistungsnachweis</li>
@@ -132,12 +131,35 @@ layout: true
 
 ---
 
-![](virtual-env.png)
+#### Ziel: Haus bauen
 
+<table>
+<thead>
+  <tr>
+  </tr>
+</thead>
+<tbody align = "left" valign = "top">
+  <tr>
+    <td>1</td>
+    <td>Adresse finden</td>
+    <td><em>Channel</em> eruieren machen</td>
+    <td><em>conda-forge</em></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Anrufen, Vertragsbedingung klären</td>
+    <td>Modul installieren</td>
+    <td><pre style="font-size: x-small">conda install -c conda-forge pandas</pre></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Arbeitseinsatz</td>
+    <td>Modul laden</td>
+    <td><pre style="font-size: x-small">import pandas</pre></td>
+  </tr>
+</tbody>
+</table>
 
----
-template: themen
-class: second
 
 ---
 layout: true
@@ -147,16 +169,20 @@ layout: true
 
 ohne Virtual Environments:
 
-.center[![](virtual-env-2.png)]
+<!-- .center[![](virtual-env-2.png)] -->
 
+![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggUkxcbiAgICBCW3BhbmRhc10gLS0-IEFbQzpcXFByb2dyYW1tZS4uXFxzb21lX3BhdGhcXC4uLl1cbiAgICBDW21hdHBsb3RsaWJdIC0tPiBBXG4gICAgRFtqdXB5dGVyIG5vdGVib29rXSAtLT4gQVxuICAgIEVbZ2VvcGFuZGFzXSAtLT4gQVxuICAgIEEgLS0-IFhbUHJvamVjdCBBXVxuICAgIEEgLS0-IFlbUHJvamVjdCBCXVxuICAgIEEgLS0-IFpbUHJvamVrdCBDXVxuXG4gICAgXG4iLCJtZXJtYWlkIjp7InNlY3VyaXR5TGV2ZWwiOiJsb29zZSIsImZsb3djaGFydCI6eyJodG1sTGFiZWxzIjp0cnVlfSwidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 .center[Alles wird an einem zentralen Ort installiert]
 
 ---
 
 mit Virtual Environments
 
-.center[![](virtual-env3.png)]
+<!-- .center[![](virtual-env3.png)] -->
 
+<div style = "text-align: center;">
+<img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggUkxcbiAgICBCW3BhbmRhc10gLS0-IEFbQUdJLWVudl1cbiAgICBDW21hdHBsb3RsaWJdIC0tPiBBXG4gICAgRFtqdXB5dGVyIG5vdGVib29rXSAtLT4gQVxuICAgIEVbZ2VvcGFuZGFzXSAtLT4gRltTQTItZW52XVxuICAgIEIgLS0-IEZcbiAgICBDIC0tPiBGXG4gICAgQSAtLT4gWFtQcm9qZWN0IEFdXG4gICAgQSAtLT4gWVtQcm9qZWN0IEJdXG4gICAgRiAtLT4gWltQcm9qZWt0IENdXG5cbiAgICBcbiIsIm1lcm1haWQiOnsic2VjdXJpdHlMZXZlbCI6Imxvb3NlIiwiZmxvd2NoYXJ0Ijp7Imh0bWxMYWJlbHMiOnRydWV9LCJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ" style="width:60%; float:center">
+</div>
 .center[unabhängige, wiederverwenbare Umgebungen]
 
 ???
@@ -271,12 +297,12 @@ layout: true
 
 
 ```ruby
-conda create --name codingingis
+conda create --name agi-env
 ```
 
 ---
 ```ruby
-`conda` create --name codingingis
+`conda` create --name agi-env
 ```
 Ruft das Programm *conda* auf
 
@@ -284,16 +310,16 @@ Ruft das Programm *conda* auf
 
 
 ```ruby
-conda `create` --name codingingis
+conda `create` --name agi-env
 ```
-Ruft den Befehl *create* auscondaauf
+Ruft den Befehl *create* von *conda* auf
 
 Der *create* Befehl erstellt eben diese neue Environment in einem Standartverzeichnis
 
 ---
 
 ```ruby
-conda create `--name` codingingis
+conda create `--name` agi-env
 ```
 
 Kündigt an, dass gleich der Name der neuen Umgebung definiert wird
@@ -301,10 +327,10 @@ Kündigt an, dass gleich der Name der neuen Umgebung definiert wird
 ---
 
 ```ruby
-conda create --name `codingingis`
+conda create --name `agi-env`
 ```
 
-Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
+Bestimmt, das der Name der neuen Umgebung *agi-env* lauten soll
 
 ---
 
@@ -325,9 +351,9 @@ layout: true
 ---
 
 ```ruby
-activate codingingis
+activate agi-env
 ```
-- Aktiviert die Environment mit dem Namen `codingingis`
+- Aktiviert die Environment mit dem Namen `agi-env`
 
 ---
 
@@ -430,6 +456,7 @@ jupyter lab
 layout: false
 
 ## Modul Importieren
+exclude: true
 
 <img src = "AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
 
@@ -437,9 +464,6 @@ zB  `import  pandas`
 
 ---
 ## Working Directory
-
-<img src = "AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
-
 
 - wo die Pythonscripts / Notebooks sind
 - Ist v.a. beim einlesen / ausgeben von Dateien wichtig

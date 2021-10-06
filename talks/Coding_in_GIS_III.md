@@ -29,10 +29,9 @@ class: titleslide
 # Lernziele
 
 
-* Ihr versteht das Ziel der Übungen aus Coding in GIS II
-* Wisst, warum wir diese Woche "for loops" lernen
+* Wisst, warum wir diese Woche `for loops` lernen
 * Versteht, dass wir bisher gar nicht mit GIS Werkzeugen gearbeitet haben und warum dies jetzt aber nötig ist
-* Kennt die drei Hierarchiestufen von GeopandasGeoDataFrames
+* Kennt die drei Hierarchiestufen von `GeopandasGeoDataFrames`
 * Ihr wisst, dass Python ein Vollfunktionsfähiges GIS bietet, welches sämtliche von ArcGIS bekannten Operationen zur Verfügung stellt
 * Ihr kennt die Anforderungen an den Leistungsnachweis für den Themenblock "Coding in GIS"
 

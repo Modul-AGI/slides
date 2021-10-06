@@ -5,8 +5,6 @@ permalink: /Coding_in_GIS_I/
 ---
 class: titleslide
 
-
-
 <h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
@@ -25,6 +23,7 @@ class: titleslide
   Grüental, Postfach, CH-8820 Wädenswil<br>
   <br>
   rata@zhaw.ch
+</div>
 
 
 
