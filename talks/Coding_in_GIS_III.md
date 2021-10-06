@@ -1,31 +1,9 @@
 ---
 layout: presentation
 title: Coding in GIS II
-permalink: /Coding_in_GIS_III/
+permalink: Coding_in_GIS_III.html
 ---
-class: titleslide
-
-<h3 class = "title-header" style = "top: 20%;"> 
-  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
-</h3>
-
-<h1 class = "title-header" style = "top: 40%;">Coding in GIS III</h1>
-
-<div class = "title-header title-bottom" style = "width: 20%">
-  <img src="zhaw_rgb_byline_d.png" width = 100%> 
-</div>
-<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
-  Nils Ratnaweera<br>
-  Forschungsgruppe Geoinformatik<br>
-  <br>
-  Institut für Umwelt und Natürliche Ressourcen	<br>
-  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
-  Grüental, Postfach, CH-8820 Wädenswil<br>
-  <br>
-  rata@zhaw.ch
-
----
-
+layout: false
 # Lernziele
 
 

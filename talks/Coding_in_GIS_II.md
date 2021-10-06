@@ -1,29 +1,7 @@
 ---
 layout: presentation
 title: Coding in GIS II
-permalink: /Coding_in_GIS_II/
----
-class: titleslide
-
-<h3 class = "title-header" style = "top: 20%;"> 
-  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
-</h3>
-
-<h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
-
-<div class = "title-header title-bottom" style = "width: 20%">
-  <img src="zhaw_rgb_byline_d.png" width = 100%> 
-</div>
-<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
-  Nils Ratnaweera<br>
-  Forschungsgruppe Geoinformatik<br>
-  <br>
-  Institut für Umwelt und Natürliche Ressourcen	<br>
-  ZHAW Zürcher Hochschule für Angewandte Wissenschaften<br>
-  Grüental, Postfach, CH-8820 Wädenswil<br>
-  <br>
-  rata@zhaw.ch
-
+permalink: Coding_in_GIS_II.html
 ---
 name: zeitplan 
 layout: true
@@ -130,36 +108,41 @@ layout: true
 # Python Erweiterungen / Module
 
 ---
+asdf
 
+![](mermaid.svg)
+
+---
 #### Ziel: Haus bauen
 
-<table>
-<thead>
-  <tr>
-  </tr>
-</thead>
-<tbody align = "left" valign = "top">
-  <tr>
-    <td>1</td>
-    <td>Adresse finden</td>
-    <td><em>Channel</em> eruieren machen</td>
-    <td><em>conda-forge</em></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Anrufen, Vertragsbedingung klären</td>
-    <td>Modul installieren</td>
-    <td><pre style="font-size: x-small">conda install -c conda-forge pandas</pre></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Arbeitseinsatz</td>
-    <td>Modul laden</td>
-    <td><pre style="font-size: x-small">import pandas</pre></td>
-  </tr>
-</tbody>
-</table>
 
+<div class="mermaid" id ="mermaid-handwerker">
+sequenceDiagram
+    participant A as Extern
+    participant B as Vertragspartner
+    participant C as Arbeitsort
+
+    A->> B: Vertragsabschluss
+    Note over A,B: HandwerkerIn ist nun Einsetzbar
+    B->> C: Anrufen
+    Note over B,C: HandwerkerIn kommt zum Einsatz
+</div>
+
+---
+#### Ziel: Haus bauen
+
+
+<div class="mermaid" id = "mermaid-install">
+sequenceDiagram
+    participant A as Server
+    participant B as Lokal
+    participant C as Session
+
+    A->> B: modul installieren
+    Note over A,B: Modul ist nun Einsetzbar
+    B->> C: modul laden
+    Note over B,C: Modul kommt zum Einsatz
+</div>
 
 ---
 layout: true
@@ -169,28 +152,47 @@ layout: true
 
 ohne Virtual Environments:
 
-<!-- .center[![](virtual-env-2.png)] -->
+<div class = "mermaid" id = "mermaid-install2">
+graph LR
+    B[pandas] --> A[Lokal]
+    C[matplotlib] --> A
+    D[jupyter notebook] --> A
+    E[geopandas] --> A
+    A --> X[Project A]
+    A --> Y[Project B]
+    A --> Z[Projekt C]
+</div>
 
-![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggUkxcbiAgICBCW3BhbmRhc10gLS0-IEFbQzpcXFByb2dyYW1tZS4uXFxzb21lX3BhdGhcXC4uLl1cbiAgICBDW21hdHBsb3RsaWJdIC0tPiBBXG4gICAgRFtqdXB5dGVyIG5vdGVib29rXSAtLT4gQVxuICAgIEVbZ2VvcGFuZGFzXSAtLT4gQVxuICAgIEEgLS0-IFhbUHJvamVjdCBBXVxuICAgIEEgLS0-IFlbUHJvamVjdCBCXVxuICAgIEEgLS0-IFpbUHJvamVrdCBDXVxuXG4gICAgXG4iLCJtZXJtYWlkIjp7InNlY3VyaXR5TGV2ZWwiOiJsb29zZSIsImZsb3djaGFydCI6eyJodG1sTGFiZWxzIjp0cnVlfSwidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
-.center[Alles wird an einem zentralen Ort installiert]
+???
+
+gegenseige Abhängigkeiten
+
 
 ---
 
 mit Virtual Environments
 
-<!-- .center[![](virtual-env3.png)] -->
 
-<div style = "text-align: center;">
-<img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggUkxcbiAgICBCW3BhbmRhc10gLS0-IEFbQUdJLWVudl1cbiAgICBDW21hdHBsb3RsaWJdIC0tPiBBXG4gICAgRFtqdXB5dGVyIG5vdGVib29rXSAtLT4gQVxuICAgIEVbZ2VvcGFuZGFzXSAtLT4gRltTQTItZW52XVxuICAgIEIgLS0-IEZcbiAgICBDIC0tPiBGXG4gICAgQSAtLT4gWFtQcm9qZWN0IEFdXG4gICAgQSAtLT4gWVtQcm9qZWN0IEJdXG4gICAgRiAtLT4gWltQcm9qZWt0IENdXG5cbiAgICBcbiIsIm1lcm1haWQiOnsic2VjdXJpdHlMZXZlbCI6Imxvb3NlIiwiZmxvd2NoYXJ0Ijp7Imh0bWxMYWJlbHMiOnRydWV9LCJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ" style="width:60%; float:center">
+<div class = "mermaid" id = "mermaid-install3">
+graph LR
+    B[pandas] --> A[AGI-env]
+    C[matplotlib] --> A
+    D[jupyter notebook] --> A
+    E[geopandas] --> F[SA2-env]
+    B --> F
+    C --> F
+    A --> X[Project A]
+    A --> Y[Project B]
+    F --> Z[Projekt C]
 </div>
-.center[unabhängige, wiederverwenbare Umgebungen]
 
 ???
-
-davon gibt es in Python 3 verschiedene Implementationen:​
-- "Virtualenv"
-- "pipenv"
-- "Conda Environment"
+- Unabhängingige Umgebungen, keine Abhängigkeiten
+- Virtuelle Umgebungen sind "günstig" (schnell erstellt) und deshalb wegwerfbar 
+- davon gibt es in Python 3 verschiedene Implementationen:​
+  - "Virtualenv"
+  - "pipenv"
+  - "Conda Environment"
 
 
 ---
@@ -264,15 +266,15 @@ layout: true
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
 
 ---
 
@@ -334,14 +336,14 @@ Bestimmt, das der Name der neuen Umgebung *agi-env* lauten soll
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
 
 - Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
 - Mit `y` bestätigen
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
 
 ---
 layout: true
@@ -357,7 +359,7 @@ activate agi-env
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
 
 ---
 layout: true
@@ -365,7 +367,7 @@ layout: true
 
 
 ---
-<img src = "AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
 
 ---
 
@@ -421,11 +423,11 @@ conda install -c conda-forge `pandas`
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
 
 ---
 
@@ -450,7 +452,7 @@ jupyter lab
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
 
 ---
 layout: false
@@ -458,7 +460,7 @@ layout: false
 ## Modul Importieren
 exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
 
 zB  `import  pandas`
 
@@ -479,8 +481,8 @@ zB  `import  pandas`
 
 --
 
-<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
-<img src = "AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
 
 
 ---
@@ -496,12 +498,12 @@ exclude: true
 ---
 exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
 exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
@@ -520,7 +522,7 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 ---
 exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
 ---
 exclude: true
@@ -532,7 +534,7 @@ exclude: true
 exclude: true
 
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
 ---
 exclude: true
 
@@ -632,7 +634,7 @@ Eure Leistung:
 - Experimentieren mit verschiedenen Radien
 - Visualisierung der Daten
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
 ---
 layout: true
