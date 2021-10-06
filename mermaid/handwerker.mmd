@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant A as Extern
+    participant B as Vertragspartner
+    participant C as Arbeitsort
+
+    A->> B: Vertragsabschluss
+    Note over A,B: HandwerkerIn ist nun Einsetzbar
+    B->> C: Anrufen
+    Note over B,C: HandwerkerIn kommt zum Einsatz

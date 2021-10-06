@@ -124,3 +124,7 @@ tr:nth-child(even) {
 tr.pause {
   background-color: #c8e6c9;
 }
+
+
+/* for mermaid graphs (since their seem to have a default width of 900 something pixel??) */
+

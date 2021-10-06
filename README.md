@@ -1,5 +1,13 @@
 
+## To serve locally
+
+```
+jekyll serve --baseurl ""
+```
+
 ## Build and push to gh-pages:
+
+
 
 ```bash
 jekyll build
@@ -14,5 +22,6 @@ I imported the slides from the pptx HS20 with the [pptx2md](https://github.com/s
 ## Coding in GIS II
 
 ```bash
-pptx2md ../../HS2020/Vorlesung/03_Coding_in_GIS_II/Vorlesung/AGI_HS19_06_Coding_in_GIS_II.pptx -o 2_Coding_in_GIS_II/index.md --disable-escaping
+pptx2md ../../HS2020/Vorlesung/03_Coding_in_GIS_II/Vorlesung/AGI_HS19_06_Coding_in_GIS_II.pptx -o Coding_in_GIS_II/index.md --disable-escaping
 ```
+

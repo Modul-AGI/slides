@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Title</title>
+  <title>Coding in GIS</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/slides/css/mystyle.css">
   <style>
@@ -31,15 +31,16 @@
 <body>
   <textarea id="source">
 class: titleslide
+layout: false
 
 <h3 class = "title-header" style = "top: 20%;"> 
   BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
 </h3>
 
-<h1 class = "title-header" style = "top: 40%;">Coding in GIS II</h1>
+<h1 class = "title-header" style = "top: 40%;">Coding in GIS I - III</h1>
 
 <div class = "title-header title-bottom" style = "width: 20%">
-  <img src="zhaw_rgb_byline_d.png" width = 100%> 
+  <img src="/img/zhaw_rgb_byline_d.png" width = 100%> 
 </div>
 <div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
   Nils Ratnaweera<br>
@@ -50,7 +51,7 @@ class: titleslide
   Grüental, Postfach, CH-8820 Wädenswil<br>
   <br>
   rata@zhaw.ch
-
+</div>
 ---
 name: zeitplan 
 layout: true
@@ -75,7 +76,7 @@ layout: true
     <tr id = "second">
       <td>13.30 – 13.45</td>
       <td>15</td>
-      <td>Kapitel "Conda cheat sheet" sowie "Python Modules" lesen und verstehen</td>
+      <td>Kapitel Conda, JupyterLab</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -85,7 +86,7 @@ layout: true
     <tr id = "third">
       <td>13.50 – 14.35</td>
       <td>45</td>
-      <td>Aufgabe 5 "Function Basics" und Aufgabe 6 "Function Advanced"</td>
+      <td>Aufgabe 5 "Function Basics" | Aufgabe 6 "Function Advanced"</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -100,7 +101,7 @@ layout: true
     <tr id = "fifth">
       <td>15:00 – 15.35</td>
       <td>35</td>
-      <td>Aufgabe 7 "Zufallszahlen generieren" </td>
+      <td>Aufgabe 7 "If / Else" | Aufgabe 8 "Zufallszahlen generieren"</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -110,7 +111,7 @@ layout: true
     <tr id = "sixth">
       <td>15.50 – 16.25</td>
       <td>35</td>
-      <td>Aufgabe 8 "Funktionen in DataFrames" </td>
+      <td>Aufgabe 8 | Aufgabe 9 "Funktionen in DataFrames" </td>
     </tr>
     <tr id = "seventh">
       <td>16.25 – 16.35</td>
@@ -141,11 +142,10 @@ layout: true
 # Themen
 
 <ul>
-  <li id = "first">Python Erweiterungen / Module</li>
-  <li id = "second">Virtual Environments</li>
+  <li id = "first">Python Modules und Virtual Environments</li>
   <li id = "third">Conda</li>
   <li id = "fourth">Conda mit ArcGIS</li>
-  <li id = "fifth">Leistungsnachweis</li>
+  <li id = "fifth">Keep your code tidy</li>
 </ul>
 
 ---
@@ -158,13 +158,16 @@ layout: true
 # Python Erweiterungen / Module
 
 ---
+#### Ziel: Haus bauen
 
-![](virtual-env.png)
 
+![](img/handwerker.svg)
 
 ---
-template: themen
-class: second
+#### Ziel: Coding Projekt umsetzen
+
+
+![](img/install.svg)
 
 ---
 layout: true
@@ -174,24 +177,29 @@ layout: true
 
 ohne Virtual Environments:
 
-.center[![](virtual-env-2.png)]
+<img src="img/install2.svg" style = "width: 75%">
 
-.center[Alles wird an einem zentralen Ort installiert]
+
+???
+
+gegenseige Abhängigkeiten
+
 
 ---
 
 mit Virtual Environments
 
-.center[![](virtual-env3.png)]
+<img src="img/install3.svg" style = "width: 75%">
 
-.center[unabhängige, wiederverwenbare Umgebungen]
+
 
 ???
-
-davon gibt es in Python 3 verschiedene Implementationen:​
-- "Virtualenv"
-- "pipenv"
-- "Conda Environment"
+- Unabhängingige Umgebungen, keine Abhängigkeiten
+- Virtuelle Umgebungen sind "günstig" (schnell erstellt) und deshalb wegwerfbar 
+- davon gibt es in Python 3 verschiedene Implementationen:​
+  - "Virtualenv"
+  - "pipenv"
+  - "Conda Environment"
 
 
 ---
@@ -265,15 +273,15 @@ layout: true
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II23.png" style = "width: 75%">
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II24.png" style = "width: 75%">
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II25.png" style = "width: 75%">
 
 ---
 
@@ -298,12 +306,12 @@ layout: true
 
 
 ```ruby
-conda create --name codingingis
+conda create --name agi-env
 ```
 
 ---
 ```ruby
-`conda` create --name codingingis
+`conda` create --name agi-env
 ```
 Ruft das Programm *conda* auf
 
@@ -311,16 +319,16 @@ Ruft das Programm *conda* auf
 
 
 ```ruby
-conda `create` --name codingingis
+conda `create` --name agi-env
 ```
-Ruft den Befehl *create* auscondaauf
+Ruft den Befehl *create* von *conda* auf
 
 Der *create* Befehl erstellt eben diese neue Environment in einem Standartverzeichnis
 
 ---
 
 ```ruby
-conda create `--name` codingingis
+conda create `--name` agi-env
 ```
 
 Kündigt an, dass gleich der Name der neuen Umgebung definiert wird
@@ -328,21 +336,21 @@ Kündigt an, dass gleich der Name der neuen Umgebung definiert wird
 ---
 
 ```ruby
-conda create --name `codingingis`
+conda create --name `agi-env`
 ```
 
-Bestimmt, das der Name der neuen Umgebung *codingingis* lauten soll
+Bestimmt, das der Name der neuen Umgebung *agi-env* lauten soll
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II26.png" width = 80%>
 
 - Speicherort: `C:\Users\rata\AppData\Local\ESRI\conda`
 - Mit `y` bestätigen
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II27.png" width = 100%>
 
 ---
 layout: true
@@ -352,13 +360,13 @@ layout: true
 ---
 
 ```ruby
-activate codingingis
+activate agi-env
 ```
-- Aktiviert die Environment mit dem Namen `codingingis`
+- Aktiviert die Environment mit dem Namen `agi-env`
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II28.png" width = 100%>
 
 ---
 layout: true
@@ -366,7 +374,7 @@ layout: true
 
 
 ---
-<img src = "AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+![](img/install.svg)
 
 ---
 
@@ -422,11 +430,11 @@ conda install -c conda-forge `pandas`
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II30.png" width = 100%>
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II31.png" width = 100%>
 
 ---
 
@@ -451,26 +459,18 @@ jupyter lab
 
 ---
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II32.png" width = 100%>
 
 ---
 layout: false
 
 ## Modul Importieren
+exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+![](img/install.svg)
 
 zB  `import  pandas`
 
----
-## Working Directory
-
-<img src = "AGI_HS19_06_Coding_in_GIS_II34.png" width = 100%>
-
-
-- wo die Pythonscripts / Notebooks sind
-- Ist v.a. beim einlesen / ausgeben von Dateien wichtig
-- kann mit `os.getcwd()` ermittelt werden
 
 
 ---
@@ -482,8 +482,8 @@ zB  `import  pandas`
 
 --
 
-<img src = "AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
-<img src = "AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
+<img src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png" class = "pull-left">
+<img src="img/AGI_HS19_06_Coding_in_GIS_II38.png" class = "pull-right">
 
 
 ---
@@ -497,15 +497,14 @@ exclude: true
 # Conda mit ArcGIS
 
 ---
-exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
-exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
+<img src="img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
+---
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
   "Tick_Original",
@@ -521,121 +520,89 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 )
 ```
 ---
-exclude: true
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
-
----
-exclude: true
-
-
-![](AGI_HS19_06_Coding_in_GIS_II45.png)
+<img src="img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
 ---
 exclude: true
 
 
-<img src = "AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II47.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II48.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
 
 ---
 exclude: true
 
 
-![](AGI_HS19_06_Coding_in_GIS_II49.png)
+<img src="img/AGI_HS19_06_Coding_in_GIS_II46.png" width = 70%>
+---
+exclude: true
+
+![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II50.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II51.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II52.png)
-
-
----
-exclude: true
-
-
-![](AGI_HS19_06_Coding_in_GIS_II53.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II54.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II55.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II56.png)
-
----
-exclude: true
-
-
-![](AGI_HS19_06_Coding_in_GIS_II57.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
 
 
 ---
 exclude: true
 
 
-![](AGI_HS19_06_Coding_in_GIS_II58.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II59.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
+
+---
+exclude: true
+
+
+![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
+
+
+---
+exclude: true
+
+
+![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
 
 ---
 template: themen
 class: fifth
-
----
-layout: true
-
-# Leistungsnachweis
-
----
-Gemeinsam kommende Woche (Coding in GIS III):
-
-- Monte Carlo Simulation mit den Zeckenstichdaten
-- Systematik gleich wie in *Datenqualität und Unsicherheit*
-- Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
-
-
-![](process.png)
-
----
-
-Eure Leistung: 
-
-- Erstellen eines sauber kommentierten Reports
-- In JupyterLabs mit JupyterNotebook (Python und Markdown)
-- Experimentieren mit verschiedenen Radien
-- Visualisierung der Daten
-
-<img src = "AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
 ---
 layout: true
@@ -746,6 +713,8 @@ zeckenstiche = pd.read_csv("zeckenstiche.txt")
 
 Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​
 
+
+
 ---
 template: zeitplan
 class: second
@@ -777,7 +746,10 @@ class: seventh
       highlightSpans: true,
       highlightLines: true,
     });
+
   </script>
+
+  
 </body>
 
 </html>
