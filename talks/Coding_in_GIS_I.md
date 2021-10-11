@@ -43,7 +43,7 @@ layout: true
   <tr id = "fourth">
     <td>13.50 – 14.35</td>
     <td>45</td>
-    <td>Selbständiges Lösen Aufgabe 1 ("Primitive Datentypen")</td>
+    <td>Aufgabe 1 & 2*</td>
   </tr>
   <tr class = "pause">
     <td></td>
@@ -53,46 +53,38 @@ layout: true
   <tr id = "fifth">
     <td>14.50 – 15.00</td>
     <td>10</td>
-    <td>Besprechung Aufgabe 1 / Einführung Aufgabe 2</td>
+    <td>Besprechung</td>
   </tr>
   <tr id = "sixth">
     <td>15.00 – 15.35</td>
     <td>35</td>
-    <td>Selbständiges Lösen Aufgabe 2 ("Listen")</td>
+    <td>Aufgabe 2  & 3*</td>
   </tr>
   <tr class = "pause">
     <td></td>
     <td></td>
     <td></td>
   </tr>
-  <tr id = "seventh">
-    <td>15.50 – 16.00</td>
-    <td>10</td>
-    <td>Besprechung Aufgabe 2 / Einführung Aufgabe 3</td>
-  </tr>
   <tr id = "eighth">
-    <td>16.00 – 16.25</td>
-    <td>25</td>
-    <td>Selbständiges Lösen Aufgabe 3 ("Dictionaries")</td>
+    <td>15.50 – 16.25</td>
+    <td>35</td>
+    <td>Aufgabe 3 & 4*</td>
   </tr>
   <tr id = "nineth">
     <td>16.25 – 16.35</td>
     <td>10</td>
-    <td>Besprechung Aufgabe 3 / Einführung Aufgabe 4</td>
+    <td>Besprechung</td>
   </tr>
   <tr class = "pause">
     <td></td>
     <td></td>
     <td></td>
   </tr>
-  <tr id = "tenth">
-    <td>Zuhause</td>
-    <td>45</td>
-    <td>Selbständiges Lösen bis und mit Aufgabe 4 ("Tabellarische Daten")</td>
-  </tr>
+
 </tbody>
 </table>
 
+.footnote[\* Selbständige Arbeit mit Betreuung]
 ---
 template: zeitplan
 class: first

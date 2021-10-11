@@ -34,6 +34,11 @@ blockquote::after {
   width: 47%;
 }
 
+.center {
+  float: left;
+  margin: 0 15% 0 15%;
+}
+
 /* makes all images scale to 100% */
 
 img {
@@ -124,3 +129,13 @@ tr:nth-child(even) {
 tr.pause {
   background-color: #c8e6c9;
 }
+
+
+/* for nice borders around images */
+/* https://www.w3schools.com/csS/css3_shadows_box.asp */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+

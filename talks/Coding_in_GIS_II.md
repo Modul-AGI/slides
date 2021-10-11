@@ -26,7 +26,7 @@ layout: true
     <tr id = "second">
       <td>13.30 – 13.45</td>
       <td>15</td>
-      <td>Kapitel "Conda cheat sheet" sowie "Python Modules" lesen und verstehen</td>
+      <td>Kapitel Conda, JupyterLab</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -36,7 +36,7 @@ layout: true
     <tr id = "third">
       <td>13.50 – 14.35</td>
       <td>45</td>
-      <td>Aufgabe 5 "Function Basics" und Aufgabe 6 "Function Advanced"</td>
+      <td>Aufgabe 5 "Function Basics" | Aufgabe 6 "Function Advanced"</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -51,7 +51,7 @@ layout: true
     <tr id = "fifth">
       <td>15:00 – 15.35</td>
       <td>35</td>
-      <td>Aufgabe 7 "Zufallszahlen generieren" </td>
+      <td>Aufgabe 7 "If / Else" | Aufgabe 8 "Zufallszahlen generieren"</td>
     </tr>
     <tr class="pause">
       <td></td>
@@ -61,7 +61,7 @@ layout: true
     <tr id = "sixth">
       <td>15.50 – 16.25</td>
       <td>35</td>
-      <td>Aufgabe 8 "Funktionen in DataFrames" </td>
+      <td>Aufgabe 8 | Aufgabe 9 "Funktionen in DataFrames" </td>
     </tr>
     <tr id = "seventh">
       <td>16.25 – 16.35</td>
@@ -95,7 +95,7 @@ layout: true
   <li id = "first">Python Modules und Virtual Environments</li>
   <li id = "third">Conda</li>
   <li id = "fourth">Conda mit ArcGIS</li>
-  <li id = "fifth">Leistungsnachweis</li>
+  <li id = "fifth">Keep your code tidy</li>
 </ul>
 
 ---
@@ -108,41 +108,16 @@ layout: true
 # Python Erweiterungen / Module
 
 ---
-asdf
-
-![](mermaid.svg)
-
----
 #### Ziel: Haus bauen
 
 
-<div class="mermaid" id ="mermaid-handwerker">
-sequenceDiagram
-    participant A as Extern
-    participant B as Vertragspartner
-    participant C as Arbeitsort
-
-    A->> B: Vertragsabschluss
-    Note over A,B: HandwerkerIn ist nun Einsetzbar
-    B->> C: Anrufen
-    Note over B,C: HandwerkerIn kommt zum Einsatz
-</div>
+![](img/handwerker.svg)
 
 ---
-#### Ziel: Haus bauen
+#### Ziel: Coding Projekt umsetzen
 
 
-<div class="mermaid" id = "mermaid-install">
-sequenceDiagram
-    participant A as Server
-    participant B as Lokal
-    participant C as Session
-
-    A->> B: modul installieren
-    Note over A,B: Modul ist nun Einsetzbar
-    B->> C: modul laden
-    Note over B,C: Modul kommt zum Einsatz
-</div>
+![](img/install.svg)
 
 ---
 layout: true
@@ -152,16 +127,8 @@ layout: true
 
 ohne Virtual Environments:
 
-<div class = "mermaid" id = "mermaid-install2">
-graph LR
-    B[pandas] --> A[Lokal]
-    C[matplotlib] --> A
-    D[jupyter notebook] --> A
-    E[geopandas] --> A
-    A --> X[Project A]
-    A --> Y[Project B]
-    A --> Z[Projekt C]
-</div>
+<img src="img/install2.svg" style = "width: 75%">
+
 
 ???
 
@@ -172,19 +139,9 @@ gegenseige Abhängigkeiten
 
 mit Virtual Environments
 
+<img src="img/install3.svg" style = "width: 75%">
 
-<div class = "mermaid" id = "mermaid-install3">
-graph LR
-    B[pandas] --> A[AGI-env]
-    C[matplotlib] --> A
-    D[jupyter notebook] --> A
-    E[geopandas] --> F[SA2-env]
-    B --> F
-    C --> F
-    A --> X[Project A]
-    A --> Y[Project B]
-    F --> Z[Projekt C]
-</div>
+
 
 ???
 - Unabhängingige Umgebungen, keine Abhängigkeiten
@@ -367,7 +324,7 @@ layout: true
 
 
 ---
-<img src="img/AGI_HS19_06_Coding_in_GIS_II29.png" width = 100%>
+![](img/install.svg)
 
 ---
 
@@ -458,18 +415,11 @@ jupyter lab
 layout: false
 
 ## Modul Importieren
-exclude: true
 
-<img src="img/AGI_HS19_06_Coding_in_GIS_II33.png" width = 100%>
+![](img/install.svg)
 
 zB  `import  pandas`
 
----
-## Working Directory
-
-- wo die Pythonscripts / Notebooks sind
-- Ist v.a. beim einlesen / ausgeben von Dateien wichtig
-- kann mit `os.getcwd()` ermittelt werden
 
 
 ---
@@ -496,15 +446,14 @@ exclude: true
 # Conda mit ArcGIS
 
 ---
-exclude: true
 
 <img src="img/AGI_HS19_06_Coding_in_GIS_II42.png" width = 100%>
 
 ---
-exclude: true
 
 <img src="img/AGI_HS19_06_Coding_in_GIS_II43.png" width = 50%>
 
+---
 ```python
 arcpy.analysis.SummarizeWithin("Wald_NichtWald", 
   "Tick_Original",
@@ -520,7 +469,6 @@ arcpy.analysis.SummarizeWithin("Wald_NichtWald",
 )
 ```
 ---
-exclude: true
 
 <img src="img/AGI_HS19_06_Coding_in_GIS_II44.png" width = 100%>
 
@@ -528,7 +476,7 @@ exclude: true
 exclude: true
 
 
-![](AGI_HS19_06_Coding_in_GIS_II45.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II45.png)
 
 ---
 exclude: true
@@ -538,103 +486,72 @@ exclude: true
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II47.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II47.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II48.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II48.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II49.png)
 
 ---
 exclude: true
 
-
-![](AGI_HS19_06_Coding_in_GIS_II49.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II50.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II50.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II51.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II51.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II52.png)
-
-
----
-exclude: true
-
-
-![](AGI_HS19_06_Coding_in_GIS_II53.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II54.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II55.png)
-
----
-exclude: true
-
-![](AGI_HS19_06_Coding_in_GIS_II56.png)
-
----
-exclude: true
-
-
-![](AGI_HS19_06_Coding_in_GIS_II57.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II52.png)
 
 
 ---
 exclude: true
 
 
-![](AGI_HS19_06_Coding_in_GIS_II58.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II53.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II54.png)
 
 ---
 exclude: true
 
-![](AGI_HS19_06_Coding_in_GIS_II59.png)
+![](img/AGI_HS19_06_Coding_in_GIS_II55.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II56.png)
+
+---
+exclude: true
+
+
+![](img/AGI_HS19_06_Coding_in_GIS_II57.png)
+
+
+---
+exclude: true
+
+
+![](img/AGI_HS19_06_Coding_in_GIS_II58.png)
+
+---
+
+![](img/AGI_HS19_06_Coding_in_GIS_II59.png)
 
 ---
 template: themen
 class: fifth
-
----
-layout: true
-
-# Leistungsnachweis
-
----
-Gemeinsam kommende Woche (Coding in GIS III):
-
-- Monte Carlo Simulation mit den Zeckenstichdaten
-- Systematik gleich wie in *Datenqualität und Unsicherheit*
-- Neu: Alles in Python (auch die Erstellung der Simulierten Daten)
-
-
-![](process.png)
-
----
-
-Eure Leistung: 
-
-- Erstellen eines sauber kommentierten Reports
-- In JupyterLabs mit JupyterNotebook (Python und Markdown)
-- Experimentieren mit verschiedenen Radien
-- Visualisierung der Daten
-
-<img src="img/AGI_HS19_06_Coding_in_GIS_II65.png" style = "width: 75%">
 
 ---
 layout: true
@@ -744,6 +661,8 @@ zeckenstiche = pd.read_csv("zeckenstiche.txt")
 ???
 
 Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten funktionieren​
+
+
 
 ---
 template: zeitplan

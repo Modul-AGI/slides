@@ -1,3 +1,4 @@
 {
-    "mermaid-editor.generate.outputPath": "img/"
+    "mermaid-editor.generate.outputPath": "img/",
+    "mermaid-editor.generate.useCurrentPath": false
 }

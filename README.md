@@ -1,5 +1,13 @@
 
+## To serve locally
+
+```
+jekyll serve --baseurl ""
+```
+
 ## Build and push to gh-pages:
+
+
 
 ```bash
 jekyll build
