@@ -34,7 +34,7 @@ blockquote::after {
   width: 47%;
 }
 
-.center {
+.pull-center {
   float: left;
   margin: 0 15% 0 15%;
 }
