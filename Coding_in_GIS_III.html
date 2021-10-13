@@ -53,6 +53,79 @@ layout: false
   rata@zhaw.ch
 </div>
 ---
+name: zeitplan 
+layout: true
+
+
+# Zeitplan
+  <table>
+  <thead align="left">
+    <tr>
+      <th>Uhrzeit</th>
+      <th>ΔT</th>
+      <th>Thema</th>
+    </tr>
+  </thead>
+  <tbody align="left">
+    <tr id = "first">
+      <th>13.00 – 13.30</th>
+      <th>30</th>
+      <th>Vorlesung</th>
+    </tr>
+    <tr id = "second">
+      <td>13.30 – 13.45</td>
+      <td>15</td>
+      <td>Aufgabe 10</td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "third">
+      <td>13.50 – 14.35</td>
+      <td>45</td>
+      <td>Aufgabe 11 | Aufgabe 12</td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "fourth">
+      <td>14.50 – 15.05</td>
+      <td>15</td>
+      <td>Input: GIS in Python </td>
+    </tr>
+    <tr id = "fifth">
+      <td>15:05 – 15.35</td>
+      <td>30</td>
+      <td>Aufgabe 14</td>
+    </tr>
+    <tr class="pause">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id = "sixth">
+      <td>15.50 – 16.25</td>
+      <td>35</td>
+      <td>Aufgabe 15</td>
+    </tr>
+    <tr id = "seventh">
+      <td>16.25 – 16.35</td>
+      <td>10</td>
+      <td>Wrap-up und Fragen</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+---
+template: zeitplan
+class: first
+
+---
 layout: false
 exclude: true
 
@@ -69,6 +142,10 @@ exclude: true
 ---
 name: themen
 layout: true
+
+background-color: #fbd4c0
+
+
 # Themen
 <ul>
  <li id = "first">Breaking New</li>
@@ -93,25 +170,37 @@ layout: true
 <img src ="img/twitter-python-tiobe.png" class = "card center" style = "width: 75%;">
 
 ---
-background-image: url(https://img5.goodfon.com/wallpaper/nbig/a/fd/volki-volk-staia-zima-sneg.jpg)
+background-color: #fbd4c0
+
 
 <blockquote style = "color: black">
-For the first time in more than 20 years we have a new leader of the pack: the Python programming language. The long-standing hegemony of Java and C is over. Python, which started as a simple scripting language, as an alternative to Perl, has become mature. Its ease of learning, its huge amount of libraries, and its widespread use in all kinds of domains, has made it the most popular programming language of today. Congratulations Guido van Rossum! Proficiat!
+For the first time in more than 20 years we have a new leader of the pack: the Python programming language. The long-standing hegemony of Java and C is over. Python, which started as a simple scripting language, as an alternative to Perl, has become mature. <span id = "first">Its ease of learning</span>, its huge amount of libraries, and its widespread use in all kinds of domains, has made it the most popular programming language of today. Congratulations Guido van Rossum! Proficiat!
 </blockquote>
  -- Paul Jansen CEO TIOBE Software 
 
+--
+class: first
 
 ---
 layout: false
 
 # Breaking <del>news</del> things
 
-<iframe src='//gifs.com/embed/office-meltdown-vnra6Q' frameborder='0' scrolling='no' width='360px' height='270px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' class = "center"></iframe>
+<iframe src='//gifs.com/embed/office-meltdown-vnra6Q' frameborder='0' scrolling='no' width='360px' height='270px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' class = "pull-center"></iframe>
 ---
 template: themen
 class: second
----
 
+---
+background-image: url(https://wallpapercave.com/wp/33mRKA5.jpg)
+layout: false
+class: center, middle
+
+
+
+# Conda
+
+---
 layout: true
 name: conda
 
@@ -144,7 +233,7 @@ layout: false
 
 
 
-<img src = "img/jb-desktop.png" style = "width: 70%" class = "card center">
+<img src = "img/jb-desktop.png" style = "width: 70%" class = "card pull-center">
 
 .footnote[https://blog.jupyter.org/jupyterlab-desktop-app-now-available-b8b661b17e9a]
 
@@ -152,7 +241,7 @@ layout: false
 
 # Für jedes Modul
 
-<div  class = "pull-left">
+<div class = "pull-left">
 <img src = "img/mermaid-module.svg" style = "width: 120%">
 </div>
 
@@ -163,6 +252,12 @@ layout: false
   <li><code>conda install -c conda-forge pandas</code></li>
 <ol>
 
+---
+layout: false
+class: center, middle
+background-image: url(https://davenewt.github.io/assets/images/perlin%20noise%20flowfield.png)
+
+<h1 style = "color: white">Ein Einzelpunkt zufällig verschieben</h1>
 
 ---
 layout: true
@@ -197,11 +292,11 @@ Zum Beispiel hat unser Punkt die Koordinate 0, 0
 ```
 
 ---
-<img src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style = "width: 75%" class = "center">
+<img src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style = "width: 75%" class = "pull-center">
 ---
-<img src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style = "width: 75%" class = "center">
+<img src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style = "width: 75%" class = "pull-center">
 ---
-<img src = "img/AGI_HS19_08_Coding_in_GIS_III7.png" style = "width: 75%" class = "center">
+<img src = "img/AGI_HS19_08_Coding_in_GIS_III7.png" style = "width: 75%" class = "pull-center">
 
 ---
 layout: false
@@ -250,7 +345,7 @@ zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate)
 
 
 ---
-<img src="img/AGI_HS19_08_Coding_in_GIS_III13.png" style="width: 50%" class = "center">
+<img src="img/AGI_HS19_08_Coding_in_GIS_III13.png" style="width: 50%" class = "pull-center">
 ---
 
 ```python
@@ -291,7 +386,7 @@ Iteration 2
 ```
 --
 
-<img src = "img/AGI_HS19_08_Coding_in_GIS_III7.png" style = "width: 50%" class = "center">
+<img src = "img/AGI_HS19_08_Coding_in_GIS_III7.png" style = "width: 50%" class = "pull-center">
 
 ---
 
@@ -401,6 +496,34 @@ layout: false
 https://modul-agi.github.io/HS21/B_Coding_in_GIS_3/9_Leistungsnachweis.html
 
 
+---
+template: zeitplan
+class: second
+
+
+---
+template: zeitplan
+class: third
+
+
+---
+template: zeitplan
+class: fourth
+
+
+---
+template: zeitplan
+class: fifth
+
+
+---
+template: zeitplan
+class: sixth
+
+
+---
+template: zeitplan
+class: 
     </textarea>
   <script src="https://remarkjs.com/downloads/remark-latest.min.js">
   </script>

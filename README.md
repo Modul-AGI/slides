@@ -1,12 +1,13 @@
 
 ## To serve locally
 
+
 ```
 jekyll serve --baseurl ""
 ```
+(`--baseurl ""` removes the base url (stored in _config.yml and must match the repo name))
 
 ## Build and push to gh-pages:
-
 
 
 ```bash
