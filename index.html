@@ -1,28 +1,51 @@
----
-title: Coding in GIS Slides
-layout: index
----
+<!doctype html>
+<html>
 
-class: titleslide
-layout: false
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<h3 class = "title-header" style = "top: 20%;"> 
-  BSc Umweltingenieurwesen<br> Angewandte Geoinformatik | HS21
-</h3>
+	<title>reveal.js</title>
 
-<h1 class = "title-header" style = "top: 40%;">Coding in GIS I - III</h1>
+	<link rel="stylesheet" href="revealjs/dist/reset.css">
+	<link rel="stylesheet" href="revealjs/dist/reveal.css">
+	<link rel="stylesheet" href="revealjs/dist/theme/black.css">
+	<link rel="stylesheet" href="css/my-reveal.css">
 
-<div class = "title-header title-bottom" style = "width: 20%">
-  <img src="img/zhaw_rgb_byline_d.png" width = 100%> 
-</div>
-<div class = "title-header title-bottom" style = "left: 40%; width: 47%;">
-    Links zu den einzelnen Vorlesungen: <br><br>
-    [Coding in GIS I](Coding_in_GIS_I.html)<br>
-    [Coding in GIS II](Coding_in_GIS_II.html)<br>
-    [Coding in GIS III](Coding_in_GIS_III.html)<br>
-  <br>
-</div>
-# Coding in GIS
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+</head>
 
+<body>
+	<div class="reveal">
+		<div class="slides">
 
+			<section>
+				<ul>
+          <li><a href="Coding_in_GIS_I.html">Coding in GIS I</a></li>
+          <li><a href="Coding_in_GIS_II.html">Coding in GIS II</a></li>
+          <li><a href="Coding_in_GIS_III.html">Coding in GIS III</a></li>
+        </ul>
+			</section>
 
+		</div>
+	</div>
+
+	<script src="revealjs/dist/reveal.js"></script>
+	<script src="revealjs/plugin/notes/notes.js"></script>
+	<script src="revealjs/plugin/highlight/highlight.js"></script>
+	<script src="revealjs/plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealHighlight, RevealNotes, RevealMath.MathJax3	]
+		});
+	</script>
+</body>
+
+</html>

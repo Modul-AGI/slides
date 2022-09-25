@@ -2,6 +2,34 @@
 
 /* https://github.com/gnab/remark/issues/305#issuecomment-403309989 */
 
+h1 {
+  text-align: center;
+}
+
+
+
+
+/* https://stackoverflow.com/a/51641695/4139249 */
+kbd {
+  padding:0.1em 0.6em;
+  border:1px solid #ccc;
+  font-size: large;
+  font-family:Arial,Helvetica,sans-serif;
+  background-color:#f7f7f7;
+  color:#333;
+  -moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -webkit-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  display:inline-block;
+  margin:0 0.1em;
+  text-shadow:0 1px 0 #fff;
+  line-height:1.4;
+  white-space:nowrap;
+}
+
 blockquote::before {
   content: open-quote;
   margin-right: 5px;
@@ -14,6 +42,14 @@ blockquote {
   font-style: italic;
   color: #ccc;
   quotes: "\201C""\201D""\2018""\2019";
+}
+
+.reveal .special h1, .reveal .special h2, .reveal .special h3, .reveal .special h4 {
+  text-shadow: 4px 4px #090909;
+}
+
+.highlight{
+  color: orange
 }
 
 blockquote::after {
@@ -47,15 +83,7 @@ img {
 
 /* just for the header (currently unused) */
 
-.header {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: gainsboro;
-  width: 100%;
-  font-size: 80%;
-  padding: 10px;
-}
+
 
 .headercol {
   width: 33.33%;
@@ -107,8 +135,22 @@ img {
 /* make footnotes smaller */
 .footnote {
   font-size: small;
+  position: absolute; 
+  bottom: 0%; 
 }
 
+.footer{
+  visibility: hidden;
+}
+
+:root {
+  --blur: 5px;
+}
+
+
+.blurred .slide-background-content {
+  filter: blur(var(--blur))
+}
 
 /* styling the tables manually */
 table {
@@ -117,17 +159,12 @@ table {
   font-size: smaller;
 }
 
-th,
-td {
+th, td {
   padding: 5px;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
 tr.pause {
-  background-color: #c8e6c9;
+  background-color: orange;
 }
 
 

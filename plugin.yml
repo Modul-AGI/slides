@@ -1,0 +1,10 @@
+name: RevealMenu
+script: [menu.js, quarto-menu.js]
+stylesheet: [menu.css, quarto-menu.css]
+config:
+  menu:
+    side: "left"
+    useTextContentForMissingTitles: false
+    hideMissingTitles: true
+    markers: false
+    loadIcons: false
