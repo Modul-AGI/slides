@@ -1814,3 +1814,747 @@
 1664065114885:legend.box.background = element_rect(fill='transparent') #transparent legend panel
 1664065114890:)
 1664065115134:ggsave("img/so_tags.png",width = 20, height = 10, units = "cm",bg='transparent')
+1664348364878:library(tidyverse)
+1664348376122:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv")
+1664348388639:View(kaggle)
+1664348429718:read_csv("kaggle/kaggle_survey_2021_responses.csv",n_max = 2)
+1664348441457:read_csv("kaggle/kaggle_survey_2021_responses.csv",n_max = 1)
+1664348452951:read_csv("kaggle/kaggle_survey_2021_responses.csv",n_max = 1) |>
+1664348452953:pivot_longer()
+1664348462758:read_csv("kaggle/kaggle_survey_2021_responses.csv",n_max = 1) |>
+1664348462760:pivot_longer(cols = everything())
+1664348469185:kaggle_meta <- read_csv("kaggle/kaggle_survey_2021_responses.csv",n_max = 1) |>
+1664348469188:pivot_longer(cols = everything())
+1664348479868:read_csv("kaggle/kaggle_survey_2021_responses.csv",skip = 1)
+1664348487652:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv",skip = 1)
+1664348507437:kaggle
+1664348509097:View(kaggle)
+1664348550585:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv",comment = 2)
+1664348571778:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv") |> slice(-1)
+1664348575288:kaggle
+1664348579793:kaggle_meta
+1664348592558:kaggle |>
+1664348592559:select(1:7)
+1664348597658:kaggle
+1664348600768:kaggle_meta
+1664348610815:kaggle |>
+1664348610818:select(1:7, starts_with("Q7"))
+1664348641829:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv") |>
+1664348641831:slice(-1) |>
+1664348641836:rename(1 = "duration")
+1664348648289:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv") |>
+1664348648290:slice(-1) |>
+1664348648291:rename(1 = "duration")
+1664348655483:?rename
+1664348670653:kaggle <- read_csv("kaggle/kaggle_survey_2021_responses.csv") |>
+1664348670655:slice(-1) |>
+1664348670659:rename("duration"  = 1)
+1664348674070:kaggle
+1664348682276:kaggle |>
+1664348682278:select(1:7, starts_with("Q7")) |>
+1664348682283:pivot_longer(starts_with("Q7"))
+1664348761384:kaggle
+1664348777849:kaggle |>
+1664348777852:select(1:7, starts_with("Q7")) |>
+1664348777856:mutate(tot = n)
+1664348782172:kaggle |>
+1664348782172:select(1:7, starts_with("Q7")) |>
+1664348782173:mutate(tot = n())
+1664348796114:kaggle |>
+1664348796116:select(1:7, starts_with("Q7")) |>
+1664348796121:mutate(tot = n())
+1664348796200:pivot_longer(starts_with("Q7"))
+1664348802003:kaggle |>
+1664348802006:select(1:7, starts_with("Q7")) |>
+1664348802007:mutate(tot = n()) |>
+1664348802008:pivot_longer(starts_with("Q7"))
+1664348827495:group_by(value) |>
+1664348827498:summarise(
+1664348827502:n = n()
+1664348827506:)
+1664348832175:kaggle |>
+1664348832178:select(1:7, starts_with("Q7")) |>
+1664348832182:mutate(tot = n()) |>
+1664348832186:pivot_longer(starts_with("Q7")) |>
+1664348832191:group_by(value) |>
+1664348832195:summarise(
+1664348832200:n = n()
+1664348832204:)
+1664348843631:kaggle |>
+1664348843634:select(1:7, starts_with("Q7")) |>
+1664348843638:mutate(tot = n()) |>
+1664348843643:pivot_longer(starts_with("Q7")) |>
+1664348843647:group_by(value) |>
+1664348843652:summarise(
+1664348843656:n = n(),
+1664348843660:perc = n/tot
+1664348843665:)
+1664348856317:kaggle |>
+1664348856317:select(1:7, starts_with("Q7")) |>
+1664348856318:mutate(tot = n()) |>
+1664348856318:pivot_longer(starts_with("Q7"))
+1664348861884:kaggle |>
+1664348861885:select(1:7, starts_with("Q7")) |>
+1664348861886:mutate(tot = n()) |>
+1664348861887:pivot_longer(starts_with("Q7")) |>
+1664348861888:group_by(value)
+1664348868606:kaggle |>
+1664348868607:select(1:7, starts_with("Q7")) |>
+1664348868608:mutate(tot = n()) |>
+1664348868609:pivot_longer(starts_with("Q7")) |>
+1664348868610:group_by(value) |>
+1664348868611:summarise(
+1664348868611:n = n()
+1664348868612:)
+1664348881126:kaggle |>
+1664348881128:select(1:7, starts_with("Q7")) |>
+1664348881133:mutate(tot = n()) |>
+1664348881137:pivot_longer(starts_with("Q7")) |>
+1664348881142:group_by(value, tot) |>
+1664348881146:summarise(
+1664348881151:n = n()
+1664348881155:) |>
+1664348881159:mutate()
+1664348890944:kaggle |>
+1664348890947:select(1:7, starts_with("Q7")) |>
+1664348890951:mutate(tot = n()) |>
+1664348890955:pivot_longer(starts_with("Q7")) |>
+1664348890960:group_by(value, tot) |>
+1664348890964:summarise(
+1664348890969:n = n()
+1664348890973:) |>
+1664348890978:mutate(
+1664348890982:perc = n/tot
+1664348890986:)
+1664348926500:kaggle |>
+1664348926503:select(1:7, starts_with("Q7")) |>
+1664348926507:mutate(tot = n()) |>
+1664348926512:pivot_longer(starts_with("Q7")) |>
+1664348926516:group_by(value, tot) |>
+1664348926520:summarise(
+1664348926525:n = n()
+1664348926529:) |>
+1664348926534:mutate(
+1664348926538:perc = n/tot
+1664348926543:value = fct_reorder(value, perc)
+1664348931553:kaggle |>
+1664348931555:select(1:7, starts_with("Q7")) |>
+1664348931556:mutate(tot = n()) |>
+1664348931557:pivot_longer(starts_with("Q7")) |>
+1664348931557:group_by(value, tot) |>
+1664348931558:summarise(
+1664348931558:n = n()
+1664348931559:) |>
+1664348931559:mutate(
+1664348931560:perc = n/tot,
+1664348931560:value = fct_reorder(value, perc)
+1664348931561:) |>
+1664348931562:ggplot(aes(perc, value)) +
+1664348931562:geom_col()
+1664348947194:kaggle |>
+1664348947196:select(1:7, starts_with("Q7")) |>
+1664348947201:mutate(tot = n()) |>
+1664348947205:pivot_longer(starts_with("Q7")) |>
+1664348947210:group_by(value, tot) |>
+1664348947214:summarise(
+1664348947218:n = n()
+1664348947223:) |>
+1664348947227:mutate(
+1664348947232:perc = n/tot,
+1664348947236:value = fct_reorder(value, perc)
+1664348947241:) |>
+1664348947246:filter(!is.na(valeu)) |>
+1664348947251:ggplot(aes(perc, value)) +
+1664348947255:geom_col()
+1664348954526:kaggle |>
+1664348954529:select(1:7, starts_with("Q7")) |>
+1664348954529:mutate(tot = n()) |>
+1664348954530:pivot_longer(starts_with("Q7")) |>
+1664348954530:group_by(value, tot) |>
+1664348954531:summarise(
+1664348954532:n = n()
+1664348954532:) |>
+1664348954533:mutate(
+1664348954533:perc = n/tot,
+1664348954534:value = fct_reorder(value, perc)
+1664348954535:) |>
+1664348954535:filter(!is.na(value)) |>
+1664348954536:ggplot(aes(perc, value)) +
+1664348954536:geom_col()
+1664348961965:kaggle |>
+1664348961967:select(1:7, starts_with("Q7")) |>
+1664348961972:mutate(tot = n()) |>
+1664348961977:pivot_longer(starts_with("Q7")) |>
+1664348961981:group_by(value, tot) |>
+1664348961985:summarise(
+1664348961990:n = n()
+1664348961995:) |>
+1664348961999:filter(!is.na(value)) |>
+1664348962004:mutate(
+1664348962009:perc = n/tot,
+1664348962013:value = fct_reorder(value, perc)
+1664348962018:) |>
+1664348962023:ggplot(aes(perc, value)) +
+1664348962027:geom_col()
+1664348971447:kaggle |>
+1664348971450:select(1:7, starts_with("Q7")) |>
+1664348971454:mutate(tot = n()) |>
+1664348971459:pivot_longer(starts_with("Q7")) |>
+1664348971464:group_by(value, tot) |>
+1664348971468:summarise(
+1664348971473:n = n()
+1664348971478:) |>
+1664348971482:filter(!is.na(value)) |>
+1664348971487:ungroup() |>
+1664348971491:mutate(
+1664348971496:perc = n/tot,
+1664348971501:value = fct_reorder(value, perc)
+1664348971505:) |>
+1664348971506:ggplot(aes(perc, value)) +
+1664348971507:geom_col()
+1664349004257:kaggle |>
+1664349004259:select(1:7, starts_with("Q7")) |>
+1664349004260:mutate(tot = n()) |>
+1664349004261:pivot_longer(starts_with("Q7")) |>
+1664349004262:group_by(value, tot) |>
+1664349004262:summarise(
+1664349004263:n = n()
+1664349004264:) |>
+1664349004264:filter(!is.na(value)) |>
+1664349004265:ungroup() |>
+1664349004266:mutate(
+1664349004266:perc = n/tot,
+1664349004267:value = fct_reorder(value, perc)
+1664349004267:) |>
+1664349004268:ggplot(aes(perc, value)) +
+1664349004269:geom_col()+
+1664349004269:theme_light() +
+1664349004270:theme(axis.text.y = element_blank(),
+1664349004270:axis.text.x = element_text(colour = "white"),
+1664349004271:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349004271:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349004272:text = element_text(colour = "white"),
+1664349004273:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349004273:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349004274:panel.grid.major = element_blank(), #remove major gridlines
+1664349004274:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349004275:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349004275:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349004276:)
+1664349031091:kaggle |>
+1664349031094:select(1:7, starts_with("Q7")) |>
+1664349031098:mutate(tot = n()) |>
+1664349031103:pivot_longer(starts_with("Q7")) |>
+1664349031107:group_by(value, tot) |>
+1664349031112:summarise(
+1664349031116:n = n()
+1664349031121:) |>
+1664349031125:filter(!is.na(value)) |>
+1664349031130:ungroup() |>
+1664349031135:mutate(
+1664349031139:perc = n/tot,
+1664349031144:value = fct_reorder(value, perc)
+1664349031148:) |>
+1664349031153:ggplot(aes(perc, value)) +
+1664349031158:geom_col()+
+1664349031162:theme_light() +
+1664349031167:theme(axis.text.y = element_blank(),
+1664349031171:axis.text.x = element_text(colour = "white"),
+1664349031176:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349031180:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349031185:text = element_text(colour = "white"),
+1664349031189:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349031194:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349031198:panel.grid.major = element_blank(), #remove major gridlines
+1664349031203:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349031207:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349031212:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349031217:)
+1664349032544:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349064051:kaggle |>
+1664349064053:select(1:7, starts_with("Q7")) |>
+1664349064058:mutate(tot = n()) |>
+1664349064062:pivot_longer(starts_with("Q7")) |>
+1664349064067:group_by(value, tot) |>
+1664349064071:summarise(
+1664349064076:n = n()
+1664349064081:) |>
+1664349064085:filter(!is.na(value)) |>
+1664349064090:ungroup() |>
+1664349064094:mutate(
+1664349064099:perc = n/tot,
+1664349064103:value = fct_reorder(value, perc)
+1664349064108:) |>
+1664349064112:ggplot(aes(perc, value)) +
+1664349064117:geom_col()+
+1664349064121:theme_light() +
+1664349064126:theme(axis.text.y = element_text(colour = "white"),
+1664349064130:axis.text.x = element_text(colour = "white"),
+1664349064135:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349064140:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349064144:text = element_text(colour = "white"),
+1664349064148:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349064153:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349064158:panel.grid.major = element_blank(), #remove major gridlines
+1664349064162:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349064167:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349064171:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349064176:)
+1664349064960:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349070833:kaggle |>
+1664349070834:select(1:7, starts_with("Q7")) |>
+1664349070835:mutate(tot = n()) |>
+1664349070835:pivot_longer(starts_with("Q7")) |>
+1664349070836:group_by(value, tot) |>
+1664349070837:summarise(
+1664349070837:n = n()
+1664349070838:) |>
+1664349070838:filter(!is.na(value)) |>
+1664349070839:ungroup() |>
+1664349070839:mutate(
+1664349070840:perc = n/tot,
+1664349070840:value = fct_reorder(value, perc)
+1664349070841:) |>
+1664349070841:ggplot(aes(perc, value)) +
+1664349070842:geom_col()+
+1664349070842:theme_light() +
+1664349070842:theme(axis.text.y = element_text(colour = "white"),
+1664349070843:axis.text.x = element_text(colour = "white"),
+1664349070843:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349070844:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349070844:text = element_text(colour = "white"),
+1664349070845:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349070845:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349070846:panel.grid.major = element_blank(), #remove major gridlines
+1664349070846:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349070847:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349070847:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349070848:)
+1664349072592:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349084721:kaggle |>
+1664349084723:select(1:7, starts_with("Q7")) |>
+1664349084728:mutate(tot = n()) |>
+1664349084732:pivot_longer(starts_with("Q7")) |>
+1664349084737:group_by(value, tot) |>
+1664349084742:summarise(
+1664349084747:n = n()
+1664349084751:) |>
+1664349084756:filter(!is.na(value)) |>
+1664349084761:ungroup() |>
+1664349084766:mutate(
+1664349084770:perc = n/tot,
+1664349084775:value = fct_reorder(value, perc)
+1664349084780:) |>
+1664349084785:ggplot(aes(perc, value)) +
+1664349084789:geom_col()+
+1664349084794:theme_light() +
+1664349084799:theme(axis.text.y = element_text(colour = "white"),
+1664349084804:axis.text.x = element_text(colour = "white"),
+1664349084808:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349084813:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349084818:text = element_text(colour = "white"),
+1664349084822:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349084827:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349084832:panel.grid.major = element_blank(), #remove major gridlines
+1664349084837:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349084841:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349084846:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349084851:)
+1664349088191:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349182494:kaggle |>
+1664349182495:select(1:7, starts_with("Q7")) |>
+1664349182496:mutate(tot = n()) |>
+1664349182497:pivot_longer(starts_with("Q7")) |>
+1664349182498:group_by(value, tot) |>
+1664349182499:summarise(
+1664349182499:n = n()
+1664349182500:) |>
+1664349182501:filter(!is.na(value)) |>
+1664349182501:ungroup() |>
+1664349182502:mutate(
+1664349182502:perc = n/tot,
+1664349182503:value = fct_reorder(value, perc)
+1664349182503:) |>
+1664349182504:ggplot(aes(perc, value)) +
+1664349182505:geom_col(fill = "gold3")+
+1664349182505:scale_x_continuous(labels = scales::percent_format())
+1664349185251:kaggle |>
+1664349185251:select(1:7, starts_with("Q7")) |>
+1664349185252:mutate(tot = n()) |>
+1664349185252:pivot_longer(starts_with("Q7")) |>
+1664349185253:group_by(value, tot) |>
+1664349185253:summarise(
+1664349185254:n = n()
+1664349185254:) |>
+1664349185254:filter(!is.na(value)) |>
+1664349185255:ungroup() |>
+1664349185255:mutate(
+1664349185256:perc = n/tot,
+1664349185256:value = fct_reorder(value, perc)
+1664349185256:) |>
+1664349185257:ggplot(aes(perc, value)) +
+1664349185257:geom_col(fill = "gold3")+
+1664349185258:scale_x_continuous(labels = scales::percent_format()) +
+1664349185258:theme_light() +
+1664349185259:theme(axis.text.y = element_text(colour = "white"),
+1664349185259:axis.text.x = element_text(colour = "white"),
+1664349185260:axis.title = element_blank(),
+1664349185260:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349185261:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349185261:text = element_text(colour = "white"),
+1664349185262:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349185262:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349185263:panel.grid.major = element_blank(), #remove major gridlines
+1664349185263:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349185264:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349185264:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349185265:)
+1664349187939:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349390373:kaggle |>
+1664349390374:select(1:7, starts_with("Q7")) |>
+1664349390375:mutate(tot = n()) |>
+1664349390376:pivot_longer(starts_with("Q7")) |>
+1664349390377:group_by(value, tot) |>
+1664349390378:summarise(
+1664349390379:n = n()
+1664349390379:) |>
+1664349390380:filter(!is.na(value)) |>
+1664349390381:ungroup() |>
+1664349390381:mutate(
+1664349390382:perc = n/tot,
+1664349390383:value = fct_reorder(value, perc)
+1664349390383:) |>
+1664349390384:ggplot(aes(perc, value)) +
+1664349390384:geom_col(fill = "gold3")+
+1664349390385:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664349390385:theme_light() +
+1664349390386:theme(axis.text.y = element_text(colour = "white"),
+1664349390386:axis.text.x = element_text(colour = "white"),
+1664349390387:axis.title = element_blank(),
+1664349390387:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349390388:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349390388:text = element_text(colour = "white"),
+1664349390389:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349390390:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349390390:panel.grid.major = element_blank(), #remove major gridlines
+1664349390391:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349390392:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349390392:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349390393:)
+1664349391616:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664349980952:kaggle |>
+1664349980954:select(1:7, starts_with("Q7")) |>
+1664349980958:mutate(tot = n()) |>
+1664349980963:pivot_longer(starts_with("Q7")) |>
+1664349980967:group_by(value, tot) |>
+1664349980971:summarise(
+1664349980976:n = n()
+1664349980980:) |>
+1664349980985:filter(!is.na(value)) |>
+1664349980989:ungroup() |>
+1664349980994:mutate(
+1664349980998:perc = n/tot,
+1664349981002:value = fct_reorder(value, perc)
+1664349981007:) |>
+1664349981011:ggplot(aes(perc, value)) +
+1664349981015:geom_col(fill = "gold3")+
+1664349981020:geom_hline(xintersects = seq(0,1,.25)) +
+1664349981025:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664349981029:theme_light() +
+1664349981034:theme(axis.text.y = element_text(colour = "white"),
+1664349981038:axis.text.x = element_text(colour = "white"),
+1664349981042:axis.title = element_blank(),
+1664349981047:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664349981051:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664349981056:text = element_text(colour = "white"),
+1664349981060:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664349981065:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664349981074:panel.grid.major = element_blank(), #remove major gridlines
+1664349981079:panel.grid.minor = element_blank(), #remove minor gridlines
+1664349981083:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664349981087:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664349981092:)
+1664349999918:kaggle |>
+1664349999921:select(1:7, starts_with("Q7")) |>
+1664349999925:mutate(tot = n()) |>
+1664349999929:pivot_longer(starts_with("Q7")) |>
+1664349999934:group_by(value, tot) |>
+1664349999938:summarise(
+1664349999943:n = n()
+1664349999947:) |>
+1664349999952:filter(!is.na(value)) |>
+1664349999956:ungroup() |>
+1664349999960:mutate(
+1664349999965:perc = n/tot,
+1664349999969:value = fct_reorder(value, perc)
+1664349999974:) |>
+1664349999978:ggplot(aes(perc, value)) +
+1664349999982:geom_col(fill = "gold3")+
+1664349999987:geom_hline(yintercept = seq(0,1,.25)) +
+1664349999991:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664349999996:theme_light() +
+1664350000000:theme(axis.text.y = element_text(colour = "white"),
+1664350000004:axis.text.x = element_text(colour = "white"),
+1664350000009:axis.title = element_blank(),
+1664350000013:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350000018:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350000022:text = element_text(colour = "white"),
+1664350000026:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350000031:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350000035:panel.grid.major = element_blank(), #remove major gridlines
+1664350000040:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350000044:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350000048:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350000053:)
+1664350013497:kaggle |>
+1664350013499:select(1:7, starts_with("Q7")) |>
+1664350013504:mutate(tot = n()) |>
+1664350013508:pivot_longer(starts_with("Q7")) |>
+1664350013513:group_by(value, tot) |>
+1664350013517:summarise(
+1664350013521:n = n()
+1664350013526:) |>
+1664350013530:filter(!is.na(value)) |>
+1664350013535:ungroup() |>
+1664350013539:mutate(
+1664350013543:perc = n/tot,
+1664350013548:value = fct_reorder(value, perc)
+1664350013552:) |>
+1664350013557:ggplot(aes(perc, value)) +
+1664350013561:geom_col(fill = "gold3")+
+1664350013566:geom_hline(yintercept = seq(0,1,.25)) +
+1664350013570:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350013574:theme_light() +
+1664350013579:theme(axis.text.y = element_text(colour = "white"),
+1664350013583:axis.text.x = element_text(colour = "white"),
+1664350013588:axis.title = element_blank(),
+1664350013592:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350013596:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350013601:text = element_text(colour = "white"),
+1664350013605:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350013610:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350013614:panel.grid.major = element_blank(), #remove major gridlines
+1664350013619:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350013623:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350013627:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350013632:)
+1664350014400:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')
+1664350029671:kaggle |>
+1664350029674:select(1:7, starts_with("Q7")) |>
+1664350029678:mutate(tot = n()) |>
+1664350029682:pivot_longer(starts_with("Q7")) |>
+1664350029687:group_by(value, tot) |>
+1664350029691:summarise(
+1664350029696:n = n()
+1664350029700:) |>
+1664350029704:filter(!is.na(value)) |>
+1664350029709:ungroup() |>
+1664350029714:mutate(
+1664350029718:perc = n/tot,
+1664350029722:value = fct_reorder(value, perc)
+1664350029727:) |>
+1664350029731:ggplot(aes(perc, value)) +
+1664350029736:geom_col(fill = "gold3")+
+1664350029740:geom_hline(yintercept = seq(0,1,.25), colour = "red") +
+1664350029745:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350029749:theme_light()
+1664350041909:seq(0,1,.25)
+1664350056454:kaggle |>
+1664350056457:select(1:7, starts_with("Q7")) |>
+1664350056461:mutate(tot = n()) |>
+1664350056466:pivot_longer(starts_with("Q7")) |>
+1664350056470:group_by(value, tot) |>
+1664350056475:summarise(
+1664350056479:n = n()
+1664350056483:) |>
+1664350056488:filter(!is.na(value)) |>
+1664350056492:ungroup() |>
+1664350056497:mutate(
+1664350056501:perc = n/tot,
+1664350056506:value = fct_reorder(value, perc)
+1664350056510:) |>
+1664350056515:ggplot(aes(perc, value)) +
+1664350056519:geom_col(fill = "gold3")+
+1664350056523:geom_hline(yintercept = seq(0,1,.25), colour = "red")
+1664350076938:kaggle |>
+1664350076938:select(1:7, starts_with("Q7")) |>
+1664350076939:mutate(tot = n()) |>
+1664350076940:pivot_longer(starts_with("Q7")) |>
+1664350076941:group_by(value, tot) |>
+1664350076941:summarise(
+1664350076942:n = n()
+1664350076943:) |>
+1664350076943:filter(!is.na(value)) |>
+1664350076944:ungroup() |>
+1664350076945:mutate(
+1664350076945:perc = n/tot,
+1664350076946:value = fct_reorder(value, perc)
+1664350076946:) |>
+1664350076947:ggplot(aes(perc, value)) +
+1664350076948:geom_col(fill = "gold3")+
+1664350076948:geom_vline(xintercept = seq(0,1,.25), colour = "red")
+1664350082109:kaggle |>
+1664350082112:select(1:7, starts_with("Q7")) |>
+1664350082116:mutate(tot = n()) |>
+1664350082120:pivot_longer(starts_with("Q7")) |>
+1664350082125:group_by(value, tot) |>
+1664350082129:summarise(
+1664350082134:n = n()
+1664350082138:) |>
+1664350082143:filter(!is.na(value)) |>
+1664350082147:ungroup() |>
+1664350082151:mutate(
+1664350082156:perc = n/tot,
+1664350082160:value = fct_reorder(value, perc)
+1664350082165:) |>
+1664350082169:ggplot(aes(perc, value)) +
+1664350082174:geom_col(fill = "gold3")+
+1664350082178:geom_vline(xintercept = seq(0,1,.25), colour = "red") +
+1664350082182:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350082187:theme_light()
+1664350112169:kaggle |>
+1664350112171:select(1:7, starts_with("Q7")) |>
+1664350112175:mutate(tot = n()) |>
+1664350112180:pivot_longer(starts_with("Q7")) |>
+1664350112184:group_by(value, tot) |>
+1664350112189:summarise(
+1664350112193:n = n()
+1664350112197:) |>
+1664350112202:filter(!is.na(value)) |>
+1664350112206:ungroup() |>
+1664350112211:mutate(
+1664350112215:perc = n/tot,
+1664350112220:value = fct_reorder(value, perc)
+1664350112224:) |>
+1664350112228:ggplot(aes(perc, value)) +
+1664350112233:geom_col(fill = "gold3")+
+1664350112237:geom_vline(xintercept = seq(0,1,.25)) +
+1664350112242:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350112246:theme_light()
+1664350135703:kaggle |>
+1664350135705:select(1:7, starts_with("Q7")) |>
+1664350135709:mutate(tot = n()) |>
+1664350135714:pivot_longer(starts_with("Q7")) |>
+1664350135718:group_by(value, tot) |>
+1664350135723:summarise(
+1664350135727:n = n()
+1664350135731:) |>
+1664350135736:filter(!is.na(value)) |>
+1664350135740:ungroup() |>
+1664350135745:mutate(
+1664350135749:perc = n/tot,
+1664350135754:value = fct_reorder(value, perc)
+1664350135758:) |>
+1664350135762:ggplot(aes(perc, value)) +
+1664350135767:geom_col(fill = "gold3")+
+1664350135771:geom_vline(xintercept = seq(0,1,.25)) +
+1664350135774:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350135778:theme_light() +
+1664350135783:theme(axis.text.y = element_text(colour = "white"),
+1664350135787:axis.text.x = element_text(colour = "white"),
+1664350135791:axis.title = element_blank(),
+1664350135796:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350135800:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350135805:text = element_text(colour = "white"),
+1664350135809:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350135814:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350135818:panel.grid.major = element_blank(), #remove major gridlines
+1664350135823:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350135827:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350135832:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350135836:)
+1664350158875:kaggle |>
+1664350158877:select(1:7, starts_with("Q7")) |>
+1664350158882:mutate(tot = n()) |>
+1664350158886:pivot_longer(starts_with("Q7")) |>
+1664350158891:group_by(value, tot) |>
+1664350158895:summarise(
+1664350158899:n = n()
+1664350158904:) |>
+1664350158909:filter(!is.na(value)) |>
+1664350158913:ungroup() |>
+1664350158918:mutate(
+1664350158922:perc = n/tot,
+1664350158927:value = fct_reorder(value, perc)
+1664350158931:) |>
+1664350158936:ggplot(aes(perc, value)) +
+1664350158940:geom_col(fill = "gold3")+
+1664350158945:geom_vline(xintercept = seq(0,1,.25), colour = element_line(colour = "white")) +
+1664350158950:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350158954:theme_light() +
+1664350158959:theme(axis.text.y = element_text(colour = "white"),
+1664350158963:axis.text.x = element_text(colour = "white"),
+1664350158967:axis.title = element_blank(),
+1664350158972:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350158976:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350158981:text = element_text(colour = "white"),
+1664350158986:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350158990:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350158995:panel.grid.major = element_blank(), #remove major gridlines
+1664350158999:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350159004:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350159008:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350159013:)
+1664350187293:kaggle |>
+1664350187296:select(1:7, starts_with("Q7")) |>
+1664350187300:mutate(tot = n()) |>
+1664350187305:pivot_longer(starts_with("Q7")) |>
+1664350187309:group_by(value, tot) |>
+1664350187314:summarise(
+1664350187318:n = n()
+1664350187323:) |>
+1664350187327:filter(!is.na(value)) |>
+1664350187332:ungroup() |>
+1664350187336:mutate(
+1664350187341:perc = n/tot,
+1664350187345:value = fct_reorder(value, perc)
+1664350187350:) |>
+1664350187354:ggplot(aes(perc, value)) +
+1664350187359:geom_col(fill = "gold3")+
+1664350187364:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350187368:theme_light() +
+1664350187373:theme(axis.text.y = element_text(colour = "white"),
+1664350187377:axis.text.x = element_text(colour = "white"),
+1664350187382:axis.title = element_blank(),
+1664350187386:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350187391:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350187395:text = element_text(colour = "white"),
+1664350187400:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350187404:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350187409:panel.grid.major = element_blank(), #remove major gridlines
+1664350187414:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350187418:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350187423:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350187428:)
+1664350200749:kaggle |>
+1664350200751:select(1:7, starts_with("Q7")) |>
+1664350200755:mutate(tot = n()) |>
+1664350200760:pivot_longer(starts_with("Q7")) |>
+1664350200765:group_by(value, tot) |>
+1664350200769:summarise(
+1664350200774:n = n()
+1664350200778:) |>
+1664350200783:filter(!is.na(value)) |>
+1664350200787:ungroup() |>
+1664350200792:mutate(
+1664350200796:perc = n/tot,
+1664350200801:value = fct_reorder(value, perc)
+1664350200805:) |>
+1664350200810:ggplot(aes(perc, value)) +
+1664350200814:geom_col(fill = "gold3")+
+1664350200819:scale_x_continuous(labels = scales::percent_format(), limits = c(0,1)) +
+1664350200823:theme_light() +
+1664350200828:theme(axis.text.y = element_text(colour = "white"),
+1664350200832:axis.text.x = element_text(colour = "white"),
+1664350200837:axis.title = element_blank(),
+1664350200841:axis.ticks.y = element_blank(), panel.border = element_blank(),
+1664350200846:plot.margin=unit(c(.5,3, .5,.5), 'cm'),
+1664350200850:text = element_text(colour = "white"),
+1664350200855:panel.background = element_rect(fill='transparent'), #transparent panel bg
+1664350200859:plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+1664350200864:panel.grid.major = element_blank(), #remove major gridlines
+1664350200869:panel.grid.minor = element_blank(), #remove minor gridlines
+1664350200873:legend.background = element_rect(fill='transparent'), #transparent legend bg
+1664350200878:legend.box.background = element_rect(fill='transparent') #transparent legend panel
+1664350200882:)
+1664350201913:ggsave("img/kaggle.png",width = 30, height = 20, units = "cm",bg='transparent')

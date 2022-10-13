@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Programmieren II</title>
+
+    <link rel="stylesheet" href="revealjs/dist/reset.css">
+    <link rel="stylesheet" href="revealjs/dist/reveal.css">
+    <link rel="stylesheet" href="revealjs/dist/theme/black.css">
+    <link rel="stylesheet" href="css/my-reveal.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+
+            <section>
+                <h1>Zeitplan </h1>
+                <table>
+                    <thead align="left">
+                        <tr>
+                            <th>Uhrzeit</th>
+                            <th>ΔT</th>
+                            <th>Thema</th>
+                        </tr>
+                    </thead>
+                    <tbody align="left">
+                        <tr id="first">
+                            <th>13.00 - 13.30</th>
+                            <th>30</th>
+                            <th>Vorlesung</th>
+                        </tr>
+                        <tr id="second">
+                            <td>13.30 - 13.45</td>
+                            <td>15</td>
+                            <td>Aufgabe 10</td>
+                        </tr>
+                        <tr class="pause">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="third">
+                            <td>13.50 - 14.35</td>
+                            <td>45</td>
+                            <td>Aufgabe 11 | Aufgabe 12</td>
+                        </tr>
+                        <tr class="pause">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="fourth">
+                            <td>14.50 - 15.05</td>
+                            <td>15</td>
+                            <td>Input: GIS in Python </td>
+                        </tr>
+                        <tr id="fifth">
+                            <td>15:05 - 15.35</td>
+                            <td>30</td>
+                            <td>Aufgabe 14</td>
+                        </tr>
+                        <tr class="pause">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="sixth">
+                            <td>15.50 - 16.25</td>
+                            <td>35</td>
+                            <td>Aufgabe 15</td>
+                        </tr>
+                        <tr id="seventh">
+                            <td>16.25 - 16.35</td>
+                            <td>10</td>
+                            <td>Wrap-up und Fragen</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+
+
+            <section data-visibility="hidden">
+                <h1>Lernziele </h1>
+
+
+
+                * Wisst, warum wir diese Woche `for loops` lernen
+                * Versteht, dass wir bisher gar nicht mit GIS Werkzeugen gearbeitet haben und warum dies jetzt aber
+                nötig ist
+                * Kennt die drei Hierarchiestufen von `GeopandasGeoDataFrames`
+                * Ihr wisst, dass Python ein Vollfunktionsfähiges GIS bietet, welches sämtliche von ArcGIS bekannten
+                Operationen zur Verfügung stellt
+                * Ihr kennt die Anforderungen an den Leistungsnachweis für den Themenblock "Coding in GIS"
+
+            </section>
+
+
+
+            <section>
+                <h1>Themen </h1>
+                <ul>
+                    <li id="first">Breaking New</li>
+                    <li id="second">Rückblick Coding in GIS II</li>
+                    <li id="third">For Loops</li>
+                    <li id="fourth">GIS in Python</li>
+                    <li id="fifth">Leistungsnachweis</li>
+                    <ul>
+            </section>
+
+
+            <section data-background-image="https://wallpapercave.com/wp/33mRKA5.jpg">
+                <h1>Conda </h1>
+            </section>
+
+
+            <section>
+                <h1>Vor jedem Aufstarten (in der Konsole) </h1>
+
+
+                <div class="pull-right">
+                    <ol>
+                        <li>(auf diesem Computer)</li>
+                        <li><code>conda create --name agi-env</code></li>
+                        <li><code>activate agi-env</code></li>
+                        <li><code>cd C:\Users\rata\...</code></li>
+                        <li><code>conda list</code></li>
+                        <li><code>conda install -c conda-forge...</code></li>
+                        <li><code>jupyter lab</code></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section><img data-src="img/mermaid-conda-env.svg" class="pull-left"></section>
+
+
+            <section>
+                <img data-src="img/mermaid-conda-env2.svg" class="pull-left">
+
+            </section>
+
+
+
+            <section>
+                <img data-src="img/jb-desktop.png" style="width: 70%" class="card pull-center">
+
+                <div class="footer">https://blog.jupyter.org/jupyterlab-desktop-app-now-available-b8b661b17e9a]</div>
+
+            </section>
+
+
+            <section>
+                <h1>Für jedes Modul </h1>
+
+                <div class="pull-left">
+                    <img data-src="img/mermaid-module.svg" style="width: 120%">
+                </div>
+
+                <ol class="pull-right">
+                    <li>Vorher alle Notebooks speichern</li>
+                    <li>ersichtlich ab dem Namen in Klammern</li>
+                    <li><code>activate agi-env</code></li>
+                    <li><code>conda install -c conda-forge pandas</code></li>
+                    <ol>
+
+            </section>
+
+
+            <section data-background-image="https://davenewt.github.io/assets/images/perlin%20noise%20flowfield.png">
+                <h1 style="color: white">Ein Einzelpunkt zufällig verschieben</h1>
+
+            </section>
+
+            <section>
+                <h1>Ein Einzelpunkt zufällig verschieben </h1>
+
+            </section>
+
+            <section>
+                Zum Beispiel hat unser Punkt die Koordinate 0, 0
+
+                <pre><code data-trim class="python" data-line-numbers="">
+        >>> x_start = 0
+        >>> x_offset = random.normalvariate(0,100)
+        >>> x_offset
+        10.24617
+
+        >>> x_neu = x_start + x_offset
+        >>> x_neu
+        10.24617
+
+    </code></pre>
+            </section>
+
+
+            <section>
+                <pre><code data-trim class="python" data-line-numbers="">
+        >>> y_start = 0
+        >>> y_offset = random.normalvariate(0,100)
+        >>> y_offset
+        -4.443904
+
+        >>> y_neu = y_start + y_offset
+        >>> y_neu
+        -4.443904
+    </code></pre>
+            </section>
+
+            <section>
+                <img data-src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style="width: 75%"
+                    class="pull-center">
+
+            </section>
+            <section>
+                <img data-src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style="width: 75%"
+                    class="pull-center">
+
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 75%" class="pull-center">
+
+            </section>
+
+            <section>
+                <h1>Workflow > Function </h1>
+
+                <pre><code data-trim class="" data-line-numbers="">
+        def offset_coordinate(old, distance = 100):
+            import random
+            new = old +random.normalvariate(0,distance)
+
+            return new
+    </code></pre>
+
+            </section>
+
+            <section>
+                <h1>Function > DataFrame </h1>
+
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III9.png" style="width: 50%">
+
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III10.png" style="width: 75%">
+
+            </section>
+
+            <section>
+
+                <pre><code data-trim class="" data-line-numbers="">
+        zeckenstiche["x"].apply(offset_coordinate)
+        #\______1_______/ \_2_/ \_______3_______/
+    </code></pre>
+
+                <ul>
+                    <li class="fragment">1. Spalte selektieren</li>
+                    <li class="fragment">2. Methode "<code>apply</code>" aufrufen</li>
+                    <li class="fragment">3. function übergeben</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <pre><code data-trim class="python" data-line-numbers="">
+        zeckenstiche["x_sim"] = zeckenstiche["x"].apply(offset_coordinate)
+        zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate)        
+    </code></pre>
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III13.png" style="width: 50%" class="pull-center">
+            </section>
+
+            <section>
+                <pre><code data-trim class="python" data-line-numbers="">
+        zeckenstiche["x_sim"] = zeckenstiche["x"].apply(offset_coordinate, distance = zeckenstiche["accuracy"])
+        zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate, distance = zeckenstiche["accuracy"])
+    </code></pre>
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III14.png" style="width: 75%">
+
+            </section>
+            <section>
+                <h1>For Loops </h1>
+
+            </section>
+
+            <section>
+                <pre><code data-trim class="python" data-line-numbers="">
+        >>> for platzhalter in [0, 1, 2]:
+        >>>     print("Iteration"+, platzhalter)
+        Iteration 0
+        Iteration 1
+        Iteration 2
+    </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim class="" data-line-numbers="">
+        >>> x_sim = []
+        >>> for platzhalter in range(1000):
+        >>>     x_new <- offset_coordinate(0, 100)
+        >>>     x_sim.append(x_new)        
+    </code></pre>
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 50%" class="pull-center">
+
+            </section>
+
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h0XeOa9Rlbc?start=38"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </section>
+
+            <section>
+                <blockquote style="color: black">
+                    I'm a bitch, I'm a lover
+                    I'm a child, I'm a mother
+                    I'm a sinner, I'm a saint
+                </blockquote>
+                Meredith Brooks
+            </section>
+
+
+            <section>
+                <h1>GIS in Python </h1>
+
+            </section>
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png" class="pull-left">
+
+            </section>
+
+
+            <section>
+                Was fehlt?
+
+                <ul>
+                    <li>Eine Geometrie</li>
+                    <li>Ein Koordinaten<u>bezugs</u>system</li>
+                </ul>
+            </section>
+
+            <section>
+                <b><em>Geo</em>DataFrames</b>
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III21.png" alt="">
+
+                <aside class="notes">
+                    Jedes Geometrische Objekt hat ein Attribut
+                    Gleiche viele Features wie Attribute
+                </aside>
+            </section>
+
+            <section>
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III22.png" alt="">
+
+                <aside class="notes">
+                    Verschiedene Objekte teilen sich Attribute
+                    Mehr Features als Attribute
+                </aside>
+            </section>
+
+
+            <section>
+                <h1>Simple Features </h1>
+
+                In verschiedensten Systemen integriert:
+
+                <span style="color:#FF0000">R</span> (library `sf`)
+                <span style="color:#FF0000">Datenbanken</span> (PostGIS, MySQL…)
+                Python (geopandas,shapely)
+                Auch in ESRI, aber _versteckt und unzugänglich_
+
+                <aside class="notes">
+                    * Transferable knowledge - learn architectures, not frameworks
+
+                </aside>
+            </section>
+
+            <section>
+                Buffer
+
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III23.png" style="width: 50%">
+
+            </section>
+
+            <section>
+                MinimumBoundingGeometry
+
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III24.png" style="width: 75%">
+
+            </section>
+
+            <section>
+                Overlay
+
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III25.png" style="width: 75%">
+
+            </section>
+
+            <section>
+                Kernel Density
+
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III26.png" style="width: 75%">
+
+            </section>
+
+            <section>
+                Web Maps
+
+                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III27.png" style="width: 50%">
+
+            </section>
+
+            <section>
+                <h1>Leistungsnachweis </h1>
+
+                https://modul-agi.github.io/HS21/B_Coding_in_GIS_3/9_Leistungsnachweis.html
+            </section>
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="revealjs/dist/reveal.js"></script>
+    <script src="revealjs/plugin/notes/notes.js"></script>
+    <script src="revealjs/plugin/highlight/highlight.js"></script>
+    <script src="revealjs/plugin/math/math.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealHighlight, RevealNotes, RevealMath.MathJax3]
+        });
+    </script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="node_modules/reveal-notes-server/client.js"></script>
+    <!--
+	node node_modules/reveal-notes-server
+	-->
+</body>
+
+</html>

@@ -6,7 +6,7 @@
         "description": "Insert an external image into a blog post.",
         "interactive": true,
         "binding": "insert_image_addin",
-        "ordinal": 9
+        "ordinal": 20
     },
     "blogdown::new_post_addin": {
         "name": "New Post",
@@ -15,7 +15,7 @@
         "description": "Create a new post with blogdown::new_post().",
         "interactive": true,
         "binding": "new_post_addin",
-        "ordinal": 7
+        "ordinal": 18
     },
     "blogdown::quote_poem_addin": {
         "name": "Quote Poem",
@@ -24,7 +24,7 @@
         "description": "Add > to the beginning of selected paragraphs and two trailing spaces to selected lines.",
         "interactive": false,
         "binding": "quote_poem_addin",
-        "ordinal": 11
+        "ordinal": 22
     },
     "blogdown::serve_site": {
         "name": "Serve Site",
@@ -33,7 +33,7 @@
         "description": "Run blogdown::serve_site() to live preview a website locally.",
         "interactive": true,
         "binding": "serve_site",
-        "ordinal": 6
+        "ordinal": 17
     },
     "blogdown::touch_file_rstudio": {
         "name": "Touch File",
@@ -42,7 +42,7 @@
         "description": "Change the timestamp of the current file in the editor.",
         "interactive": false,
         "binding": "touch_file_rstudio",
-        "ordinal": 10
+        "ordinal": 21
     },
     "blogdown::update_meta_addin": {
         "name": "Update Metadata",
@@ -51,7 +51,7 @@
         "description": "Update the title, author, date, categories, and tags of the current blog post.",
         "interactive": true,
         "binding": "update_meta_addin",
-        "ordinal": 8
+        "ordinal": 19
     },
     "bookdown::mathquill": {
         "name": "Input LaTeX Math",
@@ -60,7 +60,7 @@
         "description": "Input math expressions via the MathQuill library.",
         "interactive": true,
         "binding": "mathquill",
-        "ordinal": 3
+        "ordinal": 14
     },
     "bookdown::serve_book": {
         "name": "Preview Book",
@@ -69,7 +69,7 @@
         "description": "Run bookdown::serve_book() to live preview a book.",
         "interactive": true,
         "binding": "serve_book",
-        "ordinal": 2
+        "ordinal": 13
     },
     "clipr::clipr_output": {
         "name": "Output to clipboard",
@@ -78,7 +78,7 @@
         "description": "Copies the console output of a selected expression to the system clipboard",
         "interactive": false,
         "binding": "clipr_output",
-        "ordinal": 20
+        "ordinal": 31
     },
     "clipr::clipr_result": {
         "name": "Value to clipboard",
@@ -87,7 +87,7 @@
         "description": "Copies the results of a selected expression to the system clipboard",
         "interactive": false,
         "binding": "clipr_result",
-        "ordinal": 19
+        "ordinal": 30
     },
     "covr::addin_report": {
         "name": "Calculate package test coverage",
@@ -96,7 +96,7 @@
         "description": "Calculates the package test coverage and opens a report, using `covr::report()`",
         "interactive": false,
         "binding": "addin_report",
-        "ordinal": 1
+        "ordinal": 12
     },
     "devtools::document": {
         "name": "Document a package",
@@ -105,7 +105,7 @@
         "description": "A wrapper for `roxygen`'s `roxygen2::roxygenize()`",
         "interactive": true,
         "binding": "document",
-        "ordinal": 17
+        "ordinal": 28
     },
     "devtools::run_examples": {
         "name": "Run examples",
@@ -114,7 +114,7 @@
         "description": "Runs R code in examples using `devtools::run_examples()`",
         "interactive": true,
         "binding": "run_examples",
-        "ordinal": 18
+        "ordinal": 29
     },
     "devtools::test_active_file": {
         "name": "Run a test file",
@@ -123,7 +123,7 @@
         "description": "Run the current test file, using `devtools::test_active_file()`.",
         "interactive": true,
         "binding": "test_active_file",
-        "ordinal": 14
+        "ordinal": 25
     },
     "devtools::test_coverage": {
         "name": "Report test coverage for a package",
@@ -132,7 +132,7 @@
         "description": "Calculate and report the test coverage for the current package, using `devtools::test_coverage()`.",
         "interactive": true,
         "binding": "test_coverage",
-        "ordinal": 16
+        "ordinal": 27
     },
     "devtools::test_coverage_active_file": {
         "name": "Report test coverage for a file",
@@ -141,7 +141,7 @@
         "description": "Calculate and report test coverage for the current test file, using `devtools::test_coverage_active_file()`.",
         "interactive": true,
         "binding": "test_coverage_active_file",
-        "ordinal": 15
+        "ordinal": 26
     },
     "pkgdown::build_site_external": {
         "name": "Build pkgdown",
@@ -150,7 +150,7 @@
         "description": "Runs pkgdown on the current package",
         "interactive": true,
         "binding": "build_site_external",
-        "ordinal": 21
+        "ordinal": 32
     },
     "reprex::reprex_addin": {
         "name": "Render reprex...",
@@ -159,7 +159,7 @@
         "description": "Run `reprex::reprex()` to prepare a reproducible example for sharing.",
         "interactive": true,
         "binding": "reprex_addin",
-        "ordinal": 12
+        "ordinal": 23
     },
     "reprex::reprex_selection": {
         "name": "Reprex selection",
@@ -168,7 +168,106 @@
         "description": "Prepare reprex from current selection",
         "interactive": false,
         "binding": "reprex_selection",
-        "ordinal": 13
+        "ordinal": 24
+    },
+    "targets::rstudio_addin_tar_glimpse": {
+        "name": "Glimpse a targets pipeline",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_glimpse(). Requires a _targets.R configuration file and the visNetwork package.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_glimpse",
+        "ordinal": 6
+    },
+    "targets::rstudio_addin_tar_load": {
+        "name": "Load target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Load the target identified by the symbol at the cursor position from the _targets data store.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_load",
+        "ordinal": 9
+    },
+    "targets::rstudio_addin_tar_make_bg": {
+        "name": "Run a targets pipeline in the background",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_make() in a background process. Requires a _targets.R configuration file.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_make_bg",
+        "ordinal": 3
+    },
+    "targets::rstudio_addin_tar_outdated": {
+        "name": "See outdated targets",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_outdated(). Requries a _targets.R configuration file",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_outdated",
+        "ordinal": 7
+    },
+    "targets::rstudio_addin_tar_progress": {
+        "name": "Print recent progress",
+        "package": "targets",
+        "title": "",
+        "description": "Run tar_progress() and print the tail() of the result.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_progress",
+        "ordinal": 8
+    },
+    "targets::rstudio_addin_tar_read": {
+        "name": "Read target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Read the target identified by the symbol at the cursor position from the _targets data store.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_read",
+        "ordinal": 10
+    },
+    "targets::rstudio_addin_tar_target": {
+        "name": "Write target at cursor",
+        "package": "targets",
+        "title": "",
+        "description": "Write tar_target() at the cursor position.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_target",
+        "ordinal": 11
+    },
+    "targets::rstudio_addin_tar_visnetwork": {
+        "name": "Visualize a targets pipeline",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_visnetwork(). Requires a _targets.R configuration file and the visNetwork package.",
+        "interactive": false,
+        "binding": "rstudio_addin_tar_visnetwork",
+        "ordinal": 5
+    },
+    "targets::tar_edit": {
+        "name": "Edit _targets.R",
+        "package": "targets",
+        "title": "",
+        "description": "Open the file _targets.R for editing. Requires the usethis package.",
+        "interactive": false,
+        "binding": "tar_edit",
+        "ordinal": 1
+    },
+    "targets::tar_make": {
+        "name": "Run a targets pipeline in the foreground",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_make() in the current R process. Requires a _targets.R configuration file.",
+        "interactive": false,
+        "binding": "tar_make",
+        "ordinal": 2
+    },
+    "targets::tar_watch": {
+        "name": "Launch app to watch progress",
+        "package": "targets",
+        "title": "",
+        "description": "Calls tar_watch(). Requires a _targets.R file and packages bs4Dash, pingr, shiny, and visNetwork.",
+        "interactive": false,
+        "binding": "tar_watch",
+        "ordinal": 4
     },
     "testit::insert_identical": {
         "name": "Insert %==%",
@@ -177,7 +276,7 @@
         "description": "Insert the infix operator %==% from testit.",
         "interactive": false,
         "binding": "insert_identical",
-        "ordinal": 4
+        "ordinal": 15
     },
     "xaringan::inf_mr": {
         "name": "Infinite Moon Reader",
@@ -186,6 +285,6 @@
         "description": "Run xaringan::infinite_moon_reader() to live preview slides or any\n   single-HTML-file R Markdown output.",
         "interactive": true,
         "binding": "inf_mr",
-        "ordinal": 5
+        "ordinal": 16
     }
 }

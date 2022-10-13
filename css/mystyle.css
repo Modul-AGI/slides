@@ -147,6 +147,10 @@ img {
   --blur: 5px;
 }
 
+.sepia .slide-background-content{
+  filter: sepia()
+}
+
 
 .blurred .slide-background-content {
   filter: blur(var(--blur))

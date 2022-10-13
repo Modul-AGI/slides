@@ -1,0 +1,566 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Programmieren II</title>
+
+	<link rel="stylesheet" href="revealjs/dist/reset.css">
+	<link rel="stylesheet" href="revealjs/dist/reveal.css">
+	<link rel="stylesheet" href="revealjs/dist/theme/black.css">
+	<link rel="stylesheet" href="css/my-reveal.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+					<h1>Programmieren II</h1>
+				</section>
+				<section>
+					<table>
+						<thead align="left">
+							<tr>
+								<th>Uhrzeit</th>
+								<th>ΔT</th>
+								<th>Thema</th>
+							</tr>
+						</thead>
+						<tbody align="left">
+							<tr>
+								<td>13.00 - 13.30</td>
+								<td>30</td>
+								<td>Module, Virtual Environments und Conda</td>
+							</tr>
+							<tr id="second">
+								<td>13.30 - 13.45</td>
+								<td>15</td>
+								<td>Kapitel Conda, JupyterLab</td>
+							</tr>
+							<tr class="pause">
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="third">
+								<td>13.50 - 14.35</td>
+								<td>45</td>
+								<td>Aufgabe 5 & Aufgabe 6</td>
+							</tr>
+							<tr class="pause">
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="fourth">
+								<td>14.50 - 15.00</td>
+								<td>10</td>
+								<td>Demo / Fragen</td>
+							</tr>
+							<tr id="fifth">
+								<td>15:00 - 15.35</td>
+								<td>35</td>
+								<td>Aufgabe 7 & Aufgabe 8 </td>
+							</tr>
+							<tr class="pause">
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr id="sixth">
+								<td>15.50 - 16.25</td>
+								<td>35</td>
+								<td>Aufgabe 8 & Aufgabe 9</td>
+							</tr>
+							<tr id="seventh">
+								<td>16.25 - 16.35</td>
+								<td>10</td>
+								<td>Wrap-up und Fragen</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h2>Lernziele</h2>
+
+					<ul>
+						<li class="fragment">Ihr wisst was Python Erweiterungen / Module sind und wie man sie installiert</li>
+						<li class="fragment">Ihr kennt das Konzept von Conda Environments</li>
+						<li class="fragment">Ihr wisst was eine <em>Working Directory</em> ist und könnt diese abfragen und setzen</li>
+					</ul>
+				</section>
+				<section data-visibility="hidden">
+					<h2>Themen</h2>
+					<ul>
+						<li>Python Modules und Virtual Environments</li>
+						<li>Conda</li>
+						<li>Conda mit ArcGIS</li>
+						<li>Keep your code tidy</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg"
+					data-auto-animate>
+					<h2 data-id="conda-title" style="font-size: var(--r-heading1-size)">Conda</h2>
+					<h2>wozu?</h2>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="conda-title">Conda</h2>
+					<ul>
+						<li class="fragment">Installation von <em>Python Modules</em></li>
+						<li class="fragment">Verwalten von <em>Virtual Environments</em></li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>Python Modules</h2>
+				</section>
+				<section data-background-color="" data-transition="fade">
+					<img data-src="mermaid/install-python-modules-3.svg	">
+				</section>
+
+
+				<section>
+					<h2>Virtual Environment</h2>
+
+					<p>Wo sind die <em>python modules</em> installiert?</p>
+				</section>
+
+				<section data-transition="fade">
+					ohne Virtual Environments:
+
+					<img data-src="mermaid/install2.svg" style="width: 75%">
+					<aside class="notes">
+						gegenseige Abhängigkeiten
+					</aside>
+				</section>
+
+				<section data-transition="fade">
+					mit Virtual Environments
+
+					<img data-src="mermaid/install3.svg" style="width: 75%">
+					<aside class="notes">
+
+						<ul>
+							<li>Unabhängingige Umgebungen, keine Abhängigkeiten</li>
+							<li>Virtuelle Umgebungen sind "günstig" (schnell erstellt) und deshalb wegwerfbar</li>
+							<li>davon gibt es in Python 3 verschiedene Implementationen:</li>
+							<ul>
+								<li>"Virtualenv"</li>
+								<li>"pipenv"</li>
+								<li>"Conda Environment"</li>
+							</ul>
+						</ul>
+
+					</aside>
+				</section>
+
+				<section>
+					<p>Wo werden diese <em>virtual environments gespeichert?</em> </p>
+					<p class="fragment">In der Working directory?</p>
+
+					<pre class="fragment"><code data-trim class="sh" data-line-numbers="">
+						conda config --show envs_dirs 
+					</code></pre>
+
+
+				</section>
+
+			</section>
+			<section>
+
+				<section data-auto-animate>
+					<h2 style="font-size: var(--r-heading1-size)"><span data-id="conda-title">Conda</span></h2>
+					<h2>Wie?</h2>
+				</section>
+
+
+
+				<section data-auto-animate>
+					<h2>
+						<span>wie nutzt man</span>
+						<span data-id="conda-title">Conda</span>
+						<span>?</span>
+					</h2>
+					<ul>
+						<li class="fragment strike">Schritt 1: Software herunterladen und installieren</li>
+						<li class="fragment strike">Schritt 2: Systemvariable setzen (falls nötig)</li>
+						<li class="fragment">Schritt 3: Eine <em>Virtual Environment</em> erstellen</li>
+						<li class="fragment">Schritt 4: Die <em>Virtual Environment</em> aktivieren</li>
+						<li class="fragment">Schritt 5: Modul installieren</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">Schritt 1: Software herunterladen und installieren</h3>
+
+					<ul>
+						<li>CLI Software (kein GUI)</li>
+						<li>wird mit ArcGIS Pro mitgeliefert</li>
+						<li>Verwechslungsgefahr: Anaconda</li>
+
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">Schritt 2: Systemvariable setzen</h3>
+					<ul>
+						<li class="fragment">Conda wird von der <em>Konsole</em> bedient</li>
+						<li class="fragment">Die Konsole sucht nach <code>conda</code> in verschiedenen Ordnern</li>
+						<li class="fragment">Die Liste der Orner ist in den Umgebungvariablen festgehalten</li>
+						<li class="fragment">Wir müssen den <code>conda</code>-Pfad also ausfindig machen und den liste hinzufügen</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul>
+						<li>Wenn ihr auf Windows arbeitet und ArcGIS installiert habt, ist conda vermutlich hier
+							installiert:</li>
+						<li><code>C:\Program Files\ArcGIS\Pro\bin\Python\Scripts</code></li>
+					</ul>
+				</section>
+
+				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II23.png" data-background-size="contain">
+				</section>
+				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II24.png" data-background-size="contain">
+				</section>
+				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II25.png" data-background-size="contain">
+				</section>
+
+				<section>
+					Nun sollte <em>conda</em> betriebsbereit sein<br><br>
+
+					Konsole starten (cmd):
+
+					<pre><code data-trim class="bash" data-line-numbers="">
+						conda --version
+						conda 4.3.27 # < kann auch variieren 
+					</code></pre>
+				</section>
+
+			
+
+			<section>
+				<h3 class="r-fit-text">Schritt 3: Eine <em>Virtual Environment</em> erstellen</h3>
+				<div style="font-family: Consolas, monospace" data-id="conda-cmd" class="hljs bash">
+					<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
+					<span class="fragment highlight-current-red" data-fragment-index="2">create</span>
+					<span class="fragment highlight-current-red" data-fragment-index="3">--name</span>
+					<span class="fragment highlight-current-red" data-fragment-index="4">conda-env</span>
+				</div>
+
+				<ul>
+					<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm <code>conda</code>
+						auf</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl <code>create</code>
+						von <code>conda</code> auf</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt den Namen der neuen Umgebung
+						an</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="4">Bestimmt der Name der neuen Umgebung
+					</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<img src="img/AGI_HS19_06_Coding_in_GIS_II26.png" width=80%>
+
+				Speicherort: <code>C:\Users\rata\AppData\Local\ESRI\conda</code>
+
+			</section>
+
+			<section>
+				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II27.png" width=100%>
+			</section>
+
+
+			<section>
+				<h3 class="r-fit-text">Schritt 4: Environment aktivieren</h3>
+
+				<pre><code data-trim class="bash" data-line-numbers="">
+						activate agi-env
+					</code></pre>
+
+				Aktiviert die Environment mit dem Namen <code>agi-env</code>
+			</section>
+
+			<section>
+				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II28.png" width=100%>
+			</section>
+
+			<section>
+				<h3 class="r-fit-text">Schritt 5: Modul installieren</h3>
+
+				<img data-src="mermaid/install-python-modules-3.svg">
+
+
+			</section>
+
+			
+			<section>
+				
+				
+				<div style="font-family: Consolas, monospace" data-id="conda-cmd" class="hljs bash">
+					<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
+					<span class="fragment highlight-current-red" data-fragment-index="2">install</span>
+					<span class="fragment highlight-current-red" data-fragment-index="3">-c</span>
+					<span class="fragment highlight-current-red" data-fragment-index="4">conda-forge</span>
+					<span class="fragment highlight-current-red" data-fragment-index="5">pandas</span>
+				</div>
+
+				<ul>
+					<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm <code>conda</code>auf</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl <code>install</code>von <code>conda</code> auf</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt der Name des <em>channels</em> an</li>
+					<li class="fragment fade-in-then-out" data-fragment-index="4">Ist der Name des <em>channels</em></li>
+					<li class="fragment fade-in-then-out" data-fragment-index="5">Ist der Name des Python Moduls</li>
+				</ul>
+				
+				
+			</section>
+
+
+
+
+			<section>
+				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II30.png" width=100%>
+			</section>
+
+			<section>
+				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II31.png" width=100%>
+			</section>
+
+			<section data-visibility="hidden">
+				Für Programmieren I - III brauchen wir nachstehende Module von <em>conda-forge</em>:<br>
+
+				<pre><code data-trim class="bash" data-line-numbers="">
+					jupyterlab
+					pandas
+					matplotlib
+					geopandas
+					descartes
+				</code></pre>
+			</section>
+
+			<section>
+				<span class="fragment highlight-red">Sobald <code>jupyterlab</code> installiert ist</span>, könnt ihr die Anwendung mit folgendem Befehl in die
+				Konsole starten: <code>jupyter lab</code>
+			</section>
+
+			<section data-background-color="white">
+				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II32.png" width=100%>
+			</section>
+
+
+			<section>
+
+				Warum verbringen wir so viel Zeit mit <code>conda</code>?
+				<ul>
+
+					<li class="fragment">Wichtige Basis für Python</li>
+					<li class="fragment">Wird oft vorausgesettz</li>
+					<li class="fragment">Wird meist unzureichend erklärt</li>
+					<li class="fragment">Verbindet zwei Welten</li>
+				</ul>
+
+				<div class="r-hstack fragment">
+					<img data-src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png">
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II38.png">
+				</div>
+
+			</section>
+		</section>
+
+
+			</section>
+
+			<section>
+				<section data-background-image="img/arcgis-dark.jpg" class="blurred special" data-background-size="contain">
+					<h1>Conda mit ArcGIS</h1>
+				</section>
+
+				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II42.png" data-background-size="contain"></section>
+
+				<section>
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II43.png" width=50%>
+				</section>
+
+				<section>
+					<pre><code data-trim class="python" data-line-numbers="">
+						arcpy.analysis.SummarizeWithin("Wald_NichtWald",
+							"Tick_Original",
+							r"C:\unsicherheit.gdb\summary",
+							"KEEP_ALL",
+							None,
+							"ADD_SHAPE_SUM",
+							'',
+							None,
+							"NO_MIN_MAJ",
+							"NO_PERCENT",
+							None
+						)
+					</code></pre>
+				</section>
+				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II44.png" style="width: 75%;"><aside class="notes">Warum funktioniert das nicht? Das modul arcpy fehlt!</aside></section>
+				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II45.png" style="width: 75%;"></section>
+				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II46.png" style="width: 50%;"><pre><code class="fragment bash" data-trim class="">conda install -c esri arcpy</code></pre><aside class="notes"><blockquote>Requires ArcGIS Pro Installed on the same machine</blockquote></aside></section>
+				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II47.png"></section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II48.png"></section>
+				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II49.png"></section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II50.png"><aside class="notes"></aside></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II51.png"><aside class="notes">"Broken environment" -> Löschen, bestehende environment klonen</aside></section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II52.png"></section>
+				<section data-transition="fade"> <img data-src="img/AGI_HS19_06_Coding_in_GIS_II53.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II54.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II55.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II56.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II57.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II58.png"></section>
+				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II59.png"></section>
+			</section>
+
+			<section>
+				<section data-auto-animate data-background-image="img/AufraeumenUrsusWehrliPommesfr.jpg" class="blurred special">
+					<h1 data-id="tidy">Keep your code tidy!</h1>
+					<aside class="notes">
+						Urs Wehrli: Kunst aufräumen!
+						Nils Ratnawera: Code aufräumen
+
+
+					</aside>
+				</section>
+
+				<section data-auto-animate data-background-image="img/AufraeumenUrsusWehrliPommesfr.jpg">
+					<h1 data-id="tidy" style="opacity: 0">Keep your code tidy!</h1>
+				</section>
+
+				<section data-auto-animate>
+					<pre  data-id="import-code"><code data-trim class="python" data-line-numbers="|1,5,9">
+						import padnas as pd​
+
+						​pd.read_csv("zeckenstiche.csv")​
+
+						import pandas as pd​
+
+						zeckenstiche.head()
+
+						import os​
+
+						zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
+
+						zeckenstiche = pd.read_csv("zeckenstiche.csv")
+					</code></pre>
+
+					<aside class="notes">
+						Alle "import" befehle zu beginn des scripts​
+					</aside>
+				</section>
+
+				<section data-auto-animate>
+					<pre data-id="import-code"><code data-trim class="python" data-line-numbers="|1|1,5|1,5,9">
+						import padnas as pd​
+						import pandas as pd​
+						import os​
+
+						​pd.read_csv("zeckenstiche.csv")​
+
+						zeckenstiche.head()
+
+						zeckenstiche = pd.read_csv("Zeckenstiche.txt")​
+
+						zeckenstiche = pd.read_csv("zeckenstiche.csv")
+					</code></pre>
+
+					<aside class="notes">
+						Code-Zeilen, die nicht funktionieren oder nicht mehr benötigt werden auskommentieren oder löschen​
+					</aside>
+				</section>
+
+				<section data-auto-animate>
+					<pre data-id="import-code"><code data-trim class="python" data-line-numbers="|6">
+						import pandas as pd​
+						import os​
+
+						​#pd.read_csv("zeckenstiche.csv")​
+
+						zeckenstiche.head()
+
+						zeckenstiche = pd.read_csv("zeckenstiche.csv")
+					</code></pre>
+
+					<aside class="notes">
+						Die Reihenfolge der Ausführung berücksichtigen! Ein Skript sollte von oben bis unten
+						funktionieren​
+					</aside>
+				</section>
+
+				<section data-auto-animate>
+					<pre data-id="import-code"><code data-trim class="python" data-line-numbers>
+						import pandas as pd​
+						import os​
+
+						​#pd.read_csv("zeckenstiche.csv")​
+
+						zeckenstiche = pd.read_csv("zeckenstiche.csv")
+
+						zeckenstiche.head()
+					</code></pre>				
+				</section>
+
+		
+			</section>
+
+			<section>
+				<section>
+					<img src="img/slido-qr-code.png" alt="" style="width: 50%">
+					
+					<p>Join at slido.com #1748 762</p>
+
+
+				</section>
+				<section>
+					<iframe src="https://app.sli.do/event/sQcPbYUbCFZ2gsyB1ua7Nm" height="100%" width="100%" frameBorder="0" style="min-height: 560px;" title="Slido"></iframe>
+				</section>
+			</section>
+
+			<section data-visibility="hide">
+				<section data-background-image="img/lancet-trench-watch-pulp-fiction-3224873518.jpeg" class="blurred"></section>
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="revealjs/dist/reveal.js"></script>
+	<script src="revealjs/plugin/notes/notes.js"></script>
+	<script src="revealjs/plugin/highlight/highlight.js"></script>
+	<script src="revealjs/plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealHighlight, RevealNotes, RevealMath.MathJax3]
+		});
+	</script>
+	<!--
+	node node_modules/reveal-notes-server
+	-->
+</body>
+
+</html>
