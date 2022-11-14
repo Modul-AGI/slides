@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Leistungsnachweis Programmieren I - III</title>
+
+	<link rel="stylesheet" href="revealjs/dist/reset.css">
+	<link rel="stylesheet" href="revealjs/dist/reveal.css">
+	<link rel="stylesheet" href="revealjs/dist/theme/black.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+
+    <style>
+        blockquote{
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+            <section>
+                <h1 class="r-fit-text">Feedback Leistungsnachweis</h1>
+            </section>
+
+            <section>
+                <section>
+                    <blockquote>Zwar fühlt sich das Coden effizient und sauber an, im vergleich zum Arbeiten mit ArcGis-Pro fehlte mir aber irgendwie das Visuelle Feedback.</blockquote>
+
+                    <!--Wir schauten zwar an, wie man die ganzen Punkte auf einer Karte abbilden kan, doch dieser schritt fühlte sich für mich definitiv einfacher im ArcGis programm an. -->
+                </section>
+
+                <section>
+                    <img data-src="img-feedback-leistungsnachweis/boxplots.png" style="width: 50%;">
+                    <blockquote>Erkennbar ist, dass je höher der Radius gewählt wird, der Anteil im Wald liegender Punkte abnimmt. Dies konnte mit einer simplen Monte-Carlo Simulation aufgezeigt werden. </blockquote>
+                </section>
+                
+                <section>
+                    <blockquote>Die resultierenden Mittelwerte befinden sich normalerweise zwischen 42 und 45 Prozent, bei grösseren Distanzen (500) fällt der Mittelwert deutlich ab. Für die Simulation dieser Zeckenstichdaten machen solche hohen Distanzen auch wenig Sinn, da die simulierten Punkte viel zu weit weg von den Originalpunkten streuen.</blockquote>
+                </section>
+
+                <section data-auto-animate>
+                    <pre data-id="loop"><code data-trim class="python" data-line-numbers="|1|3|4-5|7-8|10|11|12|13||8">
+                        anteil = []
+
+                        for i in range(100):
+                            x_sim = offset_coordinate(zecken["x"], distance = 1000)
+                            y_sim = offset_coordinate(zecken["y"], distance = 1000)
+                            
+                            geom_100 = gpd.points_from_xy(x_sim, y_sim)
+                            sim = gpd.GeoDataFrame(zecken, geometry = geom_100, crs = 2056)
+                           
+                            join = gpd.sjoin(sim, wald)
+                            summe_100 = sum(join["Wald_text"] == "ja")
+                            anteil_i = summe_100/len(join["Wald_text"])
+                            anteil.append(anteil_i)
+                    </code></pre>
+                </section>
+     
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        m = wald.explore(column = "Wald_text", cmap = ["green", "grey"],tiles = None)
+                        sim.explore(m = m, color = "red")
+                    </code></pre>   
+                    <img data-src="img-feedback-leistungsnachweis/check_sim.png" style="width: 80%;" class="fragment">
+                </section>
+
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        sim.to_file("sim.gpkg")
+                    </code></pre>
+                    <img data-src="img-feedback-leistungsnachweis/qgis.png" style="width: 100%;" class="fragment">
+
+                </section>
+
+                <section data-auto-animate>
+                    <pre data-id="loop"><code data-trim class="python" data-line-numbers="|8|10-13">
+                        anteil = []
+
+                        for i in range(100):
+                            x_sim = offset_coordinate(zecken["x"], distance = 1000)
+                            y_sim = offset_coordinate(zecken["y"], distance = 1000)
+                            
+                            geom_100 = gpd.points_from_xy(x_sim, y_sim)
+                            sim = gpd.GeoDataFrame(zecken, geometry = geom_100, crs = 2056)
+                           
+                            join = gpd.sjoin(sim, wald)
+                            summe_100 = sum(join["Wald_text"] == "ja")
+                            anteil_i = summe_100/len(join["Wald_text"])
+                            anteil.append(anteil_i)
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="loop"><code data-trim class="python" data-line-numbers="">
+                        anteil = []
+
+                        for i in range(100):
+                            x_sim = offset_coordinate(zecken["x"], distance = 1000)
+                            y_sim = offset_coordinate(zecken["y"], distance = 1000)
+                            
+                            geom_100 = gpd.points_from_xy(x_sim, y_sim)
+                            sim = gpd.GeoDataFrame(zecken, geometry = geom_100, crs = 2056)
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="loop"><code data-trim class="python" data-line-numbers="">
+                        anteil = []
+                        gdf_list = []
+
+                        for i in range(100):
+                            x_sim = offset_coordinate(zecken["x"], distance = 1000)
+                            y_sim = offset_coordinate(zecken["y"], distance = 1000)
+                            
+                            geom_100 = gpd.points_from_xy(x_sim, y_sim)
+                            sim = gpd.GeoDataFrame(zecken, geometry = geom_100, crs = 2056)
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="loop"><code data-trim class="python" data-line-numbers="">
+                        anteil = []
+                        gdf_list = []
+
+                        for i in range(100):
+                            x_sim = offset_coordinate(zecken["x"], distance = 1000)
+                            y_sim = offset_coordinate(zecken["y"], distance = 1000)
+                            
+                            geom_100 = gpd.points_from_xy(x_sim, y_sim)
+                            sim = gpd.GeoDataFrame(zecken, geometry = geom_100, crs = 2056)
+                            gdf_list.append(sim.copy())
+                    </code></pre>
+                </section>
+
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        sim2 = pd.concat(gdf_list)
+
+                        m = wald.explore(column = "Wald_text", cmap = ["green", "grey"],tiles = None)
+                        sim2.explore(m = m, color = "red")
+                    </code></pre>
+                    <img data-src="img-feedback-leistungsnachweis/check_sim2.png" style="width: 60%;" class="fragment">
+
+                </section>
+
+                <section>
+                    <img data-src="img-feedback-leistungsnachweis/boxplots.png" style="width: 50%;">
+
+                </section>
+             
+
+            </section>
+
+            <section>
+                <section>
+                    <blockquote>Ehrlich gesagt weiss ich nicht, was ich jetzt mit diesen Resultaten anfangen soll... je geringer die Streu-Distanz, desto geringer die Streuung der Resultate </blockquote>
+                </section>
+                <section>
+                    <div>
+                        <p>Aussage <span style="color: salmon;">vor</span> Monte-Carlo-Simulation: </p>
+                        <blockquote>44% aller Zeckenstiche befinden sich im Wald</blockquote>
+                    </div>
+                    <div class="fragment">
+                        <p>Aussage <span style="color: salmon;">nach</span> Monte-Carlo-Simulation</p>
+                        <blockquote style="text-align: left;">Die GPS Ungenauigkeit beträgt gemäss Literaturangaben zwischen 30 und 40m (siehe Kopernikus et al. 2010). Gehen wir davon aus, dass die Zeckenstiche auf 100m genau gemeldet werden können, befinden sich 40% - 48% aller Zeckenstiche im Wald (μ = 44%). </blockquote>
+                    </div>
+                    
+                    
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <!--<img src="img-feedback-leistungsnachweis/markdown.png">-->
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        ###MATERIAL & METHODEN###
+                        #Für die Ausführung des Leistungsnachweises wurden verschiedene Codes, welche im Modul AGI erlernt wurden angewendet
+
+                        #Als erstes wurde dabei die nötigen Module geladen. Hier wurden vor allem pandas und das auf pandas basierende geopandas, 
+                        #welches das bearbeiten von geodaten ermöglicht verwendet 
+                    </code></pre>
+                    <p class="fragment">Das ist nicht Markdown!</p>
+                </section>
+
+                <section>
+                    <pre><code data-trim class="markdown" data-line-numbers="">
+
+                        ## Material und Methoden
+
+                        Für die Ausführung des Leistungsnachweises in *Programmieren I - III* 
+                        wurden verschiedene Codes, welche im Modul AGI erlernt wurden,
+                        angewendet.
+
+                        Schritte:
+
+                        1. Zeckenstiche importieren
+                        2. Zeckenstiche auf der Basis von gemeldeten Stichen simulieren
+                        3. Simulierte Zeckenstiche von pandas DataFrame in geopandas GeoDataFrame umwandeln
+                        ...
+                    </code></pre>
+                    <p class="fragment">Das ist Markdown!</p>
+
+                </section>
+
+                <section data-visibility="hidden">
+                    <blockquote>Durch die Untersuchung wird klar das die Zecken nicht im Wald aktiver sind ode dort mehr zeckenstiche geschehen. allerdings ist der Unterschied zu Wald und Nichtwald sehr klein. Es könnte also auch Zufall sein. Weiter müsste man jetzt ncoh die UNsicherheit der Waldgrenze mit einbeziehen um eine sichere Aussage machen zu können 
+                    </blockquote>
+                </section>
+
+    
+            </section>
+
+
+            <section>
+                <section>
+                    <blockquote>.. sehe ich den grossen Vorteil im Skripten, das es OpenSource ist, und somit solche Berechnungen auch noch nach dem Studium ohne fancy ArcGIS-Lizenzen und co. möglich sind.</blockquote>
+                </section>
+
+                <section>
+                    <blockquote>Mithilfe von Geopandas ist es uns gelungen, eine Geografische Fragestellung ohne ein Geografisches Informationssystem wie ArcGIS zu lösen. </blockquote>
+
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <blockquote>Die Durchführung dieses Leistungsnachweises war sehr anspruchsvoll. Jedoch war es mit dem im Unterricht erworbenem Wissen, der Hilfe aus dem Internet und dem Verbrauch einiger Nerven machbar. </blockquote>
+                    <blockquote>Die grösste Schwierigkeit bereitete interessanterweise das Starten des Jupyter notebook selber. Anfänglich lief das jupyter notebook einwandfrei, jedoch lies sich dieses auf einmal nicht mehr starten, <span class="fragment highlight-current-red">da das Benutzerprofil nicht mehr als Administrator erkannt wurde</span>. Dieses Problem konnte <span class="fragment highlight-current-red">nach langem Recherchieren behoben werden</span> und die restlichen Schritte verliefen <span class="fragment highlight-current-red">dann mehrheitlich problemlos</span>.</blockquote>
+                </section>
+                
+            </section>
+
+            
+
+	
+
+
+
+
+		</div>
+	</div>
+
+	<script src="revealjs/dist/reveal.js"></script>
+	<script src="revealjs/plugin/notes/notes.js"></script>
+	<script src="revealjs/plugin/highlight/highlight.js"></script>
+	<script src="revealjs/plugin/math/math.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealHighlight, RevealNotes, RevealMath.MathJax3],
+			backgroundTransition: 'convex'
+		});
+	</script>
+	<script src="socket.io/socket.io.js"></script>
+	<script src="node_modules/reveal-notes-server/client.js"></script>
+</body>
+
+</html>
