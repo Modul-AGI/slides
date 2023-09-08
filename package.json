@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@mermaid-js/mermaid-cli": "^9.1.6",
-    "reveal-notes-server": "^0.1.0"
-  }
-}

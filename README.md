@@ -8,6 +8,34 @@
 - Geführte Übungen haben sich bewährt
 
 
+## RevealJS
+
+### Footnotes
+
+To add a footnote, create two nested `div`s. The parent `div` must have the class `footnote`. The inner `div` contains the text to be included in the footnote (will be centered).
+
+
+```css
+.footnote{
+  height: var(--slide-height);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footnote > :first-child {
+  position: absolute !important;
+  font-size: large;
+}
+```
+
+```html
+<div class = "footnote">
+    <div><a href="https://youtu.be/MwLXrN0Yguk?t=33">Original auf Youtube.com</a></div>
+</div>
+```
+
+
 ## Feedback Pascal (ocpa) 
 
 2022 kam Pascal für eine Lektion in den Unterricht. Er hat mir folgendes Feedback gemacht:

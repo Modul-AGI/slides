@@ -48,6 +48,12 @@ blockquote {
   text-shadow: 4px 4px #090909;
 }
 
+.code-snippet{
+  font-family: Consolas, monospace; 
+  font-size: x-large;
+  text-align: left;
+}
+
 .highlight{
   color: orange
 }
@@ -132,16 +138,28 @@ img {
   color: hotpink;
 }
 
-/* make footnotes smaller */
-.footnote {
-  font-size: small;
-  position: absolute; 
-  bottom: 0%; 
+.footnote{
+  height: var(--slide-height);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.footer{
-  visibility: hidden;
+.footnote > :first-child {
+  position: absolute !important;
+  font-size: large;
+  
 }
+
+
+
+/* .footer{
+  visibility: hidden;
+} */
 
 :root {
   --blur: 5px;

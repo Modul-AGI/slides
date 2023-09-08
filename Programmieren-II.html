@@ -93,9 +93,11 @@
 					<h2>Lernziele</h2>
 
 					<ul>
-						<li class="fragment">Ihr wisst was Python Erweiterungen / Module sind und wie man sie installiert</li>
+						<li class="fragment">Ihr wisst was Python Erweiterungen / Module sind und wie man sie
+							installiert</li>
 						<li class="fragment">Ihr kennt das Konzept von Conda Environments</li>
-						<li class="fragment">Ihr wisst was eine <em>Working Directory</em> ist und könnt diese abfragen und setzen</li>
+						<li class="fragment">Ihr wisst was eine <em>Working Directory</em> ist und könnt diese abfragen
+							und setzen</li>
 					</ul>
 				</section>
 				<section data-visibility="hidden">
@@ -110,10 +112,107 @@
 			</section>
 
 			<section>
-				<section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg"
+				<section class="blurred special" data-background-image="img/rearview-mirror-1119717_1280.jpg">
+					<h2>Rückblick Programmieren I</h2>
+				</section>
+
+				<section>
+					Letzte Woche haben wir:
+
+					<ul>
+						<li class="fragment">Primitive Datentypen kennengelernt</li>
+						<li class="fragment">Komplexe Datentypen kennengelernt</li>
+						<li class="fragment">Python in der Konsole bedient (ohne IDE)</li>
+						<li class="fragment">Python in der IDE <em>JupyterLab</em> bedient</li>
+					</ul>
+				</section>
+
+				<section>
+					Welche <em>primitive</em> Datentypen kennen wir in Python?
+
+					<ul>
+						<li class="fragment">Boolean</li>
+						<li class="fragment">String</li>
+						<li class="fragment">Integer</li>
+						<li class="fragment">Float</li>
+					</ul>
+				</section>
+
+
+				<section>
+					Warum unterscheiden wir zwischen unterschiedlichen Datentypen?
+
+					<aside class="notes">
+
+						<ul>
+							<li>Effizienz: Unterschiedliche Datentypen ermöglichen die effiziente Speicherung und
+								Verarbeitung von Informationen je nach Bedarf, wodurch Ressourcen optimal genutzt
+								werden.</li>
+							<li>Klarheit und Lesbarkeit: Durch die Verwendung von verschiedenen Datentypen können
+								Programmierer den Code leichter lesen und verstehen, da sie Informationen über die Art
+								der gespeicherten Daten erhalten.</li>
+							<li>Präzision: Verschiedene Datentypen ermöglichen die präzise Darstellung von
+								Informationen. Zum Beispiel können Fließkommazahlen Dezimalstellen enthalten, während
+								Ganzzahlen dies nicht tun.</li>
+							<li>Validierung: Datentypen können zur Validierung von Benutzereingaben verwendet werden, um
+								sicherzustellen, dass die erwarteten Datenformate und -werte eingehalten werden.</li>
+							<li>Berechnungen: Unterschiedliche Datentypen sind für unterschiedliche Arten von
+								Berechnungen und Operationen geeignet. Ganzzahlen werden beispielsweise für einfache
+								arithmetische Operationen verwendet, während Booleans für logische Operationen verwendet
+								werden.</li>
+							<li>Programmfluss: Datentypen beeinflussen den Programmfluss, da sie Bedingungen und
+								Schleifen steuern. Zum Beispiel kann ein Boolean-Wert dazu verwendet werden, eine
+								bedingte Anweisung zu aktivieren oder zu deaktivieren.</li>
+							<li>Datensicherheit: Die Verwendung geeigneter Datentypen kann dazu beitragen, Datenfehler
+								und Sicherheitslücken zu verhindern, indem sie sicherstellen, dass Daten in einem
+								erwarteten Format vorliegen.</li>
+							<li>Interoperabilität: Verschiedene Datentypen sind in verschiedenen Kontexten und
+								Technologien nützlich und können zur Interaktion mit verschiedenen Systemen und APIs
+								verwendet werden.</li>
+							<li>Fehlererkennung und Debugging: Die Verwendung von Datentypen hilft bei der frühzeitigen
+								Erkennung von Fehlern im Code, da ungültige Datentypen oder Konvertierungsprobleme
+								leichter erkennbar sind.</li>
+							<li>Dokumentation: Die Verwendung von Datentypen in Variablendeklarationen und
+								Funktionssignaturen dient als Dokumentation, die anderen Entwicklern hilft, den Code zu
+								verstehen und korrekt zu verwenden.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					Welche <em>komplexe</em> Datentypen kennen wir in Python?
+					<ul>
+						<li class="fragment">List</li>
+						<li class="fragment">Dict</li>
+						<li class="fragment">DataFrame</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<ul>
+						<li>Wie verhalten sich komplexe Datentypen zu den primitiven Datentypen?</li>
+						<li>Von Lists, Dicts und DataFrames: Welcher Datetyp tanzt aus der Reihe (und warum)?</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Frage 1: komplexe Datentypen bestehen aus primitiven Datentypen. </li>
+							<li>Frage 2: DataFrames: Diese sind eine spezielle Dict, zudem sind sie nicht in base-Python
+								integriert (sondern in Pandas)</li>
+						</ul>
+					</aside>
+				</section>
+
+
+			</section>
+
+
+
+			<section>
+				<section class="blurred special" data-background-image="img/ai-generated-8174214_1280.png"
 					data-auto-animate>
 					<h2 data-id="conda-title" style="font-size: var(--r-heading1-size)">Conda</h2>
-					<h2>wozu?</h2>
+					<h2>Was?</h2>
 				</section>
 
 				<section data-auto-animate>
@@ -123,23 +222,83 @@
 						<li class="fragment">Verwalten von <em>Virtual Environments</em></li>
 					</ul>
 
+					<aside class="notes">
+						<ul>
+							<li>In R konnten wir <em>mit R</em> Packages installieren. In Python geht dies lieder nicht
+							</li>
+							<li>In R haben wir alle Packages am gleichen Ort installiert. In Python ist das nicht üblich
+							</li>
+						</ul>
+
+					</aside>
+
 				</section>
+
+			</section>
+
+			<section>
+				<section class="blurred special" data-background-image="img/books-2596809_1280.jpg">
+					<h2>Python<br> Modules / Libraries</h2>
+				</section>
+
 				<section>
-					<h2>Python Modules</h2>
+					Was ist ein Python Module / Library?
+
+
+					<aside class="notes">
+						<ul>
+
+							<li>Eine Sammlung von "Scripts", um spezifische Aufgaben zu erleichtern. </li>
+							<li>Beispiel Pandas. Base-python hat keinen umgang mit tabellarsichen Daten. Um dies zu
+								erleichtern, wurde Pandas geschieben.</li>
+							<li>Mit Pandas kann man tabelarrische Daten (z.B. CSVs) einlesen, darstellen, manipulieren
+								und erweitern. Entspricht einem MS Excel in Python</li>
+							<li>Häufig sind diese Scripts ebenfalls in Python geschrieben, aber nicht immer</li>
+						</ul>
+					</aside>
+
 				</section>
+
+				<section>
+					Von werden diese "Scripts" geholt und wo werden sie abgespeichert, damit ich sie nutzen kann?
+
+					<aside class="notes">
+						Also wo werden die scripts installiert?
+					</aside>
+				</section>
+
+
 				<section data-background-color="" data-transition="fade">
 					<img data-src="mermaid/install-python-modules-3.svg	">
+
+					<aside class="notes">
+						<ul>
+							<li>es ist wichtig, dass man dieses konzept versteht!</li>
+							<li>Zuerst liegt das Script irgendwo auf einem server, zb bei conda-forge</li>
+							<li>Um es nutzen zu können, muss man es zuerst installieren. So wird das skript irgendwo auf dem computer gespeichert</li>
+							<li>Um es zu nutzen, muss man es in die jeweilige session laden</li>
+							<li>Analog Bibliothek: Buch ausleihen, Buch zur Hand nehmen</li>
+							<li>Wo werden die scripts installiert? Hier kommen Virtual Environments ins spiel</li>
+						</ul>
+					</aside>
+
 				</section>
 
 
-				<section>
-					<h2>Virtual Environment</h2>
 
-					<p>Wo sind die <em>python modules</em> installiert?</p>
+
+			</section>
+
+			<section>
+
+				<section data-background-image="img/planet-1702788_1280.jpg" class="blurred special">
+					<h2>Virtual Environments</h2>
+
+					<p>Wo werden die <em>Python Modules</em> installiert?</p>
 				</section>
 
 				<section data-transition="fade">
-					ohne Virtual Environments:
+					<span class="highlight">ohne</span> Virtual Environments:
 
 					<img data-src="mermaid/install2.svg" style="width: 75%">
 					<aside class="notes">
@@ -148,7 +307,7 @@
 				</section>
 
 				<section data-transition="fade">
-					mit Virtual Environments
+					<span class="highlight">mit</span> Virtual Environments
 
 					<img data-src="mermaid/install3.svg" style="width: 75%">
 					<aside class="notes">
@@ -168,20 +327,35 @@
 				</section>
 
 				<section>
-					<p>Wo werden diese <em>virtual environments gespeichert?</em> </p>
-					<p class="fragment">In der Working directory?</p>
+					<p>Wo werden diese <em>Virtual Environments gespeichert?</em> </p>
+					<p class="fragment">Im Project Folder?</p>
 
-					<pre class="fragment"><code data-trim class="sh" data-line-numbers="">
-						conda config --show envs_dirs 
+				</section>
+
+				<section>
+					<pre><code data-trim class="sh">
+						foo@bar:~$ conda env list
 					</code></pre>
-
-
+					
+					<pre class="fragment"><code data-trim class="sh">
+						base                     /home/nils/miniconda3
+						biodiversity-monitor     /home/nils/miniconda3/envs/biodiversity-monitor
+						biodiversity-streamlit   /home/nils/miniconda3/envs/biodiversity-streamlit
+						copernicus               /home/nils/miniconda3/envs/copernicus
+						geopandas-tutorial       /home/nils/miniconda3/envs/geopandas-tutorial
+						geopython                /home/nils/miniconda3/envs/geopython
+						grassland-streamlit      /home/nils/miniconda3/envs/grassland-streamlit
+						ldm                      /home/nils/miniconda3/envs/ldm
+						mydifffusers             /home/nils/miniconda3/envs/mydifffusers
+						r-env                    /home/nils/miniconda3/envs/r-env
+						xcube                    /home/nils/miniconda3/envs/xcube					
+					</code></pre>
 				</section>
 
 			</section>
 			<section>
 
-				<section data-auto-animate>
+				<section data-auto-animate data-background-image="img/einstein-professor-humor-formula-preview.jpg" class="blurred special">
 					<h2 style="font-size: var(--r-heading1-size)"><span data-id="conda-title">Conda</span></h2>
 					<h2>Wie?</h2>
 				</section>
@@ -190,13 +364,13 @@
 
 				<section data-auto-animate>
 					<h2>
-						<span>wie nutzt man</span>
+						<span>Wie nutzt man</span>
 						<span data-id="conda-title">Conda</span>
 						<span>?</span>
 					</h2>
 					<ul>
-						<li class="fragment strike">Schritt 1: Software herunterladen und installieren</li>
-						<li class="fragment strike">Schritt 2: Systemvariable setzen (falls nötig)</li>
+						<li class="fragment"><span class="fragment strike">Schritt 1: Software herunterladen und installieren</span></li>
+						<li class="fragment"><span class="fragment strike">Schritt 2: Systemvariable setzen (falls nötig)</span></li>
 						<li class="fragment">Schritt 3: Eine <em>Virtual Environment</em> erstellen</li>
 						<li class="fragment">Schritt 4: Die <em>Virtual Environment</em> aktivieren</li>
 						<li class="fragment">Schritt 5: Modul installieren</li>
@@ -204,9 +378,9 @@
 				</section>
 
 				<section>
-					<h3 class="r-fit-text">Schritt 1: Software herunterladen und installieren</h3>
+					<h3 class="r-fit-text">Schritt 1: Software ("Miniconda") herunterladen und installieren</h3>
 
-					<ul>
+					<ul style="font-size: x-large;">
 						<li>CLI Software (kein GUI)</li>
 						<li>wird mit ArcGIS Pro mitgeliefert</li>
 						<li>Verwechslungsgefahr: Anaconda</li>
@@ -214,17 +388,20 @@
 					</ul>
 				</section>
 
-				<section>
+				<section data-visibility="hidden">
 					<h3 class="r-fit-text">Schritt 2: Systemvariable setzen</h3>
-					<ul>
+
+					Nicht nötig in Python Command Prompt
+					<!-- <ul>
 						<li class="fragment">Conda wird von der <em>Konsole</em> bedient</li>
 						<li class="fragment">Die Konsole sucht nach <code>conda</code> in verschiedenen Ordnern</li>
-						<li class="fragment">Die Liste der Orner ist in den Umgebungvariablen festgehalten</li>
-						<li class="fragment">Wir müssen den <code>conda</code>-Pfad also ausfindig machen und den liste hinzufügen</li>
-					</ul>
+						<li class="fragment">Die Liste der Ordner ist in den Umgebungvariablen festgehalten</li>
+						<li class="fragment">Wir müssen den <code>conda</code>-Pfad also ausfindig machen und den liste
+							hinzufügen</li>
+					</ul> -->
 				</section>
 
-				<section>
+				<section data-visibility="hidden">
 					<ul>
 						<li>Wenn ihr auf Windows arbeitet und ArcGIS installiert habt, ist conda vermutlich hier
 							installiert:</li>
@@ -232,156 +409,179 @@
 					</ul>
 				</section>
 
-				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II23.png" data-background-size="contain">
+				<section data-visibility="hidden" data-background-image="img/AGI_HS19_06_Coding_in_GIS_II23.png" data-background-size="contain">
 				</section>
-				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II24.png" data-background-size="contain">
+				<section data-visibility="hidden" data-background-image="img/AGI_HS19_06_Coding_in_GIS_II24.png" data-background-size="contain">
 				</section>
-				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II25.png" data-background-size="contain">
+				<section data-visibility="hidden" data-background-image="img/AGI_HS19_06_Coding_in_GIS_II25.png" data-background-size="contain">
 				</section>
 
 				<section>
-					Nun sollte <em>conda</em> betriebsbereit sein<br><br>
 
-					Konsole starten (cmd):
+					<h3 class="r-fit-text">Schritt 3: Eine <em>Virtual Environment</em> erstellen</h3>
+
+					
 
 					<pre><code data-trim class="bash" data-line-numbers="">
-						conda --version
-						conda 4.3.27 # < kann auch variieren 
+						# Test, ob Konda funktioniert:
+						foo@bar:~$ conda --version
+
+						# Wenn eine Versionsnummer erscheint 👍
+						conda 22.9.0 
 					</code></pre>
 				</section>
 
-			
-
-			<section>
-				<h3 class="r-fit-text">Schritt 3: Eine <em>Virtual Environment</em> erstellen</h3>
-				<div style="font-family: Consolas, monospace" data-id="conda-cmd" class="hljs bash">
-					<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
-					<span class="fragment highlight-current-red" data-fragment-index="2">create</span>
-					<span class="fragment highlight-current-red" data-fragment-index="3">--name</span>
-					<span class="fragment highlight-current-red" data-fragment-index="4">conda-env</span>
-				</div>
-
-				<ul>
-					<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm <code>conda</code>
-						auf</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl <code>create</code>
-						von <code>conda</code> auf</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt den Namen der neuen Umgebung
-						an</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="4">Bestimmt der Name der neuen Umgebung
-					</li>
-				</ul>
-			</section>
 
 
-			<section>
-				<img src="img/AGI_HS19_06_Coding_in_GIS_II26.png" width=80%>
+				<section>
+					<h3 class="r-fit-text">Schritt 3: Eine <em>Virtual Environment</em> erstellen</h3>
+					<div data-id="conda-cmd" class="hljs bash code-snippet">
+						<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
+						<span class="fragment highlight-current-red" data-fragment-index="2">create</span>
+						<span class="fragment highlight-current-red" data-fragment-index="3">--name</span>
+						<span class="fragment highlight-current-red" data-fragment-index="4">codingingis</span>
+					</div>
 
-				Speicherort: <code>C:\Users\rata\AppData\Local\ESRI\conda</code>
+					<ul>
+						<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm
+							<code>conda</code>
+							auf
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl
+							<code>create</code>
+							von <code>conda</code> auf
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt den Namen der neuen
+							Umgebung
+							an</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="4">Bestimmt der Name der neuen
+							Umgebung
+						</li>
+					</ul>
+				</section>
 
-			</section>
 
-			<section>
-				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II27.png" width=100%>
-			</section>
+				<section>
+					<img src="img/AGI_HS19_06_Coding_in_GIS_II26.png" width=80%>
+
+					<span class="r-fit-text">Speicherort: <code>C:\Users\rata\AppData\Local\ESRI\conda</code> mit <kbd>Enter</kbd> / <kbd>Y</kbd> bestätigen</span>
+
+				</section>
+
+				<section>
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II27.png" width=100%>
+				</section>
 
 
-			<section>
-				<h3 class="r-fit-text">Schritt 4: Environment aktivieren</h3>
+				<section>
+					<h3 class="r-fit-text">Schritt 4: Environment aktivieren</h3>
 
-				<pre><code data-trim class="bash" data-line-numbers="">
-						activate agi-env
+					<pre><code data-trim class="bash" data-line-numbers="">
+						activate codingingis
 					</code></pre>
 
-				Aktiviert die Environment mit dem Namen <code>agi-env</code>
-			</section>
+					Aktiviert die Environment mit dem Namen <code>codingingis</code>
+				</section>
 
-			<section>
-				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II28.png" width=100%>
-			</section>
+				<section>
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II28.png" width=100%>
+				</section>
 
-			<section>
-				<h3 class="r-fit-text">Schritt 5: Modul installieren</h3>
+				<section>
+					<h3 class="r-fit-text">Schritt 5: Modul installieren</h3>
 
-				<img data-src="mermaid/install-python-modules-3.svg">
-
-
-			</section>
-
-			
-			<section>
-				
-				
-				<div style="font-family: Consolas, monospace" data-id="conda-cmd" class="hljs bash">
-					<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
-					<span class="fragment highlight-current-red" data-fragment-index="2">install</span>
-					<span class="fragment highlight-current-red" data-fragment-index="3">-c</span>
-					<span class="fragment highlight-current-red" data-fragment-index="4">conda-forge</span>
-					<span class="fragment highlight-current-red" data-fragment-index="5">pandas</span>
-				</div>
-
-				<ul>
-					<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm <code>conda</code>auf</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl <code>install</code>von <code>conda</code> auf</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt der Name des <em>channels</em> an</li>
-					<li class="fragment fade-in-then-out" data-fragment-index="4">Ist der Name des <em>channels</em></li>
-					<li class="fragment fade-in-then-out" data-fragment-index="5">Ist der Name des Python Moduls</li>
-				</ul>
-				
-				
-			</section>
+					<img data-src="mermaid/install-python-modules-3.svg">
 
 
+				</section>
 
 
-			<section>
-				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II30.png" width=100%>
-			</section>
+				<section>
 
-			<section>
-				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II31.png" width=100%>
-			</section>
 
-			<section data-visibility="hidden">
-				Für Programmieren I - III brauchen wir nachstehende Module von <em>conda-forge</em>:<br>
+					<div data-id="conda-cmd" class="hljs bash code-snippet">
+						<span class="fragment highlight-current-red" data-fragment-index="1">conda</span>
+						<span class="fragment highlight-current-red" data-fragment-index="2">install</span>
+						<span class="fragment highlight-current-red" data-fragment-index="3">-c</span>
+						<span class="fragment highlight-current-red" data-fragment-index="4">conda-forge</span>
+						<span class="fragment highlight-current-red" data-fragment-index="5">pandas</span>
+					</div>
 
-				<pre><code data-trim class="bash" data-line-numbers="">
+					<ul>
+						<li class="fragment fade-in-then-out" data-fragment-index="1">Ruft das Programm
+							<code>conda</code>auf
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="2">Ruft den Befehl
+							<code>install</code>von <code>conda</code> auf
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="3">Kündigt der Name des
+							<em>channels</em> an
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="4">Ist der Name des <em>channels</em>
+						</li>
+						<li class="fragment fade-in-then-out" data-fragment-index="5">Ist der Name des Python Moduls
+						</li>
+					</ul>
+
+
+				</section>
+
+
+
+
+				<section>
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II30.png" width=100%>
+				</section>
+
+				<section>
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II31.png" width=100%>
+				</section>
+
+				<section data-visibility="hidden">
+					Für Programmieren I - III brauchen wir nachstehende Module von <em>conda-forge</em>:<br>
+
+					<pre><code data-trim class="bash" data-line-numbers="">
 					jupyterlab
 					pandas
 					matplotlib
 					geopandas
 					descartes
 				</code></pre>
+				</section>
+
+				<section>
+					<span class="fragment highlight-red">Sobald <code>jupyterlab</code> installiert ist</span>, könnt
+					ihr die Anwendung mit folgendem Befehl in die
+					Konsole starten: <code>jupyter lab</code>
+				</section>
+
+				<section data-background-color="white" data-visibility="hidden">
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II32.png" width=100%>
+				</section>
+
+				<section data-background-iframe="https://modul-agi.github.io/HS23/B_Programmieren_2/2_Conda.html#sec-conda-cheet-sheet">
+
+				</section>
+
+
+				<section>
+
+					Warum verbringen wir so viel Zeit mit <code>conda</code>?
+					<ul>
+
+						<li class="fragment">Wichtige Basis für Python</li>
+						<li class="fragment">Wird oft vorausgesetzt</li>
+						<li class="fragment">Wird meist unzureichend erklärt</li>
+						<li class="fragment">Verbindet zwei Welten</li>
+					</ul>
+
+					<div class="r-hstack fragment">
+						<img data-src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png">
+						<img data-src="img/AGI_HS19_06_Coding_in_GIS_II38.png">
+					</div>
+
+				</section>
 			</section>
-
-			<section>
-				<span class="fragment highlight-red">Sobald <code>jupyterlab</code> installiert ist</span>, könnt ihr die Anwendung mit folgendem Befehl in die
-				Konsole starten: <code>jupyter lab</code>
-			</section>
-
-			<section data-background-color="white">
-				<img data-src="img/AGI_HS19_06_Coding_in_GIS_II32.png" width=100%>
-			</section>
-
-
-			<section>
-
-				Warum verbringen wir so viel Zeit mit <code>conda</code>?
-				<ul>
-
-					<li class="fragment">Wichtige Basis für Python</li>
-					<li class="fragment">Wird oft vorausgesettz</li>
-					<li class="fragment">Wird meist unzureichend erklärt</li>
-					<li class="fragment">Verbindet zwei Welten</li>
-				</ul>
-
-				<div class="r-hstack fragment">
-					<img data-src="img/AGI_HS20_02_Coding_in_GIS_Ia66.png">
-					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II38.png">
-				</div>
-
-			</section>
-		</section>
 
 
 			</section>
@@ -391,7 +591,8 @@
 					<h1>Conda mit ArcGIS</h1>
 				</section>
 
-				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II42.png" data-background-size="contain"></section>
+				<section data-background-image="img/AGI_HS19_06_Coding_in_GIS_II42.png" data-background-size="contain">
+				</section>
 
 				<section>
 					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II43.png" width=50%>
@@ -413,16 +614,28 @@
 						)
 					</code></pre>
 				</section>
-				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II44.png" style="width: 75%;"><aside class="notes">Warum funktioniert das nicht? Das modul arcpy fehlt!</aside></section>
-				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II45.png" style="width: 75%;"></section>
-				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II46.png" style="width: 50%;"><pre><code class="fragment bash" data-trim class="">conda install -c esri arcpy</code></pre><aside class="notes"><blockquote>Requires ArcGIS Pro Installed on the same machine</blockquote></aside></section>
-				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II47.png"></section>
+				<section data-visibility="hidden">
+					<img data-src="img/AGI_HS19_06_Coding_in_GIS_II44.png" style="width: 75%;">
+					<aside class="notes">Warum funktioniert das nicht? Das modul arcpy fehlt!</aside>
+				</section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II45.png" style="width: 75%;"></section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II46.png" style="width: 50%;">
+					<pre><code class="fragment bash" data-trim class="">conda install -c esri arcpy</code></pre>
+					<aside class="notes">
+						<blockquote>Requires ArcGIS Pro Installed on the same machine</blockquote>
+					</aside>
+				</section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II47.png"></section>
 				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II48.png"></section>
 				<section><img data-src="img/AGI_HS19_06_Coding_in_GIS_II49.png"></section>
-				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II50.png"><aside class="notes"></aside></section>
-				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II51.png"><aside class="notes">"Broken environment" -> Löschen, bestehende environment klonen</aside></section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II50.png">
+					<aside class="notes"></aside>
+				</section>
+				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II51.png">
+					<aside class="notes">"Broken environment" -> Löschen, bestehende environment klonen</aside>
+				</section>
 				<section data-visibility="hidden"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II52.png"></section>
-				<section data-transition="fade"> <img data-src="img/AGI_HS19_06_Coding_in_GIS_II53.png"></section>
+				<section data-visibility="hidden"> <img data-src="img/AGI_HS19_06_Coding_in_GIS_II53.png"></section>
 				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II54.png"></section>
 				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II55.png"></section>
 				<section data-transition="fade"><img data-src="img/AGI_HS19_06_Coding_in_GIS_II56.png"></section>
@@ -432,7 +645,15 @@
 			</section>
 
 			<section>
-				<section data-auto-animate data-background-image="img/AufraeumenUrsusWehrliPommesfr.jpg" class="blurred special">
+				<section data-auto-animate data-background-image="img/viewpoint-3593304_1280.jpg"
+				class="blurred special">				
+					<h1>Ausblick heute</h1>
+				</section>
+			</section>
+
+			<section>
+				<section data-auto-animate data-background-image="img/AufraeumenUrsusWehrliPommesfr.jpg"
+					class="blurred special">
 					<h1 data-id="tidy">Keep your code tidy!</h1>
 					<aside class="notes">
 						Urs Wehrli: Kunst aufräumen!
@@ -447,7 +668,7 @@
 				</section>
 
 				<section data-auto-animate>
-					<pre  data-id="import-code"><code data-trim class="python" data-line-numbers="|1,5,9">
+					<pre data-id="import-code"><code data-trim class="python" data-line-numbers="|1,5,9">
 						import padnas as pd​
 
 						​pd.read_csv("zeckenstiche.csv")​
@@ -484,7 +705,8 @@
 					</code></pre>
 
 					<aside class="notes">
-						Code-Zeilen, die nicht funktionieren oder nicht mehr benötigt werden auskommentieren oder löschen​
+						Code-Zeilen, die nicht funktionieren oder nicht mehr benötigt werden auskommentieren oder
+						löschen​
 					</aside>
 				</section>
 
@@ -516,27 +738,16 @@
 						zeckenstiche = pd.read_csv("zeckenstiche.csv")
 
 						zeckenstiche.head()
-					</code></pre>				
+					</code></pre>
 				</section>
 
-		
+
 			</section>
 
-			<section>
-				<section>
-					<img src="img/slido-qr-code.png" alt="" style="width: 50%">
-					
-					<p>Join at slido.com #1748 762</p>
 
-
+			<section data-visibility="hidden">
+				<section data-background-image="img/lancet-trench-watch-pulp-fiction-3224873518.jpeg" class="blurred">
 				</section>
-				<section>
-					<iframe src="https://app.sli.do/event/sQcPbYUbCFZ2gsyB1ua7Nm" height="100%" width="100%" frameBorder="0" style="min-height: 560px;" title="Slido"></iframe>
-				</section>
-			</section>
-
-			<section data-visibility="hide">
-				<section data-background-image="img/lancet-trench-watch-pulp-fiction-3224873518.jpeg" class="blurred"></section>
 			</section>
 
 
