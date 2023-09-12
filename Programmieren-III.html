@@ -394,21 +394,102 @@
                                 y_sim.append(y_new)     
                         </code></pre>
 
-                        <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 50%">
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 50%">
+
+                </section>
+
+                <section>
+                    <div class="mytable" style="grid-template-columns: repeat(5, auto);">
+                        <div>
+                            <div>&nbsp;</div>
+                            <div>0</div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                        <div>
+                            <div>ID</div>
+                            <div>2550</div>
+                            <div>10437</div>
+                            <div>9174</div>
+                            <div>8773</div>
+                            <div>2764</div>
+                            <div>2513</div>
+                            <div>9185</div>
+                            <div>28521</div>
+                            <div>26745</div>
+                            <div>27391</div>
+                        </div>
+
+                        <div>
+                            <div>Accuracy</div>
+                            <div>439.128951</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748529</div>
+                            <div>301.748529</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                        </div>
+                        <div>
+                            <div>x</div>
+                            <div>2681116</div>
+                            <div>2681092</div>
+                            <div>2681128</div>
+                            <div>2681111</div>
+                            <div>2681131</div>
+                            <div>2681171</div>
+                            <div>2681107</div>
+                            <div>2681124</div>
+                            <div>2681117</div>
+                            <div>2681138</div>
+                        </div>
+
+                        <div>
+                            <div>y</div>
+                            <div>1250648</div>
+                            <div>1250672</div>
+                            <div>1250683</div>
+                            <div>1250683</div>
+                            <div>1250692</div>
+                            <div>1250711</div>
+                            <div>1250712</div>
+                            <div>1250720</div>
+                            <div>1250725</div>
+                            <div>1250725</div>
+
+                        </div>
+
+
+                    </div>
 
                 </section>
 
 
                 <section>
-                    <pre><code data-trim class="python" data-line-numbers="">
-                        zeckenstiche   
-                    </code></pre>
 
-                    <table  class="large"><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td></tr></tbody></table>
+                    <p>Was fehlt?</p>
+                    <ul>
+                        <li class="fragment">Eine Geometrie</li>
+                        <li class="fragment">Ein Koordinaten<u>bezugs</u>system</li>
+                    </ul>
+
                 </section>
 
+
                 <section>
-                    <pre><code data-trim class="" data-line-numbers="">
+                    <b><em class="fragment highlight">Geo</em>DataFrames</b>
+
+                    <pre class="fragment"><code data-trim class="python" data-line-numbers="">
                         import geopandas as gpd
 
                         geom = gpd.points_from_xy(
@@ -417,7 +498,7 @@
                         )   
                     </code></pre>
 
-                    <pre class="fragment"><code data-trim class="" data-line-numbers="">
+                    <pre class="fragment"><code data-trim class="python" data-line-numbers="">
                         zeckenstiche_gpd = gpd.GeoDataFrame(
                             zeckenstiche,    # die DataFrame ("Attributtabelle")
                             geometry = geom, #
@@ -427,157 +508,260 @@
                 </section>
 
 
-                <section data-transition="fade">
-                    <pre><code data-trim class="python" data-line-numbers="">
-                        zeckenstiche   
-                    </code></pre>
-                    <table  class="large"><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td></tr></tbody></table>
-                </section>
-                <section data-transition="fade">
-                    <pre><code data-trim class="python" data-line-numbers="">
-                        zeckenstiche_gpd   
-                    </code></pre>
+                <section data-auto-animate>
 
-                    <div class="fragment custom geodataframe" data-fragment-index="2">
-                        <table class="large"><colgroup>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col class="fragment custom geoseries" data-fragment-index="1">
-                          </colgroup><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th><th>geometry</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td><td><span class="fragment custom geometry" data-fragment-index="0">POINT (2681116.000 1250648.000)</span></td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td><td>POINT (2681092.000 1250672.000)</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td><td>POINT (2681128.000 1250683.000)</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td><td>POINT (2681111.000 1250683.000)</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td><td>POINT (2681131.000 1250692.000)</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td><td>POINT (2681171.000 1250711.000)</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td><td>POINT (2681107.000 1250712.000)</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td><td>POINT (2681124.000 1250720.000)</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td><td>POINT (2681117.000 1250725.000)</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td><td>POINT (2681138.000 1250725.000)</td></tr></tbody></table>
+                    <pre><code data-trim class="" data-line-numbers="">
+                        zeckenstiche
+                    </code></pre>
+                    <div class="mytable" style="grid-template-columns: repeat(5, auto);">
+                        <div data-id="index">
+                            <div>&nbsp;</div>
+                            <div>0</div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                        <div data-id="id">
+                            <div>ID</div>
+                            <div>2550</div>
+                            <div>10437</div>
+                            <div>9174</div>
+                            <div>8773</div>
+                            <div>2764</div>
+                            <div>2513</div>
+                            <div>9185</div>
+                            <div>28521</div>
+                            <div>26745</div>
+                            <div>27391</div>
+                        </div>
+
+                        <div data-id="accuracy">
+                            <div>Accuracy</div>
+                            <div>439.128951</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748529</div>
+                            <div>301.748529</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                        </div>
+                        <div data-id="x">
+                            <div>x</div>
+                            <div>2681116</div>
+                            <div>2681092</div>
+                            <div>2681128</div>
+                            <div>2681111</div>
+                            <div>2681131</div>
+                            <div>2681171</div>
+                            <div>2681107</div>
+                            <div>2681124</div>
+                            <div>2681117</div>
+                            <div>2681138</div>
+                        </div>
+
+                        <div data-id="y">
+                            <div>y</div>
+                            <div>1250648</div>
+                            <div>1250672</div>
+                            <div>1250683</div>
+                            <div>1250683</div>
+                            <div>1250692</div>
+                            <div>1250711</div>
+                            <div>1250712</div>
+                            <div>1250720</div>
+                            <div>1250725</div>
+                            <div>1250725</div>
+
+                        </div>
+
+
                     </div>
 
-                   <div class="r-stack">
-                        <div class="fragment fade-in-then-out" data-fragment-index="0" style="color: #8eaadd;">Geometry</div>
-                        <div class="fragment fade-in-then-out" data-fragment-index="1" style="color: red;">GeoSeries</div>
-                        <div class="fragment fade-in-then-out" data-fragment-index="2" style="color: green;">GeoDataFrame</div>
-                   </div>
-
-                    
                 </section>
 
-             
-    
-              
+                <section data-auto-animate>
+                    <pre><code data-trim class="" data-line-numbers="">
+                        zeckenstiche_gpd
+                    </code></pre>
+                    <div data-fragment-index="2" class="mytable fragment custom geodataframe"
+                        style="grid-template-columns: repeat(6, auto);">
+                        <div data-id="index">
+                            <div>&nbsp;</div>
+                            <div>0</div>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                        <div data-id="id">
+                            <div>ID</div>
+                            <div>2550</div>
+                            <div>10437</div>
+                            <div>9174</div>
+                            <div>8773</div>
+                            <div>2764</div>
+                            <div>2513</div>
+                            <div>9185</div>
+                            <div>28521</div>
+                            <div>26745</div>
+                            <div>27391</div>
+                        </div>
+
+                        <div data-id="accuracy">
+                            <div>Accuracy</div>
+                            <div>439.128951</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748529</div>
+                            <div>301.748529</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                            <div>301.748542</div>
+                        </div>
+                        <div data-id="x">
+                            <div>x</div>
+                            <div>2681116</div>
+                            <div>2681092</div>
+                            <div>2681128</div>
+                            <div>2681111</div>
+                            <div>2681131</div>
+                            <div>2681171</div>
+                            <div>2681107</div>
+                            <div>2681124</div>
+                            <div>2681117</div>
+                            <div>2681138</div>
+                        </div>
+
+                        <div data-id="y">
+                            <div>y</div>
+                            <div>1250648</div>
+                            <div>1250672</div>
+                            <div>1250683</div>
+                            <div>1250683</div>
+                            <div>1250692</div>
+                            <div>1250711</div>
+                            <div>1250712</div>
+                            <div>1250720</div>
+                            <div>1250725</div>
+                            <div>1250725</div>
+                        </div>
+
+
+
+                        <div class="fragment custom geoseries" data-fragment-index="1">
+                            <div>geometry</div>
+                            <div class="fragment custom geometry" data-fragment-index="0">POINT(2681116 1250648)</div>
+                            <div>POINT(2681092 1250672)</div>
+                            <div>POINT(2681128 1250683)</div>
+                            <div>POINT(2681111 1250683)</div>
+                            <div>POINT(2681131 1250692)</div>
+                            <div>POINT(2681171 1250711)</div>
+                            <div>POINT(2681107 1250712)</div>
+                            <div>POINT(2681124 1250720)</div>
+                            <div>POINT(2681117 1250725)</div>
+                            <div>POINT(2681138 1250725)</div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="r-stack">
+                        <div class="fragment fade-in-then-out" data-fragment-index="0" style="color: #8eaadd;">Geometry
+                        </div>
+                        <div class="fragment fade-in-then-out" data-fragment-index="1" style="color: red;">GeoSeries
+                        </div>
+                        <div class="fragment fade-in-then-out" data-fragment-index="2" style="color: green;">
+                            GeoDataFrame</div>
+                    </div>
+
+                </section>
+
+
+
+
+
+
             </section>
 
             <section>
-                <section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+                <section class="blurred special" data-background-image="img/bee-2925241_1280.jpg">
 
                     <h2>Räumliche Operationen</h2>
 
                 </section>
+
+
+
+                <section>
+                    <img class="white-padded"
+                        data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png">
+                </section>
+                <section>
+                    <p>Buffer</p>
+
+                    <img class="white-padded" data-src="img/AGI_HS19_08_Coding_in_GIS_III23.png">
+
+                </section>
+
+                <section>
+                    MinimumBoundingGeometry
+
+                    <img class="white-padded" data-src="img/AGI_HS19_08_Coding_in_GIS_III24.png">
+
+                </section>
+
+                <section>
+                    <p>Overlay</p>
+
+                    <img class="white-padded" data-src="img/AGI_HS19_08_Coding_in_GIS_III25.png">
+
+                </section>
+
+                <section>
+                    <p>Kernel Density</p>
+
+                    <img class="white-padded" data-src="img/AGI_HS19_08_Coding_in_GIS_III26.png">
+
+                </section>
+
+                <section>
+                    <p>Web Maps</p>
+
+                    <img class="white-padded" data-src="img/AGI_HS19_08_Coding_in_GIS_III27.png">
+
+                </section>
+
             </section>
 
             <section>
-                <section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+                <section class="blurred special" data-background-image="img/bee-4616099_1280.jpg">
 
                     <h2>Spatial Joins</h2>
 
                 </section>
             </section>
 
-
-
-
-
-
-
-            <section data-visibility="hidden">
-
-
-
-
-                <section
-                    data-background-image="https://davenewt.github.io/assets/images/perlin%20noise%20flowfield.png">
-                    <h1 style="color: white">Ein Einzelpunkt zufällig verschieben</h1>
-
-                </section>
-
+            <section>
                 <section>
-                    <h1>Ein Einzelpunkt zufällig verschieben </h1>
-
-                </section>
-
-                <section>
-                    Zum Beispiel hat unser Punkt die Koordinate 0, 0
 
                     <pre><code data-trim class="python" data-line-numbers="">
-        >>> x_start = 0
-        >>> x_offset = random.normalvariate(0,100)
-        >>> x_offset
-        10.24617
-
-        >>> x_neu = x_start + x_offset
-        >>> x_neu
-        10.24617
-
-    </code></pre>
-                </section>
-
-
-                <section>
-                    <pre><code data-trim class="python" data-line-numbers="">
-        >>> y_start = 0
-        >>> y_offset = random.normalvariate(0,100)
-        >>> y_offset
-        -4.443904
-
-        >>> y_neu = y_start + y_offset
-        >>> y_neu
-        -4.443904
-    </code></pre>
-                </section>
-
-                <section>
-                    <img data-src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style="width: 75%"
-                        class="pull-center">
-
-                </section>
-                <section>
-                    <img data-src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style="width: 75%"
-                        class="pull-center">
-
-                </section>
-
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 75%" class="pull-center">
-
-                </section>
-
-                <section>
-                    <h1>Workflow > Function </h1>
-
-                    <pre><code data-trim class="" data-line-numbers="">
-        def offset_coordinate(old, distance = 100):
-            import random
-            new = old +random.normalvariate(0,distance)
-
-            return new
-    </code></pre>
-
-                </section>
-
-                <section>
-                    <h1>Function > DataFrame </h1>
-
-                </section>
-
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III9.png" style="width: 50%">
-
-                </section>
-
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III10.png" style="width: 75%">
-
-                </section>
-
-                <section>
-
-                    <pre><code data-trim class="" data-line-numbers="">
         zeckenstiche["x"].apply(offset_coordinate)
         #\______1_______/ \_2_/ \_______3_______/
     </code></pre>
@@ -615,28 +799,6 @@
 
 
 
-                <section>
-                    <h1>GIS in Python </h1>
-
-                </section>
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png" class="pull-left">
-
-                </section>
-
-
-                <section>
-                    Was fehlt?
-
-                    <ul>
-                        <li>Eine Geometrie</li>
-                        <li>Ein Koordinaten<u>bezugs</u>system</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <b><em>Geo</em>DataFrames</b>
-                </section>
 
                 <section>
                     <img data-src="img/AGI_HS19_08_Coding_in_GIS_III21.png" alt="">
@@ -673,46 +835,7 @@
                     </aside>
                 </section>
 
-                <section>
-                    Buffer
 
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III23.png" style="width: 50%">
-
-                </section>
-
-                <section>
-                    MinimumBoundingGeometry
-
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III24.png" style="width: 75%">
-
-                </section>
-
-                <section>
-                    Overlay
-
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III25.png" style="width: 75%">
-
-                </section>
-
-                <section>
-                    Kernel Density
-
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III26.png" style="width: 75%">
-
-                </section>
-
-                <section>
-                    Web Maps
-
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III27.png" style="width: 50%">
-
-                </section>
-
-                <section>
-                    <h1>Leistungsnachweis </h1>
-
-                    https://modul-agi.github.io/HS21/B_Coding_in_GIS_3/9_Leistungsnachweis.html
-                </section>
 
             </section>
 
