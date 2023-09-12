@@ -89,6 +89,17 @@ img {
 
 /* just for the header (currently unused) */
 
+.xx-large{
+  font-size: xx-large;
+}
+
+.x-large{
+  font-size: x-large;
+}
+
+.large{
+  font-size: large;
+}
 
 
 .headercol {
@@ -123,21 +134,6 @@ img {
   bottom: 5%;
 }
 
-/* this style is for the repeated "topics of the day" part */
-
-.first #first, 
-.second #second, 
-.third #third, 
-.fourth #fourth, 
-.fifth #fifth, 
-.sixth #sixth, 
-.seventh #seventh, 
-.eighth #eighth, 
-.nineth #nineth, 
-.tenth #tenth {
-  color: hotpink;
-}
-
 .footnote{
   height: var(--slide-height);
   display: flex;
@@ -154,12 +150,6 @@ img {
   font-size: large;
   
 }
-
-
-
-/* .footer{
-  visibility: hidden;
-} */
 
 :root {
   --blur: 5px;
@@ -190,11 +180,45 @@ tr.pause {
 }
 
 
+.inline-block-children > div {
+  display: inline;
+}
+
 /* for nice borders around images */
 /* https://www.w3schools.com/csS/css3_shadows_box.asp */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
+
+
+.fragment.geodataframe,
+.fragment.geoseries,
+.fragment.geometry
+{
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.fragment.geodataframe.current-fragment{
+  padding: 10px; 
+  border: 3px solid green;
+}
+
+
+
+/* or .fragment.geoseries.visible */
+.fragment.geoseries.current-fragment{
+  border: 3px solid red;
+}
+
+
+.fragment.geometry.current-fragment{
+  outline: 3px solid #8eaadd; 
+  padding: 4px
+}
+
+
+
 
 

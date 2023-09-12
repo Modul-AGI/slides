@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Programmieren II</title>
+    <title>Programmieren III</title>
 
     <link rel="stylesheet" href="revealjs/dist/reset.css">
     <link rel="stylesheet" href="revealjs/dist/reveal.css">
@@ -24,173 +24,487 @@
 
 
             <section>
-                <h1>Zeitplan </h1>
-                <table>
-                    <thead align="left">
-                        <tr>
-                            <th>Uhrzeit</th>
-                            <th>ΔT</th>
-                            <th>Thema</th>
-                        </tr>
-                    </thead>
-                    <tbody align="left">
-                        <tr id="first">
-                            <th>13.00 - 13.30</th>
-                            <th>30</th>
-                            <th>Vorlesung</th>
-                        </tr>
-                        <tr id="second">
-                            <td>13.30 - 13.45</td>
-                            <td>15</td>
-                            <td>Aufgabe 10</td>
-                        </tr>
-                        <tr class="pause">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr id="third">
-                            <td>13.50 - 14.35</td>
-                            <td>45</td>
-                            <td>Aufgabe 11 | Aufgabe 12</td>
-                        </tr>
-                        <tr class="pause">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr id="fourth">
-                            <td>14.50 - 15.05</td>
-                            <td>15</td>
-                            <td>Input: GIS in Python </td>
-                        </tr>
-                        <tr id="fifth">
-                            <td>15:05 - 15.35</td>
-                            <td>30</td>
-                            <td>Aufgabe 14</td>
-                        </tr>
-                        <tr class="pause">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr id="sixth">
-                            <td>15.50 - 16.25</td>
-                            <td>35</td>
-                            <td>Aufgabe 15</td>
-                        </tr>
-                        <tr id="seventh">
-                            <td>16.25 - 16.35</td>
-                            <td>10</td>
-                            <td>Wrap-up und Fragen</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+                    <h1>Programmieren III</h1>
+                </section>
+
+                <section>
+                    <h2>Zeitplan </h2>
+                    <table class="x-large">
+                        <thead>
+                            <tr>
+                                <th>Uhrzeit</th>
+                                <th>ΔT</th>
+                                <th>Thema</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>13.00 - 13.30</th>
+                                <th>30</th>
+                                <th>Vorlesung</th>
+                            </tr>
+                            <tr>
+                                <td>13.30 - 13.45</td>
+                                <td>15</td>
+                                <td>Aufgabe 10</td>
+                            </tr>
+                            <tr class="pause">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13.50 - 14.35</td>
+                                <td>45</td>
+                                <td>Aufgabe 11 | Aufgabe 12</td>
+                            </tr>
+                            <tr class="pause">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14.50 - 15.05</td>
+                                <td>15</td>
+                                <td>Input: GIS in Python </td>
+                            </tr>
+                            <tr>
+                                <td>15:05 - 15.35</td>
+                                <td>30</td>
+                                <td>Aufgabe 14</td>
+                            </tr>
+                            <tr class="pause">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>15.50 - 16.25</td>
+                                <td>35</td>
+                                <td>Aufgabe 15</td>
+                            </tr>
+                            <tr>
+                                <td>16.25 - 16.35</td>
+                                <td>10</td>
+                                <td>Wrap-up und Fragen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>Lernziele </h2>
+
+                    <ul class="x-large">
+                        <li>Verwenden von <em class="highlight">for loops</em></li>
+                        <li><span class="highlight">Räumliche</span> Daten in Python</li>
+                        <ul>
+                            <li>Struktur einer <em class="highlight">GeoDataFrame</em></li>
+                            <li>Verschiedene <em class="highlight">Simple Feature</em> Typen</li>
+                            <li>Verschiedene räumliche <span class="highlight">Operationen</span></li>
+                            <li>Logik eines <em class="highlight">Spatial Joins</em></li>
+                        </ul>
+                        <li>Anforderung des <span class="highlight">Leistungsnachweises</span> kennen</li>
+                    </ul>
+
+
+                </section>
             </section>
+
+
+
+            <section>
+                <section class="blurred special" data-background-image="img/rearview-mirror-1119717_1280.jpg">
+                    <h2>Rückblick Programmieren II</h2>
+                </section>
+
+                <section>
+                    Letze Woche haben wir:
+
+                    <ul class="x-large">
+                        <li class="fragment">Das Konzept von Python <span class="highlight">Modules / Libraries</span>
+                            kennen gelernt</li>
+                        <li class="fragment">Das Konzept von <span class="highlight">Conda Environments</span> kennen
+                            gelernt</li>
+                        <li class="fragment">Das Konzept der <em class="highlight">Working Directory</em> kennen gelernt
+                        </li>
+                        <li class="fragment">Mit <span class="highlight">Funktionen</span> gearbeitet</li>
+                        <li class="fragment">Mit <span class="highlight">If/Else Konditionen</span> gearbeitet</li>
+                    </ul>
+                </section>
+
+
+                <section>
+
+                    <ul>
+                        <li class="fragment">Warum verwenden wir Python Modules / Libraries?</li>
+                        <li class="fragment">Warum verwenden wir Conda?</li>
+                        <li class="fragment">Was ist die Working directory?</li>
+                    </ul>
+
+                </section>
+
+
+                <section>
+
+                    <ul>
+                        <li class="fragment">Wie schreibe ich eine Funktion?</li>
+                        <li class="fragment">Warum arbeiten wir mit Funktionen?</li>
+                    </ul>
+
+
+                    <aside class="notes">
+                        Kurz die verschiedenen Stufen einer Funktion durchspielen:
+
+                        <ul>
+                            <li>Funktion ohne Argumente</li>
+                            <li>Funktion mit Argumenten</li>
+                            <li>Funktion mit Argumenten und default-Werten</li>
+                        </ul>
+                    </aside>
+
+                </section>
+
+                <section>
+                    Wie generiere ich Zufallszahlen?
+
+
+                    <aside class="notes">
+                        Demo: Zufallszahlen generieren
+
+                        <ul>
+                            <li>random.randrange(1, 10) generiert eine Zahl zw. 1 und 9 (Uniforme Verteilung)</li>
+                            <li>random.normalvariate(5, 2) generiert eine Zahl aus einer Normalverteilung (Mitelwert 5,
+                                SD 5)</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <section data-auto-animate>
+                    <div class="inline-block-children">
+                        <div data-id="wie-nutze">Wie nutze ich Zufallszahlen, um</div>
+                        <div data-id="einen-punkt">einen Punkt in einem Umkreis von 100m</div>
+                        <div data-id="zu-verschieben">zu verschieben?</div>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code data-trim class="python" data-line-numbers="">
+                            x_start = 0
+                            y_start = 0
+
+                            x_offset = random.normalvariate(0,100)
+                            y_offset = random.normalvariate(0,100)
+
+                            x_neu = x_start + x_offset
+                            y_neu = y_start + y_offset
+                        </code></pre>
+                    </aside>
+
+                </section>
+
+
+                <section data-auto-animate>
+                    <div class="inline-block-children">
+                        <div data-id="wie-nutze">Wie nutze ich Zufallszahlen, um</div>
+                        <div data-id="mit-einer" class="highlight">mit einer Funktion</div>
+                        <div data-id="einen-punkt">einen Punkt in einem Umkreis von 100m</div>
+                        <div data-id="zu-verschieben">zu verschieben?</div>
+
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code data-trim class="python" data-line-numbers="">
+                            def offset_coordinate(old, distance = 100):
+                                import random
+                                new = old +random.normalvariate(0,distance)
+
+                                return new
+                        </code></pre>
+                    </aside>
+
+                </section>
+
+
+                <section data-auto-animate>
+                    <div class="inline-block-children">
+                        <div data-id="wie-nutze">Wie nutze ich Zufallszahlen, um</div>
+                        <div data-id="mit-einer">mit einer Funktion</div>
+                        <div data-id="einen-punkt">einen Punkt in einem Umkreis von 100m</div>
+                        <div data-id="mit-einer" class="highlight">wiederholt</div>
+
+                        <div data-id="zu-verschieben">zu verschieben?</div>
+                    </div>
+                </section>
+
+
+
+            </section>
+
+            <section>
+                <section class="blurred special" data-background-image="img/duisburg-4158911_1280.jpg">
+
+                    <h2>For Loops</h2>
+
+                </section>
+
+
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        for platzhalter in [0, 1, 2]:
+                            print("Iteration"+, platzhalter)
+                    </code></pre>
+                    <pre class="fragment"><code data-trim class="bash">
+                        Iteration 0
+                        Iteration 1
+                        Iteration 2
+                    </code></pre>
+
+                    <pre class="fragment"><code data-trim class="python" data-line-numbers="">
+                        platzhalter = 0
+                        print("Iteration"+, platzhalter)
+
+                        platzhalter = 1
+                        print("Iteration"+, platzhalter)
+
+                        platzhalter = 2
+                        print("Iteration"+, platzhalter)
+                    </code></pre>
+
+                    <aside class="notes">
+                        <li><code>for</code> legt fest, dass eine For-Loop beginnt</li>
+                        <li>Nach <code>for</code> kommt eine Platzhalter-Variabel, die ihr beliebig benennen könnt. Im
+                            obigen Beispiel lautet diese <code>platzhalter</code></li>
+                        <li>Nach dem Platzhalter kommt der Begriff <code>in</code>. Dieser Begriff kommt zwingend nach
+                            dem Platzhalter.</li>
+                        <li>Nach <code>in</code> wird der "Iterator" festgelegt, also worüber der For-Loop iterieren
+                            soll (hier: über eine <code>List</code> mit den Werten <code>[0,1,2]</code>). </li>
+                        <li>Danach kommt ein Doppelpunkt ":" der zeigt: "Nun legen wir gleich fest was im For-Loop
+                            passieren soll" (ähnlich wie in einer *Function*)</li>
+                        <li>Auf einer neuen Zeile wird eingerückt festgelegt, was in der *For-Loop* passieren soll.
+                            Dieser Teil kann beliebig lange sein, ein *for loop* ist dann fertig, wenn man nicht mehr
+                            eingerückt wird. In unserem Fall wird mit <code>print</code>[^print] etwas in die Konsole
+                            ausgegeben.</li>
+                        <li>Achtung: <code>return()</code> gibt’s in For-Loops nicht!</li>
+                    </aside>
+
+                </section>
+
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        for platzhalter in range(3):
+                            print("Iteration",platzhalter)
+
+                    </code></pre>
+                    <pre class="fragment"><code data-trim class="python">
+                        Iteration 0
+                        Iteration 1
+                        Iteration 2
+                    </code></pre>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Output ist genau der gleiche. Was ist der Vorteil?</li>
+                            <li>Jetzt ist die "Einführung in for Loops" gemacht</li>
+                            <li>Übung 10 machen, dannach wieder Folien</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <video data-autoplay src="mov/brooks.mp4" controls></video>
+
+                    <aside class="notes">
+                        bei Basic for Loops anfangen und bis und mit Advanced for Loops arbeiten
+                    </aside>
+                </section>
+
+                <section>
+                    <div class="r-hstack">
+                        <div>
+                            <ol class="x-large">
+                                <li><span class="fragment highlight-red" data-fragment-index="0">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="0">bitch</span></li>
+                                <li><span class="fragment highlight-red" data-fragment-index="1">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="1">lover</span></li>
+                                <li><span class="fragment highlight-red" data-fragment-index="2">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="2">child</span></li>
+                                <li><span class="fragment highlight-red" data-fragment-index="3">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="3">mother</span></li>
+                                <li><span class="fragment highlight-red" data-fragment-index="4">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="4">sinner</span></li>
+                                <li><span class="fragment highlight-red" data-fragment-index="5">I'm a</span> <span
+                                        class="fragment highlight-blue" data-fragment-index="5">saint</span></li>
+                            </ol>
+                        </div>
+                        <div style="width: 60%;" class="fragment">
+                            <pre><code data-trim class="python" data-line-numbers="">
+                                for platzhalter in [0, 1, 2]:
+                                    print("Iteration"+, platzhalter)
+                            </code></pre>
+                            <pre><code data-trim class="bash">
+                                Iteration 0
+                                Iteration 1
+                                Iteration 2
+                            </code></pre>
+                        </div>
+                    </div>
+
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Wie Programmieren wir den Output dieser Zeilen in Python?</li>
+                            <li>Was ist, wenn wir den Refrain nun aber als Liste o.ä abspeichern und weiterverwenden
+                                wollen?</li>
+                            <li>Was steckt nun hinter der variabel "liedzeile"?</li>
+                            <li>Was steckt nun hinter der variabel "rolle"?</li>
+                            <li>Übungsunterlagen "Basics for Loops"</li>
+                        </ul>
+
+                    </aside>
+                </section>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+            <section>
+
+                <section class="blurred special" data-background-image="img/earth-11593_1280.jpg">
+
+                    <h2>GIS in Python</h2>
+
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                            x_sim = []
+                            y_sim = []
+                            for platzhalter in range(1000):
+                                x_new = offset_coordinate(0, 100)
+                                y_new = offset_coordinate(0, 100)
+                                x_sim.append(x_new)     
+                                y_sim.append(y_new)     
+                        </code></pre>
+
+                        <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 50%">
+
+                </section>
+
+
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        zeckenstiche   
+                    </code></pre>
+
+                    <table  class="large"><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td></tr></tbody></table>
+                </section>
+
+                <section>
+                    <pre><code data-trim class="" data-line-numbers="">
+                        import geopandas as gpd
+
+                        geom = gpd.points_from_xy(
+                            zeckenstiche['x'],    # ↘
+                            zeckenstiche['y']     # → die Geometrie Spalte
+                        )   
+                    </code></pre>
+
+                    <pre class="fragment"><code data-trim class="" data-line-numbers="">
+                        zeckenstiche_gpd = gpd.GeoDataFrame(
+                            zeckenstiche,    # die DataFrame ("Attributtabelle")
+                            geometry = geom, #
+                            crs = 2056       # das Koordinatenbezugssystem (EPSG Code)
+                            )
+                    </code></pre>
+                </section>
+
+
+                <section data-transition="fade">
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        zeckenstiche   
+                    </code></pre>
+                    <table  class="large"><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td></tr></tbody></table>
+                </section>
+                <section data-transition="fade">
+                    <pre><code data-trim class="python" data-line-numbers="">
+                        zeckenstiche_gpd   
+                    </code></pre>
+
+                    <div class="fragment custom geodataframe" data-fragment-index="2">
+                        <table class="large"><colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col class="fragment custom geoseries" data-fragment-index="1">
+                          </colgroup><thead><tr><th></th><th>ID</th><th>accuracy</th><th>x</th><th>y</th><th>geometry</th></tr></thead><tbody><tr><td>0</td><td>2550</td><td>439.128951</td><td>2681116</td><td>1250648</td><td><span class="fragment custom geometry" data-fragment-index="0">POINT (2681116.000 1250648.000)</span></td></tr><tr><td>1</td><td>10437</td><td>301.748542</td><td>2681092</td><td>1250672</td><td>POINT (2681092.000 1250672.000)</td></tr><tr><td>2</td><td>9174</td><td>301.748542</td><td>2681128</td><td>1250683</td><td>POINT (2681128.000 1250683.000)</td></tr><tr><td>3</td><td>8773</td><td>301.748542</td><td>2681111</td><td>1250683</td><td>POINT (2681111.000 1250683.000)</td></tr><tr><td>4</td><td>2764</td><td>301.748529</td><td>2681131</td><td>1250692</td><td>POINT (2681131.000 1250692.000)</td></tr><tr><td>5</td><td>2513</td><td>301.748529</td><td>2681171</td><td>1250711</td><td>POINT (2681171.000 1250711.000)</td></tr><tr><td>6</td><td>9185</td><td>301.748542</td><td>2681107</td><td>1250712</td><td>POINT (2681107.000 1250712.000)</td></tr><tr><td>7</td><td>28521</td><td>301.748542</td><td>2681124</td><td>1250720</td><td>POINT (2681124.000 1250720.000)</td></tr><tr><td>8</td><td>26745</td><td>301.748542</td><td>2681117</td><td>1250725</td><td>POINT (2681117.000 1250725.000)</td></tr><tr><td>9</td><td>27391</td><td>301.748542</td><td>2681138</td><td>1250725</td><td>POINT (2681138.000 1250725.000)</td></tr></tbody></table>
+                    </div>
+
+                   <div class="r-stack">
+                        <div class="fragment fade-in-then-out" data-fragment-index="0" style="color: #8eaadd;">Geometry</div>
+                        <div class="fragment fade-in-then-out" data-fragment-index="1" style="color: red;">GeoSeries</div>
+                        <div class="fragment fade-in-then-out" data-fragment-index="2" style="color: green;">GeoDataFrame</div>
+                   </div>
+
+                    
+                </section>
+
+             
+    
+              
+            </section>
+
+            <section>
+                <section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+
+                    <h2>Räumliche Operationen</h2>
+
+                </section>
+            </section>
+
+            <section>
+                <section class="blurred special" data-background-image="img/typewriter-ga6a497f4f_1280.jpg">
+
+                    <h2>Spatial Joins</h2>
+
+                </section>
+            </section>
+
+
+
 
 
 
 
             <section data-visibility="hidden">
-                <h1>Lernziele </h1>
 
 
 
-                * Wisst, warum wir diese Woche `for loops` lernen
-                * Versteht, dass wir bisher gar nicht mit GIS Werkzeugen gearbeitet haben und warum dies jetzt aber
-                nötig ist
-                * Kennt die drei Hierarchiestufen von `GeopandasGeoDataFrames`
-                * Ihr wisst, dass Python ein Vollfunktionsfähiges GIS bietet, welches sämtliche von ArcGIS bekannten
-                Operationen zur Verfügung stellt
-                * Ihr kennt die Anforderungen an den Leistungsnachweis für den Themenblock "Coding in GIS"
 
-            </section>
+                <section
+                    data-background-image="https://davenewt.github.io/assets/images/perlin%20noise%20flowfield.png">
+                    <h1 style="color: white">Ein Einzelpunkt zufällig verschieben</h1>
 
+                </section>
 
+                <section>
+                    <h1>Ein Einzelpunkt zufällig verschieben </h1>
 
-            <section>
-                <h1>Themen </h1>
-                <ul>
-                    <li id="first">Breaking New</li>
-                    <li id="second">Rückblick Coding in GIS II</li>
-                    <li id="third">For Loops</li>
-                    <li id="fourth">GIS in Python</li>
-                    <li id="fifth">Leistungsnachweis</li>
-                    <ul>
-            </section>
+                </section>
 
+                <section>
+                    Zum Beispiel hat unser Punkt die Koordinate 0, 0
 
-            <section data-background-image="https://wallpapercave.com/wp/33mRKA5.jpg">
-                <h1>Conda </h1>
-            </section>
-
-
-            <section>
-                <h1>Vor jedem Aufstarten (in der Konsole) </h1>
-
-
-                <div class="pull-right">
-                    <ol>
-                        <li>(auf diesem Computer)</li>
-                        <li><code>conda create --name agi-env</code></li>
-                        <li><code>activate agi-env</code></li>
-                        <li><code>cd C:\Users\rata\...</code></li>
-                        <li><code>conda list</code></li>
-                        <li><code>conda install -c conda-forge...</code></li>
-                        <li><code>jupyter lab</code></li>
-                    </ol>
-                </div>
-            </section>
-
-            <section><img data-src="img/mermaid-conda-env.svg" class="pull-left"></section>
-
-
-            <section>
-                <img data-src="img/mermaid-conda-env2.svg" class="pull-left">
-
-            </section>
-
-
-
-            <section>
-                <img data-src="img/jb-desktop.png" style="width: 70%" class="card pull-center">
-
-                <div class="footer">https://blog.jupyter.org/jupyterlab-desktop-app-now-available-b8b661b17e9a]</div>
-
-            </section>
-
-
-            <section>
-                <h1>Für jedes Modul </h1>
-
-                <div class="pull-left">
-                    <img data-src="img/mermaid-module.svg" style="width: 120%">
-                </div>
-
-                <ol class="pull-right">
-                    <li>Vorher alle Notebooks speichern</li>
-                    <li>ersichtlich ab dem Namen in Klammern</li>
-                    <li><code>activate agi-env</code></li>
-                    <li><code>conda install -c conda-forge pandas</code></li>
-                    <ol>
-
-            </section>
-
-
-            <section data-background-image="https://davenewt.github.io/assets/images/perlin%20noise%20flowfield.png">
-                <h1 style="color: white">Ein Einzelpunkt zufällig verschieben</h1>
-
-            </section>
-
-            <section>
-                <h1>Ein Einzelpunkt zufällig verschieben </h1>
-
-            </section>
-
-            <section>
-                Zum Beispiel hat unser Punkt die Koordinate 0, 0
-
-                <pre><code data-trim class="python" data-line-numbers="">
+                    <pre><code data-trim class="python" data-line-numbers="">
         >>> x_start = 0
         >>> x_offset = random.normalvariate(0,100)
         >>> x_offset
@@ -201,11 +515,11 @@
         10.24617
 
     </code></pre>
-            </section>
+                </section>
 
 
-            <section>
-                <pre><code data-trim class="python" data-line-numbers="">
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
         >>> y_start = 0
         >>> y_offset = random.normalvariate(0,100)
         >>> y_offset
@@ -215,28 +529,28 @@
         >>> y_neu
         -4.443904
     </code></pre>
-            </section>
+                </section>
 
-            <section>
-                <img data-src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style="width: 75%"
-                    class="pull-center">
+                <section>
+                    <img data-src="https://modul-agi.github.io/HS21/_images/8_Zufallzahlen_25_1.png" style="width: 75%"
+                        class="pull-center">
 
-            </section>
-            <section>
-                <img data-src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style="width: 75%"
-                    class="pull-center">
+                </section>
+                <section>
+                    <img data-src="https://modul-agi.github.io/HS21/_images/normalverteilung.jpg" style="width: 75%"
+                        class="pull-center">
 
-            </section>
+                </section>
 
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 75%" class="pull-center">
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 75%" class="pull-center">
 
-            </section>
+                </section>
 
-            <section>
-                <h1>Workflow > Function </h1>
+                <section>
+                    <h1>Workflow > Function </h1>
 
-                <pre><code data-trim class="" data-line-numbers="">
+                    <pre><code data-trim class="" data-line-numbers="">
         def offset_coordinate(old, distance = 100):
             import random
             new = old +random.normalvariate(0,distance)
@@ -244,204 +558,162 @@
             return new
     </code></pre>
 
-            </section>
+                </section>
 
-            <section>
-                <h1>Function > DataFrame </h1>
+                <section>
+                    <h1>Function > DataFrame </h1>
 
-            </section>
+                </section>
 
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III9.png" style="width: 50%">
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III9.png" style="width: 50%">
 
-            </section>
+                </section>
 
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III10.png" style="width: 75%">
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III10.png" style="width: 75%">
 
-            </section>
+                </section>
 
-            <section>
+                <section>
 
-                <pre><code data-trim class="" data-line-numbers="">
+                    <pre><code data-trim class="" data-line-numbers="">
         zeckenstiche["x"].apply(offset_coordinate)
         #\______1_______/ \_2_/ \_______3_______/
     </code></pre>
 
-                <ul>
-                    <li class="fragment">1. Spalte selektieren</li>
-                    <li class="fragment">2. Methode "<code>apply</code>" aufrufen</li>
-                    <li class="fragment">3. function übergeben</li>
-                </ul>
+                    <ul>
+                        <li class="fragment">1. Spalte selektieren</li>
+                        <li class="fragment">2. Methode "<code>apply</code>" aufrufen</li>
+                        <li class="fragment">3. function übergeben</li>
+                    </ul>
 
-            </section>
+                </section>
 
-            <section>
-                <pre><code data-trim class="python" data-line-numbers="">
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
         zeckenstiche["x_sim"] = zeckenstiche["x"].apply(offset_coordinate)
         zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate)        
     </code></pre>
-            </section>
+                </section>
 
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III13.png" style="width: 50%" class="pull-center">
-            </section>
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III13.png" style="width: 50%" class="pull-center">
+                </section>
 
-            <section>
-                <pre><code data-trim class="python" data-line-numbers="">
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="">
         zeckenstiche["x_sim"] = zeckenstiche["x"].apply(offset_coordinate, distance = zeckenstiche["accuracy"])
         zeckenstiche["y_sim"] = zeckenstiche["y"].apply(offset_coordinate, distance = zeckenstiche["accuracy"])
     </code></pre>
-            </section>
+                </section>
 
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III14.png" style="width: 75%">
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III14.png" style="width: 75%">
 
-            </section>
-            <section>
-                <h1>For Loops </h1>
-
-            </section>
-
-            <section>
-                <pre><code data-trim class="python" data-line-numbers="">
-        >>> for platzhalter in [0, 1, 2]:
-        >>>     print("Iteration"+, platzhalter)
-        Iteration 0
-        Iteration 1
-        Iteration 2
-    </code></pre>
-            </section>
-
-            <section>
-                <pre><code data-trim class="" data-line-numbers="">
-        >>> x_sim = []
-        >>> for platzhalter in range(1000):
-        >>>     x_new <- offset_coordinate(0, 100)
-        >>>     x_sim.append(x_new)        
-    </code></pre>
-            </section>
-
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III7.png" style="width: 50%" class="pull-center">
-
-            </section>
-
-            <section>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/h0XeOa9Rlbc?start=38"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-
-            </section>
-
-            <section>
-                <blockquote style="color: black">
-                    I'm a bitch, I'm a lover
-                    I'm a child, I'm a mother
-                    I'm a sinner, I'm a saint
-                </blockquote>
-                Meredith Brooks
-            </section>
+                </section>
 
 
-            <section>
-                <h1>GIS in Python </h1>
 
-            </section>
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png" class="pull-left">
+                <section>
+                    <h1>GIS in Python </h1>
 
-            </section>
+                </section>
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png" class="pull-left">
 
-
-            <section>
-                Was fehlt?
-
-                <ul>
-                    <li>Eine Geometrie</li>
-                    <li>Ein Koordinaten<u>bezugs</u>system</li>
-                </ul>
-            </section>
-
-            <section>
-                <b><em>Geo</em>DataFrames</b>
-            </section>
-
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III21.png" alt="">
-
-                <aside class="notes">
-                    Jedes Geometrische Objekt hat ein Attribut
-                    Gleiche viele Features wie Attribute
-                </aside>
-            </section>
-
-            <section>
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III22.png" alt="">
-
-                <aside class="notes">
-                    Verschiedene Objekte teilen sich Attribute
-                    Mehr Features als Attribute
-                </aside>
-            </section>
+                </section>
 
 
-            <section>
-                <h1>Simple Features </h1>
+                <section>
+                    Was fehlt?
 
-                In verschiedensten Systemen integriert:
+                    <ul>
+                        <li>Eine Geometrie</li>
+                        <li>Ein Koordinaten<u>bezugs</u>system</li>
+                    </ul>
+                </section>
 
-                <span style="color:#FF0000">R</span> (library `sf`)
-                <span style="color:#FF0000">Datenbanken</span> (PostGIS, MySQL…)
-                Python (geopandas,shapely)
-                Auch in ESRI, aber _versteckt und unzugänglich_
+                <section>
+                    <b><em>Geo</em>DataFrames</b>
+                </section>
 
-                <aside class="notes">
-                    * Transferable knowledge - learn architectures, not frameworks
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III21.png" alt="">
 
-                </aside>
-            </section>
+                    <aside class="notes">
+                        Jedes Geometrische Objekt hat ein Attribut
+                        Gleiche viele Features wie Attribute
+                    </aside>
+                </section>
 
-            <section>
-                Buffer
+                <section>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III22.png" alt="">
 
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III23.png" style="width: 50%">
+                    <aside class="notes">
+                        Verschiedene Objekte teilen sich Attribute
+                        Mehr Features als Attribute
+                    </aside>
+                </section>
 
-            </section>
 
-            <section>
-                MinimumBoundingGeometry
+                <section>
+                    <h1>Simple Features </h1>
 
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III24.png" style="width: 75%">
+                    In verschiedensten Systemen integriert:
 
-            </section>
+                    <span style="color:#FF0000">R</span> (library <code>sf</code>)
+                    <span style="color:#FF0000">Datenbanken</span> (PostGIS, MySQL…)
+                    Python (geopandas,shapely)
+                    Auch in ESRI, aber _versteckt und unzugänglich_
 
-            <section>
-                Overlay
+                    <aside class="notes">
+                        * Transferable knowledge - learn architectures, not frameworks
 
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III25.png" style="width: 75%">
+                    </aside>
+                </section>
 
-            </section>
+                <section>
+                    Buffer
 
-            <section>
-                Kernel Density
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III23.png" style="width: 50%">
 
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III26.png" style="width: 75%">
+                </section>
 
-            </section>
+                <section>
+                    MinimumBoundingGeometry
 
-            <section>
-                Web Maps
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III24.png" style="width: 75%">
 
-                <img data-src="img/AGI_HS19_08_Coding_in_GIS_III27.png" style="width: 50%">
+                </section>
 
-            </section>
+                <section>
+                    Overlay
 
-            <section>
-                <h1>Leistungsnachweis </h1>
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III25.png" style="width: 75%">
 
-                https://modul-agi.github.io/HS21/B_Coding_in_GIS_3/9_Leistungsnachweis.html
+                </section>
+
+                <section>
+                    Kernel Density
+
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III26.png" style="width: 75%">
+
+                </section>
+
+                <section>
+                    Web Maps
+
+                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III27.png" style="width: 50%">
+
+                </section>
+
+                <section>
+                    <h1>Leistungsnachweis </h1>
+
+                    https://modul-agi.github.io/HS21/B_Coding_in_GIS_3/9_Leistungsnachweis.html
+                </section>
+
             </section>
 
         </div>
