@@ -510,9 +510,9 @@
 
                 <section data-auto-animate>
 
-                    <pre><code data-trim class="" data-line-numbers="">
+                    <!-- <pre><code data-trim class="" data-line-numbers="">
                         zeckenstiche
-                    </code></pre>
+                    </code></pre> -->
                     <div class="mytable" style="grid-template-columns: repeat(5, auto);">
                         <div data-id="index">
                             <div>&nbsp;</div>
@@ -589,9 +589,9 @@
                 </section>
 
                 <section data-auto-animate>
-                    <pre><code data-trim class="" data-line-numbers="">
+                    <!-- <pre><code data-trim class="" data-line-numbers="">
                         zeckenstiche_gpd
-                    </code></pre>
+                    </code></pre> -->
                     <div data-fragment-index="2" class="mytable fragment custom geodataframe"
                         style="grid-template-columns: repeat(6, auto);">
                         <div data-id="index">
@@ -693,6 +693,97 @@
 
                 </section>
 
+                <section>
+                    <img data-src="img/ca6ce94cdd2e09a1da8aa6ec22336835.jpg" style="width: 40%;">
+                    <div class="footnote">
+						<div>
+							<p class="footer">Quelle: <a href="https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-02-multiple-layer-analysis.html">saylordotorg.github.io</a>
+							</p>
+						</div>
+					</div> 
+                </section>
+
+
+                <section data-transition="fade">
+                    <h3>Simple Features</h3>
+
+                    
+
+                    <div class="simple-feature-table">
+
+                        <!-- <div class="sf-tbl-header">Type</div>
+                        <div class="sf-tbl-header">Example</div>
+                        <div class="sf-tbl-header">WKT</div> -->
+
+                        <div>Point</div>
+                        <div><img data-src="img/sf-point.png"></div>
+                        <div class="fragment highlight-current-blue">POINT (30 10)</div>
+
+                        <div>LineString</div>
+                        <div><img data-src="img/sf-linestring.png"></div>
+                        <div class="fragment highlight-current-blue">LINESTRING (30 10, 10 30, 40 40)</div>
+
+                        <div>Polygon</div>
+                        <div><img data-src="img/sf-polygon.png"></div>
+                        <div class="fragment highlight-current-blue">POLYGON (30 10, 10 30, 40 40, 30 10)</div>
+                    </div>
+
+                    <div class="large"><em>(Eine Geometrie pro Attribut)</em></div>
+
+                    <aside class="notes">
+                        Jedes Geometrische Objekt hat ein Attribut
+                        Gleiche viele Features wie Attribute
+                    </aside>
+          
+
+                </section>
+
+                <section data-transition="fade">
+                    <h3>Simple Features </h3>
+
+                    <div class="simple-feature-table">
+
+                        <!-- <div class="sf-tbl-header">Type</div>
+                        <div class="sf-tbl-header">Example</div>
+                        <div class="sf-tbl-header">WKT</div> -->
+
+                        <div><span class="highlight">Multi</span>Point</div>
+                        <div><img data-src="img/sf-multipoint.png"></div>
+                        <div><span class="highlight">MULTI</span>POINT (30 10, 10 30, 40 40)</div>
+
+                        <div><span class="highlight">Multi</span>LineString</div>
+                        <div><img data-src="img/sf-multilinestring.png"></div>
+                        <div><span class="highlight">MULTI</span>LINESTRING ((30 10, 10 30, 40 40), (40 20, 20 40, 50 50))</div>
+
+                        <div><span class="highlight">Multi</span>Polygon</div>
+                        <div><img data-src="img/sf-multipolygon.png"></div>
+                        <div><span class="highlight">MULTI</span>POLYGON ((30 10, 10 30, 30 10), (40 20, 20 40, 40 20))</div>
+                    </div>
+
+                    <div class="large"><em>(Mehrere Geometrien pro Attribut)</em></div>
+
+
+                    <aside class="notes">
+                        Verschiedene Objekte teilen sich Attribute
+                        Mehr Features als Attribute
+
+                        Simple Features sind in verschiedensten Systemen integriert:
+
+                        <ul>
+                            <li>R</li>
+                            <li>PostGIS</li>
+                            <li>Python (geopandas, shapely)</li>
+                            <li>ESRI: versteckt und unzugänglich. Geometrien kaum manipulierbar → Transferable knowledge - learn architectures, not frameworks
+                            </li>
+                    
+                        </ul>
+        
+        
+                        </section>
+                    </aside>
+
+                </section>
+
 
 
 
@@ -707,12 +798,17 @@
 
                 </section>
 
-
-
                 <section>
-                    <img class="white-padded"
-                        data-src="img/AGI_HS19_08_Coding_in_GIS_III16.png">
+                    <img data-src="img/ca6ce94cdd2e09a1da8aa6ec22336835.jpg" style="width: 40%;">
+                    <div class="footnote">
+						<div>
+							<p class="footer">Quelle: <a href="https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-02-multiple-layer-analysis.html">saylordotorg.github.io</a>
+							</p>
+						</div>
+					</div> 
                 </section>
+
+           
                 <section>
                     <p>Buffer</p>
 
@@ -756,7 +852,15 @@
                     <h2>Spatial Joins</h2>
 
                 </section>
+
+                <section>
+
+                    <img class="white-padded" style="width: 80%;" data-src="img/spatialjoin.jpg">
+
+                </section>
             </section>
+
+
 
             <section>
                 <section>
@@ -798,42 +902,9 @@
                 </section>
 
 
+           
 
-
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III21.png" alt="">
-
-                    <aside class="notes">
-                        Jedes Geometrische Objekt hat ein Attribut
-                        Gleiche viele Features wie Attribute
-                    </aside>
-                </section>
-
-                <section>
-                    <img data-src="img/AGI_HS19_08_Coding_in_GIS_III22.png" alt="">
-
-                    <aside class="notes">
-                        Verschiedene Objekte teilen sich Attribute
-                        Mehr Features als Attribute
-                    </aside>
-                </section>
-
-
-                <section>
-                    <h1>Simple Features </h1>
-
-                    In verschiedensten Systemen integriert:
-
-                    <span style="color:#FF0000">R</span> (library <code>sf</code>)
-                    <span style="color:#FF0000">Datenbanken</span> (PostGIS, MySQL…)
-                    Python (geopandas,shapely)
-                    Auch in ESRI, aber _versteckt und unzugänglich_
-
-                    <aside class="notes">
-                        * Transferable knowledge - learn architectures, not frameworks
-
-                    </aside>
-                </section>
+               
 
 
 

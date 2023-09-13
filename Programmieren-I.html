@@ -114,7 +114,7 @@
 
 					<ul>
 						<li class="fragment" id="first">Programmieren: Eine notwendige Expertise?</li>
-						<li class="fragment" id="second">7 Gründe, warum ich gerne programmiere</li>
+						<li class="fragment" id="second">7 Gründe, warum ich gerne Programmiere</li>
 						<li class="fragment" id="third">Die Qual der Wahl</li>
 						<li class="fragment" id="fourth">Programmierumgebung einrichten</li>
 					</ul>
@@ -135,6 +135,10 @@
 						class="fragment">
 						Everybody in this country should learn how to program a computer... because it teaches you how
 						to think </blockquote>
+
+						<aside class="notes">
+							- Steve Jobs
+						</aside>
 
 				</section>
 
@@ -166,7 +170,7 @@
 					
 				</section>
 
-				<section data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia4.png" data-background-size="contain">
+				<section data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia4.png" data-background-size="contain" data-background-color="#333333">
 
 					
 					<div class="footnote">
@@ -182,7 +186,7 @@
 				</section>
 
 
-				<section data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia5.png" data-background-size="contain">
+				<section data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia5.png" data-background-size="contain" data-background-color="#333333">
 
 					<div class="footnote">
 						<div><a href="https://www.euractiv.com/section/digital/infographic/infographic-coding-at-school-how-do-eu-countries-compare">euractiv.com</a></div>
@@ -197,7 +201,7 @@
 			<section>
 				<section class="blurred special" data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia6.jpg">
 					<h1 class="r-fit-text">7 Gründe</h1>
-					<h1 class="r-fit-text">warum ich gerne programmiere</h1>
+					<h1 class="r-fit-text">warum ich gerne Programmiere</h1>
 				</section>
 
 				<section>
@@ -281,12 +285,12 @@
 
 					<div style="display: flex;justify-content: center">
 						<div class="r-stack" style="height: 300px; width: 300px;">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png">
-							<img class="fragment" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 20px;" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 30px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 40px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 50px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 60px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 70px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png">
 						</div>
 					</div>
 
@@ -297,8 +301,8 @@
 					</aside>
 				</section>
 				<section>
-					<h2>Achtung!</h2>
-					<ul>
+					<p>Achtung!</p>
+					<ul class="x-large">
 						<li>Automatisierung bringt Zeitersparnis wenn die Tasks</li>
 						<ul>
 							<li>repetitiv sind</li>
@@ -700,7 +704,8 @@
 		Reveal.initialize({
 			hash: true,
 			plugins: [RevealHighlight, RevealNotes, RevealMath.MathJax3],
-			backgroundTransition: 'convex'
+			backgroundTransition: 'convex',
+			mouseWheel: true,
 		});
 	</script>
 	<script src="socket.io/socket.io.js"></script>

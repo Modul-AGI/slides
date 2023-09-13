@@ -248,3 +248,57 @@ tr.pause {
   color: black;
   font-weight: bold;
 }
+
+
+.index-slide>a>div {
+  background-color: bisque;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: x-large;
+  text-shadow: 2px 2px #959393;
+  color: rgb(49, 46, 42);
+  font-weight: bold;
+}
+
+.simple-feature-table{
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  gap: 5px;
+  font-size: x-large;
+  justify-content: start;
+}
+
+
+.simple-feature-table > div{
+  background-color: #9ca7ba;
+  text-align: left;
+  padding: 5px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items:center;
+}
+
+/* .simple-feature-table > div.sf-tbl-header{
+  background: none;
+} */
+
+
+.simple-feature-table > div:nth-child(3n+2){
+  /* background-color: red; */
+  text-align: center;
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.simple-feature-table > div:nth-child(3n+3){
+  /* background-color: red; */
+  font-family: monospace;
+  font-size: large;
+}
+
+.simple-feature-table > div > img{
+  width: 80px;
+  margin: 0px;
+  padding: 0px;
+}
