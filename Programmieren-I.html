@@ -100,16 +100,16 @@
 				<section>
 					<h2>Lernziele</h2>
 
-					<ul>
-						<li class="fragment">Sie sind in der Lage die Vorteile von Coden / Skripten versus
-							"Point-and-Klick" zu erläutern</li>
-						<li class="fragment">Sie kennen die Programmiersprachen für Einsteiger im Kontext von GIS und
-							DataScience relevant sind</li>
-						<li class="fragment">Sie kennen die erste grosse Einstiegshürde</li>
+					<ul class="x-large">
+						<li class="fragment">Sie kennen die Vorteile von Coden / Skripten versus einem
+							"Point-and-Klick" Ansatz</li>
+						<li class="fragment">Sie machen erste Schritte in Python und können Parallelen zu R ziehen</li>
+						<li class="fragment">Sie kennen die verschiedenen "primitiven" Datentypen in Python</li>
+						<li class="fragment">Sie kennen verschiedene "komplexe" Datentypen in Python</li>
 						<li class="fragment">Sie haben Lust Programmieren zu lernen</li>
 					</ul>
 				</section>
-				<section>
+				<section data-visibility="hidden">
 					<h2>Themen</h2>
 
 					<ul>
@@ -127,13 +127,13 @@
 					<h1 class="r-fit-text">Eine notwendige Expertise?</h1>
 				</section>
 
+			
+				<section data-transition="fade" data-background-image="img/steve-jobs.jpeg"></section>
 
-				<section data-background-image="img/steve-jobs.jpeg">
+				<section data-transition="fade" data-background-image="img/steve-jobs.jpeg" class="blurred">
 
-					<blockquote
-						style="position: absolute; background-color: white; opacity: 0.2; color: black; border-radius: 10px"
-						class="fragment">
-						Everybody in this country should learn how to program a computer... because it teaches you how
+					<blockquote style="background-color: rgba(128, 128, 128, 0.5);">
+						Everybody in this country should learn how to program a computer [...] because it teaches you how
 						to think </blockquote>
 
 						<aside class="notes">
@@ -205,10 +205,10 @@
 				</section>
 
 				<section>
-					<h2>Ich <span class="highlight">♥</span> Programmieren, weil ich damit:</h2>
+					<h2 class="r-fit-text">Ich <span class="highlight">♥</span> Programmieren, weil ich damit:</h2>
 
 
-					<ol>
+					<ol class="x-large">
 						<li class="fragment"><span class="highlight">repetitive</span> Tasks automatisieren kann</li>
 						<li class="fragment">übertragbare <span class="highlight">Tools</span> bauen kann</li>
 						<li class="fragment">mehr Flexibilität und <span class="highlight">Power</span> habe</li>
@@ -258,7 +258,7 @@
 					data-background-color="white" data-background-transition="fade">
 				</section>
 
-				<section data-background-image="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" data-background-size="30%"
+				<section data-background-image="img/brutvogelatlas/auerhuhn.png" data-background-size="60%"
 					data-background-color="white" data-background-transition="fade">
 				</section>
 
@@ -266,10 +266,10 @@
 					<pre><code data-trim class="python" data-line-numbers="">
 						import mapmaker
 
-						mapmaker.make_map(Neutoeter)
+						mapmaker.make_map(Auerhuhn)
 					</code></pre>
 					<div style="width: 100%; text-align: center">
-						<img class="fragment" src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png" style="width: 50%;">
+						<img class="fragment" src="img/brutvogelatlas/auerhuhn.png" style="width: 70%;">
 					</div>
 				</section>
 
@@ -277,20 +277,20 @@
 					<pre><code data-trim class="python" data-line-numbers="">
 						import mapmaker
 
-						all_birds = [Neutoeter, Ringdrossel​, Turmfalke​, Mittelspecht​, Turteltaube​, Rauchschwalbe​]​
+						all_birds = [Auerhuh, Haselhuhn, Mittelspecht, Steinhuhn, Turmfalke, Turteltaube]​
 
 						for bird in all_birds:​
 							mapmaker.make_map(bird)
 					</code></pre>
 
 					<div style="display: flex;justify-content: center">
-						<div class="r-stack" style="height: 300px; width: 300px;">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 20px;" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 30px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 40px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 50px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 60px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png">
-							<img class="fragment" style="position:relative; border: 1px solid black; left: 70px;"data-src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png">
+						<div class="r-stack" style="width: 70%;">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 20px; top: 20px;" data-src="img/brutvogelatlas/auerhuhn.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 30px; top: 30px;" data-src="img/brutvogelatlas/haselhuhn.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 40px; top: 40px;" data-src="img/brutvogelatlas/mittelspecht.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 50px; top: 50px;" data-src="img/brutvogelatlas/steinhuhn.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 60px; top: 60px;" data-src="img/brutvogelatlas/turmfalke.png">
+							<img class="fragment" style="position:relative; border: 1px solid black; left: 70px; top: 70px;" data-src="img/brutvogelatlas/turteltaube.png">
 						</div>
 					</div>
 
@@ -347,17 +347,17 @@
 				</section>
 
 				<section>
-					<div class="r-hstack">
-						<div style="width: 60%">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia10.png">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia11.png">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia13.png">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia14.png">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia15.png">
-							<img style="width: 30%" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia16.png">
+					<div class="r-hstack" style="gap: 10px;">
+						<div style="width: 50%; background-color: white; padding: 10px;">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/auerhuhn.png">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/haselhuhn.png">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/mittelspecht.png">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/steinhuhn.png">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/turmfalke.png">
+							<img style="width: 49%; margin-bottom: 0px; margin-top: 0px;" data-src="img/brutvogelatlas/turteltaube.png">
 						</div>
 						<div style="width: 40%" class="fragment">
-							<img data-src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" alt="">
+							<img style="padding: 10px; background-color: white;" data-src="img/AGI_HS20_02_Coding_in_GIS_Ia22.png" alt="">
 						</div>
 					</div>
 				</section>
@@ -417,7 +417,7 @@
 
 				<section>
 					<h2>Hilfe erhalten</h2>
-					<ul>
+					<ul class="x-large">
 						<li class="fragment" data-fragment-index="1"><em>Minimal Working Example</em></li>
 						<li class="fragment" data-fragment-index="2">Beispiel Stackoverflow</li>
 						<ul class="fragment" data-fragment-index="3">

@@ -1,5 +1,7 @@
 /* beautiful blockquotes */
 
+
+
 /* https://github.com/gnab/remark/issues/305#issuecomment-403309989 */
 
 h1 {
@@ -9,60 +11,66 @@ h1 {
 
 
 
+
 /* https://stackoverflow.com/a/51641695/4139249 */
 kbd {
-  padding:0.1em 0.6em;
-  border:1px solid #ccc;
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
   font-size: large;
-  font-family:Arial,Helvetica,sans-serif;
-  background-color:#f7f7f7;
-  color:#333;
-  -moz-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  -webkit-box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-  border-radius:3px;
-  display:inline-block;
-  margin:0 0.1em;
-  text-shadow:0 1px 0 #fff;
-  line-height:1.4;
-  white-space:nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 blockquote::before {
   content: open-quote;
-  margin-right: 5px;
+  /* margin-right: 5px; */
   font-size: 1.2em;
 }
 
 blockquote {
-  border-left: 0.3em solid #ccc;
+  /* border-left: 0.3em solid #ccc; */
   padding: 0 15px;
-  font-style: italic;
+  font-style:italic;
   color: #ccc;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-.reveal .special h1, .reveal .special h2, .reveal .special h3, .reveal .special h4 {
+
+blockquote::after {
+  content: close-quote;
+  /* margin-left: 5px; */
+  font-size: 1.2em;
+}
+
+.reveal .special h1,
+.reveal .special h2,
+.reveal .special h3,
+.reveal .special h4 {
   text-shadow: 4px 4px #090909;
 }
 
-.code-snippet{
-  font-family: Consolas, monospace; 
+.code-snippet {
+  font-family: Consolas, monospace;
   font-size: x-large;
   text-align: left;
 }
 
-.highlight{
+.highlight {
   color: orange
 }
 
-blockquote::after {
-  content: close-quote;
-  margin-left: 5px;
-  font-size: 1.2em;
-}
 
 /* creates xaringan pull-righta and pull left classes */
 
@@ -89,15 +97,15 @@ img {
 
 /* just for the header (currently unused) */
 
-.xx-large{
+.xx-large {
   font-size: xx-large;
 }
 
-.x-large{
+.x-large {
   font-size: x-large;
 }
 
-.large{
+.large {
   font-size: large;
 }
 
@@ -134,7 +142,7 @@ img {
   bottom: 5%;
 }
 
-.footnote{
+.footnote {
   height: var(--slide-height);
   display: flex;
   justify-content: center;
@@ -145,17 +153,17 @@ img {
   width: 100%;
 }
 
-.footnote > :first-child {
+.footnote> :first-child {
   position: absolute !important;
   font-size: large;
-  
+
 }
 
 :root {
   --blur: 5px;
 }
 
-.sepia .slide-background-content{
+.sepia .slide-background-content {
   filter: sepia()
 }
 
@@ -171,7 +179,8 @@ table {
   font-size: smaller;
 }
 
-th, td {
+th,
+td {
   padding: 5px;
 }
 
@@ -180,7 +189,7 @@ tr.pause {
 }
 
 
-.inline-block-children > div {
+.inline-block-children>div {
   display: inline;
 }
 
@@ -194,14 +203,13 @@ tr.pause {
 
 .fragment.geodataframe,
 .fragment.geoseries,
-.fragment.geometry
-{
+.fragment.geometry {
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-.fragment.geodataframe.current-fragment{
-  padding: 10px; 
+.fragment.geodataframe.current-fragment {
+  padding: 10px;
   outline: 3px solid green;
   outline-offset: 4px;
 }
@@ -209,7 +217,7 @@ tr.pause {
 
 
 /* or .fragment.geoseries.visible */
-.fragment.geoseries.current-fragment{
+.fragment.geoseries.current-fragment {
   outline: 3px solid red;
   outline-offset: 4px;
   font-size: larger;
@@ -218,32 +226,34 @@ tr.pause {
 }
 
 
-.fragment.geometry.current-fragment{
-  outline: 5px solid #8eaadd; 
+.fragment.geometry.current-fragment {
+  outline: 5px solid #8eaadd;
   outline-offset: 4px;
   font-size: larger;
 
   /* padding: 4px; */
   /* margin:5px; */
-  
+
 }
 
-.mytable{
+.mytable {
   /* style="display: grid; font-size: x-large; column-gap: 20px;" */
   display: grid;
   font-size: x-large;
 }
 
 
-.white-padded{
-  width: 50%; padding: 20px; background-color: white;
+.white-padded {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
 }
 
-.mytable > div > :nth-child(odd){
+.mytable>div> :nth-child(odd) {
   background-color: gray;
 }
 
-.mytable > div > :first-child{
+.mytable>div> :first-child {
   background-color: white;
   color: black;
   font-weight: bold;
@@ -261,7 +271,7 @@ tr.pause {
   font-weight: bold;
 }
 
-.simple-feature-table{
+.simple-feature-table {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
   gap: 5px;
@@ -270,13 +280,13 @@ tr.pause {
 }
 
 
-.simple-feature-table > div{
+.simple-feature-table>div {
   background-color: #9ca7ba;
   text-align: left;
   padding: 5px 20px;
   border-radius: 4px;
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 /* .simple-feature-table > div.sf-tbl-header{
@@ -284,20 +294,20 @@ tr.pause {
 } */
 
 
-.simple-feature-table > div:nth-child(3n+2){
+.simple-feature-table>div:nth-child(3n+2) {
   /* background-color: red; */
   text-align: center;
   align-self: flex-start;
   justify-content: center;
 }
 
-.simple-feature-table > div:nth-child(3n+3){
+.simple-feature-table>div:nth-child(3n+3) {
   /* background-color: red; */
   font-family: monospace;
   font-size: large;
 }
 
-.simple-feature-table > div > img{
+.simple-feature-table>div>img {
   width: 80px;
   margin: 0px;
   padding: 0px;

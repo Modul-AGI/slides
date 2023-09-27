@@ -1,4 +1,5 @@
 {
     "mermaid-editor.generate.outputPath": "img/",
-    "mermaid-editor.generate.useCurrentPath": false
+    "mermaid-editor.generate.useCurrentPath": false,
+    "liveServer.settings.port": 5501
 }
